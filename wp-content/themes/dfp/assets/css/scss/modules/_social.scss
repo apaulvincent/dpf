@@ -1,0 +1,136 @@
+.social {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    display: inline-block;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+
+      @include screen-max-md(){
+          margin-right: 10px;
+      }
+
+      a {
+          color: $brand-w;
+      }
+
+    }
+
+}
+
+
+
+.social-share {
+
+    .socials {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  
+      a {
+        font-size: 18px;
+        margin: 0 10px;
+        padding: 0;
+      }
+    }
+  
+  }
+  
+  // SHARE BUTTONS:
+  
+  .ssba {
+      .ssba_facebook_share,
+      .ssba_twitter_share,
+      .ssba_email_share,
+      .ssba_linkedin_share,
+      .ssba_google_share {
+        font-family: 'Font Awesome Brands';
+        font-weight: 400;
+        margin: 0 0 0 16px;
+        display: inline-block;
+        color: $brand-5;
+        font-size: 18px;
+
+          &:hover {
+            color: $brand-1;
+          }
+  
+          img, .ssbp-text {
+              display: none !important;
+          }
+      }
+
+      .ssba-share-text {
+          color: $brand-6;
+
+          @include screen-max-md(){
+            display: none;
+          }
+      }
+
+      .ssba_facebook_share:before{
+        content: "\F39E";
+      }
+      .ssba_twitter_share:before{
+        content: "\F099";
+      }
+      .ssba_google_share:before{
+        content: "\E813";
+      }
+      .ssba_email_share:before{
+        font-family: 'Font Awesome';
+        content: "\F0E0";
+      }
+      .ssba_linkedin_share:before{
+       content: "\F0E1";
+      }
+  
+  }
+  
+  
+  
+  
+  .footer-socials {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    
+
+    @include screen-max-sm(){
+      text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 20px 0 0;
+
+        @include screen-max-md(){
+            margin-right: 16px;
+        }
+
+        a {
+            font-size: 24px;
+            color: $brand-4;
+
+            &:hover {
+              color: $brand-2;
+            }
+        }
+
+    }
+}

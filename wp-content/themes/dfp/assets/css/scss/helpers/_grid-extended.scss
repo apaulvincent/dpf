@@ -1,0 +1,312 @@
+// Utilities for a minimum screen size and above
+
+@mixin screen-min-sm() {
+	@media screen and (min-width: $screen-sm-min) { @content; }
+}
+
+@mixin screen-min-md() {
+	@media screen and (min-width: $screen-md-min) { @content; }
+}
+
+@mixin screen-min-lg() {
+	@media screen and (min-width: $screen-lg-min) { @content; }
+}
+
+// Utilities for a maximum screen size and below
+
+@mixin screen-max-xs() {
+	@media screen and (max-width: $screen-xs-max) { @content; }
+}
+
+@mixin screen-max-sm() {
+	@media screen and (max-width: $screen-sm-max) { @content; }
+}
+
+@mixin screen-max-md() {
+	@media screen and (max-width: $screen-md-max) { @content; }
+}
+
+
+.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+  
+	> .col,
+	> [class*="col-"] {
+	  padding-right: 0;
+	  padding-left: 0;
+	}
+  }
+
+
+// applies to all responsive sizes
+
+.row-height {
+	
+	  //row
+  	display: table;
+  	table-layout: fixed;
+  	height: 100%;
+  	width: 100%;
+  	
+  	//col
+  	.col-height {
+	  	display: table-cell;
+	  	float: none;
+	  	height: 100%;
+    }
+  
+	.col-top {
+	  	vertical-align: top;
+	}
+	.col-middle {
+	  	vertical-align: middle;
+	}
+	.col-bottom {
+	  	vertical-align: bottom;
+	}
+}
+
+// responsive
+
+// max-xs ///////////
+.row-max-xs-height {
+	
+	//row
+	@include screen-max-sm(){
+	    display: table;
+	    table-layout: fixed;
+	    height: 100%;
+	    width: 100%;
+	};
+	
+	.col-max-xs-height {
+		@include screen-max-xs(){
+		    display: table-cell;
+		    float: none;
+		    height: 100%;
+		};
+	}
+	.col-max-xs-top {
+		@include screen-max-xs(){
+	    	vertical-align: top;
+		};
+	}
+	.col-max-xs-middle {
+		@include screen-max-xs(){
+	    	vertical-align: middle;
+		};
+	}
+	.col-max-xs-bottom {
+		@include screen-max-xs(){
+	    	vertical-align: bottom;
+		};
+	}
+}
+
+// max-sm ///////////
+.row-max-sm-height {
+	
+	//row
+	@include screen-max-sm(){
+	    display: table;
+	    table-layout: fixed;
+	    height: 100%;
+	    width: 100%;
+	};
+	//col
+	.col-max-sm-height {
+		@include screen-max-sm(){
+		    display: table-cell;
+		    float: none;
+		    height: 100%;
+		};
+	}
+	.col-max-sm-top {
+		@include screen-max-sm(){
+	    	vertical-align: top;
+		};
+	}
+	.col-max-sm-middle {
+		@include screen-max-sm(){
+	    	vertical-align: middle;
+		};
+	}
+	.col-max-sm-bottom {
+		@include screen-max-sm(){
+	    	vertical-align: bottom;
+		};
+	}
+}
+
+// max-md ///////////
+.row-max-md-height {
+	
+	//row
+	@include screen-max-sm(){
+	    display: table;
+	    table-layout: fixed;
+	    height: 100%;
+	    width: 100%;
+	};
+	
+	//col
+	.col-max-md-height {
+		@include screen-max-md(){
+		    display: table-cell;
+		    float: none;
+		    height: 100%;
+		};
+	}
+	.col-max-md-top {
+		@include screen-max-md(){
+	    	vertical-align: top;
+		};
+	}
+	.col-max-md-middle {
+		@include screen-max-md(){
+	    	vertical-align: middle;
+		};
+	}
+	.col-max-md-bottom {
+		@include screen-max-md(){
+	    	vertical-align: bottom;
+		};
+	}
+}
+
+// min-sm ///////////
+.row-min-sm-height {
+	
+	//row
+	@include screen-min-sm(){
+	    display: table;
+	    table-layout: fixed;
+	    height: 100%;
+	    width: 100%;
+	};
+	
+	//col
+	.col-min-sm-height {
+		@include screen-min-sm(){
+		    display: table-cell;
+		    float: none;
+		    height: 100%;
+		};
+	}
+	.col-min-sm-top {
+		@include screen-min-sm(){
+	    	vertical-align: top;
+		};
+	}
+	.col-min-sm-middle {
+		@include screen-min-sm(){
+	    	vertical-align: middle;
+		};
+	}
+	.col-min-sm-bottom {
+		@include screen-min-sm(){
+	    	vertical-align: bottom;
+		};
+	}
+}
+
+// min-md ///////////
+.row-min-md-height {
+	
+	//row
+	@include screen-min-md(){
+	    display: table;
+	    table-layout: fixed;
+	    height: 100%;
+	    width: 100%;
+	};
+	
+	//col
+	.col-min-md-height {
+		@include screen-min-md(){
+		    display: table-cell;
+		    float: none;
+		    height: 100%;
+		};
+	}
+	.col-min-md-top {
+		@include screen-min-md(){
+	    	vertical-align: top;
+		};
+	}
+	.col-min-md-middle {
+		@include screen-min-md(){
+	    	vertical-align: middle;
+		};
+	}
+	.col-min-md-bottom {
+		@include screen-min-md(){
+	    	vertical-align: bottom;
+		};
+	}
+}
+
+// min-lg ///////////
+.row-min-lg-height {
+	
+	//row
+	@include screen-min-lg(){
+	    display: table;
+	    table-layout: fixed;
+	    height: 100%;
+	    width: 100%;
+	};
+	
+	//col
+	.col-min-lg-height {
+		@include screen-min-lg(){
+		    display: table-cell;
+		    float: none;
+		    height: 100%;
+		};
+	}
+	.col-min-lg-top {
+		@include screen-min-lg(){
+	    	vertical-align: top;
+		};
+	}
+	.col-min-lg-middle {
+		@include screen-min-lg(){
+	    	vertical-align: middle;
+		};
+	}
+	.col-min-lg-bottom {
+		@include screen-min-lg(){
+	    	vertical-align: bottom;
+		};
+	}
+}
+
+
+
+.text-xs-left { text-align: left; }
+.text-xs-right { text-align: right; }
+.text-xs-center { text-align: center; }
+.text-xs-justify { text-align: justify; }
+
+@media (max-width: $screen-sm-min) {
+    .text-sm-left { text-align: left; }
+    .text-sm-right { text-align: right; }
+    .text-sm-center { text-align: center; }
+    .text-sm-justify { text-align: justify; }
+}
+
+@media (max-width: $screen-md-min) {
+    .text-md-left { text-align: left; }
+    .text-md-right { text-align: right; }
+    .text-md-center { text-align: center; }
+    .text-md-justify { text-align: justify; }
+}
+
+@media (max-width: $screen-lg-min) {
+   .text-lg-left { text-align: left; }
+   .text-lg-right { text-align: right; }
+   .text-lg-center { text-align: center; }
+   .text-lg-justify { text-align: justify; }
+}

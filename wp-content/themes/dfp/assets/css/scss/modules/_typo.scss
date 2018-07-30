@@ -1,0 +1,136 @@
+body {
+    font-family: $font-regular;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $brand-5;
+}
+
+p {
+    font-size: $font-size-base;
+    line-height: 1.6;
+}
+
+
+h1, .h1 {
+    font-family: $font-bold;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0 0 20px;
+
+    @include screen-max-md(){
+        font-size: 30px;
+    } 
+}
+
+h2, .h2 {
+    font-family: $font-bold;
+    font-size: 36px;
+    line-height: 1.4;
+    margin: 0 0 20px;
+
+    @include screen-max-md(){
+        font-size: 26px;
+    } 
+
+}
+
+h3, .h3 {
+    font-family: $font-bold;
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0 0 15px;
+
+    @include screen-max-md(){
+        font-size: 20px;
+    } 
+}
+
+h4, .h4 {
+    font-family: $font-regular;
+    font-size: 24px;
+    line-height: 1.2;
+
+    @include screen-max-md(){
+        font-size: 16px;
+    }  
+}
+
+h5, .h5 {
+    font-family: $font-regular;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 15px;
+
+    @include screen-max-md(){
+        font-size: 14px;
+    }  
+}
+
+h6, .h6 {
+    font-family: $font-regular;
+    font-size: 16px;
+    line-height: 1.4;
+
+    @include screen-max-md(){
+        font-size: 14px;
+    }  
+}
+
+a {
+    color: $brand-1;
+
+    &:hover {
+        text-decoration: none;
+        color: $brand-5;
+    }
+ }
+
+
+blockquote {
+    font-family: $font-regular;
+    font-size: 18px;
+    line-height: 1.3;
+    border-left: 3px solid $tint-1;
+    padding-left: 20px;
+    
+    em {
+        font-family: $font-regular;
+        font-size: 12px;
+        font-style: normal;
+    }
+
+    @include screen-max-md(){
+        font-size: 16px;
+    } 
+}
+
+table {
+    width: 100%;
+    border: 1px solid $tint-8;
+
+    th {
+        padding: 10px;
+        font-weight: normal;
+        background: $tint-9;
+        text-transform: uppercase;
+        border: 1px solid $tint-7;
+    }
+
+    td {
+        padding: 10px;
+        border: 1px solid $tint-7;
+    }
+}
+
+ul, ol {
+    font-size: $font-size-base;
+    margin: 0 0 20px;
+    padding: 0 0 0 24px;
+
+    li {
+        margin: 0 0 8px;
+    }
+}
+.copyright a{
+  color:#E4E4E4;
+}

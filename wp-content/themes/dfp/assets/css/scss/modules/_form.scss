@@ -1,0 +1,226 @@
+.select-wrap {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	background: #fff;
+
+	&:after {
+		position: absolute;
+		top: 14px;
+		right: 12px;
+		content: '';
+        font-family: 'Font Awesome';
+		font-weight: 400;
+		font-size: 12px;
+		content: "\f0d7";
+		color: $tint-6;
+	}
+
+	select {
+		position: relative;
+		z-index: 1;
+		background: transparent;
+		padding-right: 30px;
+	}
+}
+
+
+
+select {
+	font-family: $font-regular;
+	font-size: 14px;
+	padding: 0 10px;
+	margin: 0;
+	height: 40px;
+	line-height: 1.2;
+	width: 100%;
+	line-height: 40px;
+	background: $tint-w;
+	outline: none;
+	color: $brand-5;
+	cursor: pointer;
+	border: 1px solid $brand-8;
+
+	 -webkit-appearance: none; 
+	 -moz-appearance: none;
+
+	@include round-corners(0);
+	@include transition(0.4s all ease);
+
+	&:focus {
+		border-color:  $tint-6;
+	}
+
+	&.error {
+		border: 1px solid #ff0204;
+	}
+
+	&::-webkit-input-placeholder {color: $placeholder-color; }
+	&:-moz-placeholder {color: $placeholder-color; opacity: 1; } 
+	&::-moz-placeholder {color: $placeholder-color; opacity: 1; } 
+	&:-ms-input-placeholder {color: $placeholder-color; }
+}
+
+label {
+	font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+	font-family: $font-regular;
+	font-size: 14px;
+	padding: 0 15px;
+	margin: 0;
+	height: 50px;
+	line-height: 1.2;
+	vertical-align: middle;
+	width: 100%;
+	background: $tint-w;
+	outline: none;
+	color: $brand-6;
+	border: 1px solid $brand-8;
+	width: 100%;
+
+	 -webkit-appearance: none; 
+	 -moz-appearance: none;
+
+	&::-webkit-input-placeholder {color: $placeholder-color; }
+	&:-moz-placeholder {color: $placeholder-color; opacity: 1; } 
+	&::-moz-placeholder {color: $placeholder-color; opacity: 1; } 
+	&:-ms-input-placeholder {color: $placeholder-color; }
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+	    -webkit-appearance: none;
+	    margin: 0;
+	}
+
+	@include round-corners(0);
+	// @include transition(0.4s all ease);
+	@include box-shadow(none);
+
+	&:focus, &:active {
+		outline: none;
+		border-color:  $tint-6;
+		@include box-shadow(none);
+	}
+
+	@include screen-max-xs(){
+
+	}
+}
+
+
+textarea, textarea.form-control {
+	font-family: $font-regular;
+	font-size: 14px;
+	width: 100%;
+	padding: 10px;
+	line-height: 1.2;
+	text-align: left;
+	outline: none;
+	margin: 0 auto;
+	background: $tint-w;
+	outline: none;
+	color: $brand-6;
+	border: 1px solid $brand-8;
+	 -webkit-appearance: none; 
+	 -moz-appearance: none;
+
+
+	&::-webkit-input-placeholder {color: $placeholder-color; }
+	&:-moz-placeholder {color: $placeholder-color; opacity: 1; } 
+	&::-moz-placeholder {color: $placeholder-color; opacity: 1; } 
+	&:-ms-input-placeholder {color: $placeholder-color; }
+
+	&:focus {
+		outline: none;
+		border-color:  $tint-6;
+		@include box-shadow(none);
+	}
+
+	&.error {
+		border: 1px solid #fd6562;
+	}
+}
+
+
+
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+
+// CF7
+.recaptcha-container{
+	margin-bottom:16px;
+	padding-left:0px;
+	padding-right:0px;
+}
+.recaptcha-container .wpcf7-recaptcha div{
+}
+.wpcf7-form {
+	label {
+		display: block;
+	}
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+textarea,
+select,
+input[type="password"] {
+
+	&.wpcf7-not-valid {
+		border: 1px solid $brand-danger;
+	}
+}
+
+span.wpcf7-not-valid-tip, div.wpcf7 img.ajax-loader {
+	display: none !important;
+}
+
+div.wpcf7-response-output {
+	margin: 10px 0;
+}
+
+.ajax-loader {
+	display: none !important;
+}
+
+div.wpcf7-validation-errors {
+	border: none !important;
+	background: $brand-danger;
+	color: $brand-w;
+	padding: 20px;
+	line-height: 1.2em;
+	font-size: 14px;
+	text-align: center;
+}
+
+div.wpcf7-mail-sent-ok {
+	border: none !important;
+	background: $brand-success;
+	color: $brand-w;
+	padding: 20px;
+	line-height: 1.2em;
+	font-size: 14px;
+	text-align: center;
+}
+
+div.wpcf7-mail-sent-ng {
+	border: none !important;
+	background: $brand-danger;
+	color: $brand-w;
+	padding: 20px;
+	line-height: 1.2em;
+	font-size: 14px;
+	text-align: center;
+}

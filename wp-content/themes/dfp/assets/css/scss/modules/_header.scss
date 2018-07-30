@@ -1,0 +1,82 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 99;
+  
+  .site-header-inner {
+    position: relative;
+    background: rgba(17, 17, 17, 0.8); // $tint-4;
+    z-index: 10;
+
+    @include screen-max-md(){
+      background: rgba(17, 17, 17, 1); // $tint-4; 
+    }
+
+  }
+
+  .header-wrap {
+    padding: 30px 0;
+    
+    @include screen-max-md(){
+      padding: 15px 0;
+    }
+
+  }
+
+  @include screen-max-sm(){
+    margin: 0;  
+  }
+
+}
+
+
+.branding {
+  display: inline-block;
+  width: 68px;
+
+  img {
+      max-width: 100%;
+  }
+
+  @include screen-max-md(){
+    width: 48px;
+  }
+}
+
+.site-controls {
+  padding: 0 0 20px;
+}
+
+.site-info {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+  li {
+    display: inline-block;
+    color: $brand-w;
+    margin-left: 20px;
+    font-size: 14px;
+
+    a {
+      color: $brand-w;
+    }
+
+    i {
+      margin-right: 8px;
+      color: $brand-7;
+    }
+  }
+}
+
+.call-btn {
+  position: fixed;
+  top: 86px;
+  width: 100%;
+  z-index: 4; 
+}

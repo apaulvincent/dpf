@@ -1,0 +1,117 @@
+// ======================================================================
+   // Vars
+// ======================================================================
+
+
+
+// Colors
+
+$brand-w: #ffffff;
+$brand-b: #000000;
+
+$brand-1: #568c20;
+$brand-2: #3c6a3b;
+$brand-3: #9b4124;
+$brand-4: #111111;
+$brand-5: #212121;
+$brand-6: #616161;
+$brand-7: #e0e0e0;
+$brand-8: #eeeeee;
+$brand-9: #f5f5f5;
+
+$tint-w: #ffffff;
+$tint-b: #000000;
+
+$tint-1: $brand-1;
+$tint-2: $brand-2;
+$tint-3: $brand-3;
+$tint-4: $brand-4;
+$tint-5: $brand-5;
+$tint-6: $brand-6;
+$tint-7: $brand-7;
+$tint-8: $brand-8;
+$tint-9: $brand-9;
+
+$tint-1-hover: $tint-4;
+$tint-2-hover: $tint-6;
+
+
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #ff6161;
+
+$placeholder-color: #cccccc;
+
+
+// Typography
+
+$font-ultra: 'geomanistultra', sans-serif;
+$font-thin: 'geomanistthin', sans-serif;
+$font-light: 'geomanistlight', sans-serif;
+$font-xlight: 'geomanistextralight', sans-serif;
+$font-regular: 'geomanistregular', sans-serif;
+$font-book: 'geomanistbook', sans-serif;
+$font-medium: 'geomanistmedium', sans-serif;
+$font-bold: 'geomanistbold', sans-serif;
+$font-black: 'geomanistblack', sans-serif;
+
+
+$font-size-base: 16px;
+$line-height-base: 1.4;
+$text-color: $brand-4;
+
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-4, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
+
+
+
+
+
+
+// GRID SYSTEM VARIABLES: DO NOT EDIT!
+
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px;
+$screen-md-min:              $screen-md;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);

@@ -1,0 +1,200 @@
+button {
+    outline: none;
+}
+
+.btn {
+    padding: 0 30px;
+    font-size: 14px;
+    line-height: 40px;
+    height: 40px;
+    background: $tint-1;
+    border-color: $tint-1;
+    color: $brand-w;
+    vertical-align: middle;
+    text-align: center;
+    @include round-corners(0);
+    @include transition(0.4s all ease);
+
+    &:hover, 
+    &:focus, 
+    &:active,
+    &:active:hover,
+    &:active:focus {
+        background: $tint-1-hover;
+        border-color: $tint-1-hover;
+        color: $brand-w;
+        outline: none;
+        @include box-shadow(none);
+    }
+
+    &.btn-full {
+        width: 100%;
+    }
+
+    &:disabled {
+        background: $tint-4;
+        border-color: $tint-4;
+    }
+
+    i {
+        margin: 0 4px;
+    }
+
+}
+
+.btn-2 {
+    border-color: $tint-2;
+    background: $tint-2;
+    color: $brand-w;
+}
+
+.btn-3 {
+    border-color: $tint-4;
+    background: transparent;
+    color: $brand-4;
+
+    &:hover, 
+    &:focus, 
+    &:active,
+    &:active:hover,
+    &:active:focus {
+        color: $brand-w;
+        background: $tint-4;
+    }
+}
+
+.btn-4 {
+    border-color: $tint-4;
+    background: $tint-4;
+    color: $brand-w;
+
+    &:hover, 
+    &:focus, 
+    &:active,
+    &:active:hover,
+    &:active:focus {
+        background: $tint-6;
+        border-color: $tint-6;
+    }
+}
+
+.btn-box-icon {
+    position: relative;
+    padding: 0 15px;
+    text-transform: uppercase;
+
+    &:hover{
+        background: $tint-2;
+        border-color: $tint-2;
+
+        &:after  {
+            background: $tint-2;
+        }
+    }
+
+    &.btn-lg {
+        font-size: 16px;
+        line-height: 50px;
+        height: 50px;
+        padding: 0 24px;
+
+        &:after {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &.btn-2 {
+
+        &:after {
+            background: $tint-2;
+            border-color: $tint-2;
+        }
+
+        &:hover  {
+            background: $tint-4;
+            border-color: $tint-4;
+
+            &:after {
+                background: $tint-4;
+                border-color: $tint-4;
+            }
+
+        }
+
+    }
+
+    &.btn-3 {
+
+        &:after {
+            background: transparent;
+            color: $brand-4;
+            border: 1px solid $brand-4;
+        }
+
+        &:hover  {
+            background: $tint-4;
+            border-color: $tint-4;
+
+            &:after {
+                background: $tint-4;
+                border-color: $tint-4;
+                color: $brand-w;
+            }
+
+        }
+
+    }
+
+    &.btn-4 {
+
+        &:after {
+            background: $tint-4;
+            border-color: $tint-4;
+        }
+
+        &:hover  {
+            background: $tint-6;
+            border-color: $tint-6;
+
+            &:after {
+                background: $tint-6;
+                border-color: $tint-6;
+            }
+
+        }
+
+    }
+
+
+    &:after {
+        position: absolute;
+        left: 100%;
+        top: -1px;
+        margin-left: 2px;
+        background: $tint-1;
+
+        font-family: 'Pe-icon-7-stroke';
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        font-size: 28px;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        content: "\e684";
+        width: 40px;
+        height: 40px;
+        @include transition(0.4s all ease);
+    }
+
+
+    &.icon-download:after {
+        content: "\e65c";
+        font-size: 18px;
+    }
+
+
+}

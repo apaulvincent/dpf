@@ -1,0 +1,38 @@
+{
+  "name": "linfox",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es2015-modules-strip": "^0.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "copy-webpack-plugin": "^4.1.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "imagemin-webpack-plugin": "^1.5.2",
+    "node-sass": "^4.8.3",
+    "popper.js": "^1.12.5",
+    "postcss-loader": "^2.0.6",
+    "precss": "^2.0.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.12.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "file-loader": "^1.1.11",
+    "jquery": "^3.2.1",
+    "resolve-url": "^0.2.1",
+    "resolve-url-loader": "^2.3.0",
+    "url-loader": "^1.0.1"
+  }
+}
