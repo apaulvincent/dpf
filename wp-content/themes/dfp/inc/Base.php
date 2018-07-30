@@ -79,9 +79,6 @@
 
 		add_action( 'after_setup_theme', array($this, 'register_menus') );
 
-		add_action( 'init', array($this, 'create_insight_post_type' ));
-		add_action( 'init', array($this, 'create_downloads_post_type' ));
-		add_action( 'init', array($this, 'create_product_post_type' ));
 		add_action( 'init', array($this, 'create_reusable_content_post_type' ));
 		add_action( 'init', array($this, 'create_page_taxonomy' ));
 
@@ -168,6 +165,8 @@ public function customise_admin_menu() {
 	//hide the posts section
     remove_menu_page( 'edit.php' );
 }
+
+
 public function assign_tags_to_post_types(){
 
 	//assigns tags to articles, products. the idea is for them to share the tags
@@ -196,150 +195,17 @@ public function assign_tags_to_post_types(){
 
 
 
-public function create_insight_post_type() {
-		  $labels = array(
-				'name' => _x('Insights', 'post type general name'),
-				'singular_name' => _x('Insight', 'post type singular name'),
-				'add_new' => _x('Add New Insight', 'portfolio item'),
-				'add_new_item' => __('Add New Insight'),
-				'edit_item' => __('Edit Insight'),
-				'new_item' => __('New Insight'),
-				'view_item' => __('View Insight'),
-				'search_items' => __('Search Insights'),
-				'not_found' =>  __('Nothing found'),
-				'not_found_in_trash' => __('Nothing found in Trash'),
-				'parent_item_colon' => ''
-			);
- 
-			$args = array(
-				'labels' => $labels,
-				'public' => true,
-				'publicly_queryable' => true,
-				'show_ui' => true,
-				'query_var' => true,
-				'menu_icon' => 'dashicons-welcome-view-site',
-				'rewrite' => true,
-				'capability_type' => 'post',
-				'hierarchical' => true,
-				'menu_position' => null,
-				//'taxonomies' => array('post_tag','category'),
-				'supports' => array('title','excerpt','thumbnail')
-			); 
-
-			/*register_taxonomy(
-				'insight-cat',
-				'insight',
-				array(
-					'label' => __( 'Category' ),
-					'rewrite' => array( 'slug' => 'insight-cat' ),
-					'hierarchical' => true,
-				)
-			);*/
- 
-			register_post_type( 'insight' , $args );
-			register_taxonomy_for_object_type('category', 'insight');
-			register_taxonomy_for_object_type('post_tag', 'insight');
-			
-}
-
-
-function create_product_post_type() {
-	$labels = array(
-		'name' => _x('Products', 'post type general name'),
-		'singular_name' => _x('Product', 'post type singular name'),
-		'add_new' => _x('Add New Product', 'portfolio item'),
-		'add_new_item' => __('Add New Product'),
-		'edit_item' => __('Edit Product'),
-		'new_item' => __('New Product'),
-		'view_item' => __('View Product'),
-		'search_items' => __('Search Products'),
-		'not_found' =>  __('Nothing found'),
-		'not_found_in_trash' => __('Nothing found in Trash'),
-		'parent_item_colon' => ''
-	);
- 
-	$args = array(
-		'labels' => $labels,
-		'public' => true,
-		'publicly_queryable' => true,
-		'show_ui' => true,
-		'query_var' => true,
-		'rewrite' => true,
-		'capability_type' => 'post',
-		'hierarchical' => true,
-		'menu_position' => null,
-		//'taxonomies' => array('post_tag', 'category'),
-		'supports' => array('title','excerpt','thumbnail')
-	); 
-
-	register_taxonomy(
-		'product-cat',
-		'product',
-		array(
-			'label' => __( 'Category' ),
-			'rewrite' => array( 'slug' => 'product-cat' ),
-			'hierarchical' => true,
-		)
-	);
-
-	register_post_type( 'product' , $args );
-	// register_taxonomy_for_object_type('category', 'product');
-	// register_taxonomy_for_object_type('post_tag', 'product');
-		
-}
-
-
-
-function create_downloads_post_type() {
-	$labels = array(
-		'name' => _x('Downloads', 'post type general name'),
-		'singular_name' => _x('Download', 'post type singular name'),
-		'add_new' => _x('Add New Download', 'portfolio item'),
-		'add_new_item' => __('Add New Download'),
-		'edit_item' => __('Edit Download'),
-		'new_item' => __('New Download'),
-		'view_item' => __('View Download'),
-		'search_items' => __('Search Downloads'),
-		'not_found' =>  __('Nothing found'),
-		'publicly_queryable'  => false,
-		'not_found_in_trash' => __('Nothing found in Trash'),
-		'parent_item_colon' => ''
-	);
- 
-	$args = array(
-		'labels' => $labels,
-		'public' => false,
-		'publicly_queryable' => false,
-		'show_ui' => true,
-		'query_var' => true,
-		'menu_icon' => 'dashicons-format-aside',
-		'rewrite' => true,
-		'capability_type' => 'post',
-		'hierarchical' => true,
-		'menu_position' => null,
-		//'taxonomies' => array('post_tag','category'),
-		'supports' => array('title','excerpt','thumbnail')
-	); 
- 
-	register_post_type( 'download' , $args );
-	register_taxonomy_for_object_type('category', 'download');
-	register_taxonomy_for_object_type('post_tag', 'download');
-			
-}
-
-
-
 function create_reusable_content_post_type() {
 
 	$labels = array(
-		'name' => _x('Reusable Content', 'post type general name'),
-		'singular_name' => _x('Reusable Content', 'post type singular name'),
-		'add_new' => _x('Add Reusable Content', 'portfolio item'),
-		'add_new_item' => __('Add Reusable Content'),
-		'edit_item' => __('Edit Reusable Content'),
-		'new_item' => __('New Reusable Content'),
-		'view_item' => __('View Reusable Content'),
-		'search_items' => __('Search Reusable Content'),
+		'name' => _x('Reusable Blocks', 'post type general name'),
+		'singular_name' => _x('Reusable Blocks', 'post type singular name'),
+		'add_new' => _x('Add Reusable Blocks', 'portfolio item'),
+		'add_new_item' => __('Add Reusable Blocks'),
+		'edit_item' => __('Edit Reusable Blocks'),
+		'new_item' => __('New Reusable Blocks'),
+		'view_item' => __('View Reusable Blocks'),
+		'search_items' => __('Search Reusable Blocks'),
 		'not_found' =>  __('Nothing found'),
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
@@ -359,7 +225,7 @@ function create_reusable_content_post_type() {
 		'supports' 		=> array( 'title' )
 	  ); 
  
-	register_post_type( 'reusable-content' , $args );			
+	register_post_type( 'reusable-block' , $args );			
 }   
 
 function create_page_taxonomy(){

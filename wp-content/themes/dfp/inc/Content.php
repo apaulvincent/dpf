@@ -327,9 +327,7 @@ public function get_section_divider($type = 'full', $class = array()){
 
 	return $divider;
 }
-
 		
-
 public function get_section_spacer( $size = '30', $class = array() ){
 	$spacer = ' <div class="spacer '.implode(' ', $class).'" style="margin-bottom: '.$size.'px;"></div>';
 	return $spacer;
@@ -453,7 +451,7 @@ function generate_taxonomy_display( $atts ) {
 }
 
 //===========================================
-	public function get_taxonomy_display($atts){
+public function get_taxonomy_display($atts){
 		global $DB_Base, $DB_Helper;
 		/*
 			returns the taxonomy display
