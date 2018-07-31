@@ -12,35 +12,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB96rt6dlY8Gp_GFprNH5ug__wnownAQHs"></script>
 
 
-<style>
-
-.sub-nav-drawer .sub-menu-list .sub-menu-item {
-	width: 100%;
-}
-.sub-nav-drawer .sub-menu-list .menu-item-depth-1 > a {
-	font-weight: 900;
-}
-
-.sub-nav-drawer .sub-menu-list .menu-item-depth-2 > a {
-	margin: 3px 0;
-} 
-
-.sub-nav-drawer .sub-menu-list .menu-item-depth-2 > .sub-menu {
-	padding-left: 20px;
-}
-
-.sub-nav-drawer .sub-menu-list .menu-item-depth-1 > .sub-menu {
-	padding-left: 10px;
-}
-
-.sub-nav-drawer .sub-menu-list > .menu-list-row.hidden {
-	display: none;
-}
-
-
-
-</style>
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -113,7 +84,7 @@ $page_config['meta'] = get_fields($page_id);
 	</header><!-- #masthead -->
 
 	<button class="btn btn-full d-xl-none call-btn">
-		<i class="fas fa-phone"></i> CALL SACOA
+		<i class="fas fa-phone"></i> DFP
 	</button>
 
 	<?php include(locate_template('partials/common/header-banner.php')); ?>

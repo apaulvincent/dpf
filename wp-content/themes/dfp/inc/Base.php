@@ -16,10 +16,6 @@
 		'banner_md' => array(800, 200, false, 'Medium Standard Banner'),
 		'banner_lg' => array(2000, 688, false, 'Large Standard Banner'),
 
-		'landscape_sm' => array(400, 200, false, 'Small Landscape/Feature Banner'),
-		'landscape_md' => array(600, 300, false, 'Medium Landscape/Feature Banner'),
-		'landscape_lg' => array(1800, 900, false, 'Large Landscape/Feature Banner'),
-
 		'portrait_sm' => array(150, 300, false, 'Small Portrait'),
 		'portrait_md' => array(300, 600, false, 'Medium Portrait'),
 		'portrait_lg' => array(600, 1200, false, 'Large Portrait'),
@@ -59,12 +55,11 @@
 		add_filter( 'image_size_names_choose', array($this, 'list_custom_image_sizes') );
 
 		add_action( 'after_setup_theme', array($this, 'wpdocs_after_setup_theme') );
-
 		add_action( 'pre_get_posts', array($this, 'customise_site_search') );
 
 		//add custom columns in Admin
 		add_filter ( 'manage_download_posts_columns', array($this, 'add_cpt_download_columns') );
-  		add_action ( 'manage_download_posts_custom_column', array($this, 'write_cpt_custom_column'), 10, 2 );
+		add_action ( 'manage_download_posts_custom_column', array($this, 'write_cpt_custom_column'), 10, 2 );
 	}
 
 /*
