@@ -10,33 +10,7 @@
 	private $class_directory = '';
 	private $root_directory = '';
 	private $active_theme_uri = '';
-	/*
-				== system
-				thumb: 150 x 150	1 : 1
-				medium: 300 x 300	1 : 1
-				medium_large: 
-				large: 1024 x 1024	1 : 1
 
-				== other
-				landing_banner_thumb	
-
-				banner_thumb		400 x 100	4:1
-				banner_med			800 x 200	4:1
-				banner_lge			1800 x 450	4:1
-
-				landscape_thumb 	300 x 150	2:1
-				landscape_med 		600 x 300	2:1
-				landscape_lge 		1200 x 600	2:1
-
-				portrait_thumb 		150 x 300	1:2
-				portrait_med 		300 x 600	1:2
-				portrait_lge 		600 x 1200	1:2	
-
-				square_thumb 		300 x 300	1:1
-				square_med 			600 x 600	1:1
-				square_lge 			1200 x 1200	1:1							
-
-			*/
 	public $custom_image_size_arr = array(
 		'banner_sm' => array(400, 100, false, 'Small Standard Banner'),
 		'banner_md' => array(800, 200, false, 'Medium Standard Banner'),
@@ -52,10 +26,8 @@
 
 		'square_sm' => array(300, 300, false, 'Small Square'),
 		'square_md' => array(600, 600, false, 'Medium Square'),
-
 		'square_lg' => array(1200, 1200, false, 'Large Square'),
 
-		'download_image' => array(200, 200, false, 'Download Image'),
 	);
 
 	public $site_page_uris = array();
@@ -68,20 +40,17 @@
 		$this->set_class_directory_value(); //set the directory url on creation
 		$this->set_parent_theme_uri_value(); //set the parent theme url on creation
 		$this->set_active_theme_uri_value(); //set the child theme url on creation
-		$this->set_site_uri_values();
 
 		$this->run_acf_tweaks();
 
 		add_action('wp_enqueue_scripts', array($this,'enqueue_public_scripts_and_styles')); //enqueue public facing elements
 		add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts_and_styles')); //enqueues admin elements
 
-		add_filter('widget_text', 'do_shortcode');//allow use of shortcodes in text widgets
 
 		add_action( 'after_setup_theme', array($this, 'register_menus') );
 
 		add_action( 'init', array($this, 'create_reusable_content_post_type' ));
 		add_action( 'init', array($this, 'create_page_taxonomy' ));
-
 
 		add_action( 'init', array($this, 'assign_tags_to_post_types' ));
 
@@ -92,16 +61,6 @@
 		add_action( 'after_setup_theme', array($this, 'wpdocs_after_setup_theme') );
 
 		add_action( 'pre_get_posts', array($this, 'customise_site_search') );
-
-		//require_once($this->root_directory . 'vendor/autoload.php');
-
-		/**
-		* Allow shortcodes in Contact Form 7
-		*/
-
-		add_filter( 'wpcf7_form_elements', array($this, 'shortcodes_in_cf7') );
-
-		add_action( 'admin_menu', array($this, 'customise_admin_menu'));
 
 		//add custom columns in Admin
 		add_filter ( 'manage_download_posts_columns', array($this, 'add_cpt_download_columns') );
@@ -150,21 +109,13 @@ public function customise_site_search( $search_query ) {
 	}
 
 }
-	
-public function shortcodes_in_cf7( $form ) {
-$form = do_shortcode( $form );
-return $form;
-}
+
+
 public function wpdocs_after_setup_theme() {
     add_theme_support( 'html5', array( 'search-form' ) );
     add_theme_support( 'post-thumbnails' );
 }
 
-
-public function customise_admin_menu() {
-	//hide the posts section
-    remove_menu_page( 'edit.php' );
-}
 
 
 public function assign_tags_to_post_types(){
@@ -228,6 +179,8 @@ function create_reusable_content_post_type() {
 	register_post_type( 'reusable-block' , $args );			
 }   
 
+
+
 function create_page_taxonomy(){
 	register_taxonomy(
 		'page-cat',
@@ -239,6 +192,8 @@ function create_page_taxonomy(){
 		)
 	);
 }
+
+
 public function set_custom_image_sizes(){
 
 
@@ -264,13 +219,7 @@ function list_custom_image_sizes( $sizes ) {
 		$this->root_directory = ABSPATH;
 
 	}
-	public function set_site_uri_values(){
-		$this->site_uri = get_site_url();
-		$this->site_page_uris = array(
-			'product-tags' => get_field('product_tag_page', 'option')
 
-			);
-	}
 
 	//sets the URI so that we can use this later
 	public function set_active_theme_uri_value(){
@@ -286,37 +235,20 @@ function list_custom_image_sizes( $sizes ) {
 public function enqueue_public_scripts_and_styles(){
 
     //load the site CSS, with dependencies defined
-		
-	// wp_enqueue_style(
-	// 	'open-sans', 
-	// 	'https://fonts.googleapis.com/css?family=Open+Sans:400,700'
-	// );
 
-
-	// wp_enqueue_style(
-	// 	'bootstrap',
-	// 	get_stylesheet_directory_uri().'/node_modules/bootstrap/dist/css/bootstrap.css');
-
-	// wp_enqueue_style(
-	// 	'slick',
-	// 	get_stylesheet_directory_uri().'/node_modules/slick-carousel/slick/slick.css');
 	wp_enqueue_style(
 		'main',
 		get_stylesheet_directory_uri().'/assets/css/main.css');
 	
-	// wp_deregister_script('jquery');
-	// wp_enqueue_script(
-	// 	'jquery',
-	// 	get_stylesheet_directory_uri().'/node_modules/jquery/dist/jquery.min.js');
-	// wp_enqueue_script(
-	// 	'slick',
-	// 	get_stylesheet_directory_uri().'/node_modules/slick-carousel/slick/slick.min.js');
+
 	wp_enqueue_script(
 		'main',
 		get_stylesheet_directory_uri().'/assets/js/main.js');
 
 
 }
+
+
 //enqueue admin scripts and styles
 public function enqueue_admin_scripts_and_styles(){
 	global $pagenow, $post_type;

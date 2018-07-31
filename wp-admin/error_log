@@ -1,0 +1,742 @@
+[23-Oct-2013 05:58:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home3/webmedia/public_html/clientd/php/DFpartners/wp-content/plugins/dropdown-menu-widget/stf-page-options.php on line 154
+[23-Oct-2013 06:02:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home3/webmedia/public_html/clientd/php/DFpartners/wp-content/plugins/dropdown-menu-widget/stf-page-options.php on line 154
+[23-Oct-2013 06:02:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home3/webmedia/public_html/clientd/php/DFpartners/wp-content/plugins/dropdown-menu-widget/stf-page-options.php on line 154
+[23-Oct-2013 06:02:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home3/webmedia/public_html/clientd/php/DFpartners/wp-content/plugins/dropdown-menu-widget/stf-page-options.php on line 154
+[16-Oct-2014 07:50:12] PHP Fatal error:  Class 'ZIPARCHIVE' not found in /home/dfpartne/public_html/wp-content/plugins/updraftplus/class-zip.php on line 236
+[16-Oct-2014 08:09:46] PHP Fatal error:  Class 'ZIPARCHIVE' not found in /home/dfpartne/public_html/wp-content/plugins/updraftplus/class-zip.php on line 236
+[17-Oct-2014 10:12:24] PHP Fatal error:  Class 'ZIPARCHIVE' not found in /home/dfpartne/public_html/wp-content/plugins/updraftplus/class-zip.php on line 236
+[17-Oct-2014 10:20:05] PHP Fatal error:  Class 'ZIPARCHIVE' not found in /home/dfpartne/public_html/wp-content/plugins/updraftplus/class-zip.php on line 236
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_version_hidden';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_hideWpVersion, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_version_hidden',
+                 'WordPress version is only displayed to administrator users',
+                 '<p>Displaying your WordPress version on frontend and in the backend\'s footer to all visitors\r\n                        and users of your website is a security risk because if a hacker knows which version of WordPress a website is running, it can make it easier for him to target a known WordPress security issue.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_hideWpVersion, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_generators_frontend';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeWpMetaGeneratorsFrontend, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_generators_frontend',
+                 'WordPress meta tags are only displayed on frontend to administrator users',
+                 '<p>By default, WordPress creates a few meta tags, among which is the currently installed version, that give a hacker the knowledge about your WordPress installation.\r\n                At the moment, all WordPress\'s defaults meta tags are hidden for all users but administrators.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeWpMetaGeneratorsFrontend, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_rsd_frontend';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeReallySimpleDiscovery, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_rsd_frontend',
+                 'WordPress Really Simple Discovery tag is only displayed on frontend to administrator users.',
+                 '<p>By default, WordPress creates the <strong>rsd meta tag</strong> to allow bloggers to consume services like Flickr using the <a href=\"http://en.wikipedia.org/wiki/XML-RPC\" target=\"_blank\">XML-RPC</a> protocol.\r\n                            If you don\'t use such services it is recommended to hide this meta tag.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeReallySimpleDiscovery, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_wlw_frontend';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeWindowsLiveWriter, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_wlw_frontend',
+                 'WordPress Windows Live Writer tag is only displayed on frontend for administrator users',
+                 '<p>By default, WordPress creates the wlw meta tag to allow bloggers to publish their articles using the <strong>\"Windows Live Writer\"</strong> application.\r\n                        It is recommended to hide this meta tag from all visitors. If the option <strong>\"Remove Windows Live Writer meta tags from front-end\"</strong> is checked on the plugin\'s settings page, this meta tag\r\n                        will still be available for administrator users to use the <strong>\"Windows Live Writer\"</strong> application to publish their blog posts.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeWindowsLiveWriter, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_error_reporting';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_disableErrorReporting, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_error_reporting',
+                 'Error reporting, PHP and database, is enabled only for administrator users',
+                 '<p>By default, WordPress hides database errors, but there are times when a plugin might enable them thus it is very important to have this type of errors turned off\r\n                        so if there is an error during a connection to the database the user will not get access to the error message generated during that request.</p>\r\n                        <p>As regarding the PHP errors, with the <strong>display_error</strong> PHP configuration directive enabled, untrusted sources can see detailed web application environment\r\n                        error messages which include sensitive information that can be used to craft further attacks.</p>\r\n                        <p>Attackers will do anything to collect information in order to design their attack in a more sophisticated way to eventually hack your website or web application, and causing\r\n                        errors to display is a common starting point. Website errors can always occur, but they should be suppressed from being displayed back to the public.</p>\r\n                        <p>Therefore we highly recommend you to have the <strong>\"Disable error reporting (php + db) for all but administrators\"</strong> option checked on the plugin\'s settings page to ensure PHP and\r\n                        database errors will be hidden from all users. For more information, please check the following <a href=\"http://www.acunetix.com/blog/web-security-zone/articles/php-security-directive-your-website-is-showing-php-errors/\" target=\"_blank\">article</a>.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_disableErrorReporting, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_core_update_notif';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeCoreUpdateNotification, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_core_update_notif',
+                 'Core update notifications are only displayed to administrator users.',
+                 '<p>These notifications are displayed at the top of the screen by the WordPress platform whenever the website was updated or needs an update.</p>\r\n                <p>Currently, these notifications are only displayed to administrator users.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeCoreUpdateNotification, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_plugins_update_notif';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removePluginUpdateNotifications, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 2,
+                 'fix_wp_plugins_update_notif',
+                 'Plugins update notifications are displayed to all users',
+                 '<p>These notifications are displayed at the top of the screen by the WordPress platform whenever the blog administrator\r\n                        needs to be informed about an available update for a plugin.</p>\r\n                    <p>These notifications should only be viewed by the website\'s administrators and not visible to any other users registered with that website.</p>',
+                 '<p>This plugin can automatically hide these notifications if the option <strong>\"Remove plug-ins update notifications from back-end\"</strong> is checked on the plugin\'s settings page.</p>',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removePluginUpdateNotifications, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_themes_update_notif';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeThemeUpdateNotifications, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_themes_update_notif',
+                 'Themes update notifications are displayed to all users.',
+                 '<p>These notifications are displayed at the top of the screen by the WordPress platform whenever the blog administrator\r\n                        needs to be informed about an available update for a theme.</p>\r\n                    <p>These notifications should only be viewed by the website\'s administrators and not visible to any other users registered with that website.</p>',
+                 '<p>This plugin can automatically hide these notifications if the option <strong>\"Remove themes update notifications from back-end\"</strong> is checked on the plugin\'s settings page.</p>',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeThemeUpdateNotifications, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_login_errors';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeLoginErrorNotificationsFrontEnd, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_login_errors',
+                 'WordPress login errors are not displayed.',
+                 '<p>Currently, these errors are hidden to all users.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeLoginErrorNotificationsFrontEnd, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_admin_notices';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_hideAdminNotifications, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_admin_notices',
+                 'WordPress admin notifications are only displayed to administrator users.',
+                 '<p>These notifications are displayed at the top of the screen by the WordPress platform whenever the blog administrator\r\n                       needs to be informed about an event that has occurred inside WordPress, it could be about an available update for the\r\n                       WordPress platform, a plugin or a theme that was updated or needs an update or to be configured, etc.</p>\r\n                <p>Currently, these notifications are displayed only to administrator users.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_hideAdminNotifications, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_dir_listing';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_preventDirectoryListing, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_dir_listing',
+                 'Directory listing check is enabled.',
+                 '<p>A directory listing provides an attacker with the complete index of all the resources located inside of the directory.\r\n                    The specific risks and consequences vary depending on which files are listed and accessible.\r\n                    Therefore, it is important to protect your directories by having an empty index.php or index.htm file inside them.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_preventDirectoryListing, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_index_content';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_preventDirectoryListing, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_index_content',
+                 '<strong>\"/wp-content\"</strong> directory is secure from directory listing.',
+                 '<p>A directory listing provides an attacker with the complete index of all the resources located inside of the directory.\r\n                    The specific risks and consequences vary depending on which files are listed and accessible.\r\n                    Therefore, it is important to protect your directories by having an empty index.php or index.htm file inside them.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_preventDirectoryListing, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_index_plugins';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_preventDirectoryListing, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_index_plugins',
+                 '<strong>\"/wp-content/plugins\"</strong> directory is not secure from directory listing.',
+                 '<p>A directory listing provides an attacker with the complete index of all the resources located inside of the directory.\r\n                            The specific risks and consequences vary depending on which files are listed and accessible.\r\n                            Therefore, it is important to protect your directories by having an empty index.php or index.htm file inside them.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_preventDirectoryListing, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_index_themes';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_preventDirectoryListing, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_index_themes',
+                 '<strong>\"/wp-content/themes\"</strong> directory is not secure from directory listing.',
+                 '<p>A directory listing provides an attacker with the complete index of all the resources located inside of the directory.\r\n                            The specific risks and consequences vary depending on which files are listed and accessible.\r\n                            Therefore, it is important to protect your directories by having an empty index.php or index.htm file inside them.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_preventDirectoryListing, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_wp_index_uploads';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_preventDirectoryListing, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_wp_index_uploads',
+                 '<strong>\"/wp-content/uploads\"</strong> directory is not secure from directory listing.',
+                 '<p>A directory listing provides an attacker with the complete index of all the resources located inside of the directory.\r\n                            The specific risks and consequences vary depending on which files are listed and accessible.\r\n                            Therefore, it is important to protect your directories by having an empty index.php or index.htm file inside them.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_preventDirectoryListing, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'fix_remove_wp_version_links';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeWpVersionFromLinks, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'fix_remove_wp_version_links',
+                 'WordPress version displayed in links only for administrator users.',
+                 '<p>By default, WordPress will display the current version in links to javascript scripts or stylesheets.\r\n                    Therefore, if anyone has access to this information it might be a security risk because if a hacker knows which version of WordPress a website is running,\r\n                    it can make it easier for him to target a known WordPress security issue.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdSecurity::fix_removeWpVersionFromLinks, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'check_table_prefix';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_tablePrefix, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'check_table_prefix',
+                 'The default WordPress database prefix is not used',
+                 '<p>The majority of reported WordPress database security attacks were performed by exploiting SQL Injection vulnerabilities.\r\n                        By renaming the WordPress database table prefixes you are securing your WordPress blog and website from zero day SQL injections attacks.</p>\r\n                    <p>Therefore by renaming the WordPress database table prefixes, you are automatically enforcing your WordPress database security against such dangerous attacks because the attacker would not be able to guess the table names.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_tablePrefix, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'check_wp_current_version';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_currentVersion, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 3,
+                 'check_wp_current_version',
+                 'An updated version of WordPress is available: <strong>4.0</strong>',
+                 '<p>The latest WordPress version is usually more stable and secure, and is only released to include new features or fix technical and WordPress security bugs;\r\n                                    making it an important part of your website administration to keep up to date since some fixes might resolve security issues.<p>\r\n                                <p>Running an older WordPress version could put your blog security at risk, allowing a hacker to exploit known vulnerabilities for your specific version and take full control over your web server.</p>',
+                 '<p>It is recommended to update your WordPress installation as soon as possible. More information on updating WordPress manually and automatically\r\n                                    can be found on the official <a href=\"http://codex.wordpress.org/Updating_WordPress\" target=\"_blank\">WordPress site</a>.</p>',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_currentVersion, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'check_index_wp_content';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'check_index_wp_content',
+                 'The <strong>\"index.php\"</strong> file was found in the <strong>\"/wp-content\"</strong> directory',
+                 '<p>A directory listing provides an attacker with the complete index of all the resources located inside of the directory. The specific risks and consequences vary depending on which files are listed and accessible.</p>\r\n                    <p>Therefore, it is important to protect your directories by having an empty index.php or index.htm file inside them.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'check_index_wp_plugins';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'check_index_wp_plugins',
+                 'The <strong>\"index.php\"</strong> file was found in the <strong>\"/wp-content/plugins\"</strong> directory',
+                 '<p>A directory listing provides an attacker with the complete index of all the resources located inside of the directory. The specific risks and consequences vary depending on which files are listed and accessible.</p>\r\n                    <p>Therefore, it is important to protect your directories by having an empty index.php or index.htm file inside them.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'check_index_wp_themes';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'check_index_wp_themes',
+                 'The <strong>\"index.php\"</strong> file was found in the <strong>\"/wp-content/themes\"</strong> directory',
+                 '<p>A directory listing provides an attacker with the complete index of all the resources located inside of the directory. The specific risks and consequences vary depending on which files are listed and accessible.</p>\r\n                    <p>Therefore, it is important to protect your directories by having an empty index.php or index.htm file inside them.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'check_index_wp_uploads';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'check_index_wp_uploads',
+                 'The <strong>\"index.php\"</strong> file was found in the <strong>\"/wp-content/uploads\"</strong> directory',
+                 '<p>A directory listing provides an attacker with the complete index of all the resources located inside of the directory. The specific risks and consequences vary depending on which files are listed and accessible.</p>\r\n                    <p>Therefore, it is important to protect your directories by having an empty index.php or index.htm file inside them.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'check_htaccess_wp_admin';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 2,
+                 'check_htaccess_wp_admin',
+                 'The <strong>\".htaccess\"</strong> file was not found in the <strong>\"wp-admin\"</strong> directory',
+                 '<p>An .htaccess file is a configuration file which provides the ability to specify configuration settings for a specific directory in a website.\r\n                    The .htaccess file can include one or more configuration settings which apply only for the directory in which the .htaccess file has been placed.\r\n                    So while web servers have their own main configuration settings file, the .htaccess file can be used to override their main configuration settings.</p>',
+                 '<p>Please refer to this <a href=\"http://www.acunetix.com/blog/web-security-zone/articles/what-is-an-htaccess-file/\" target=\"_blank\">article</a> for more information on how to create an .htaccess file.</p>',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT alertId FROM Hgt__wsd_plugin_alerts WHERE alertActionName = 'check_readme_wp_root';  made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query INSERT INTO Hgt__wsd_plugin_alerts
+                (`alertType`,
+                `alertSeverity`,
+                `alertActionName`,
+                `alertTitle`,
+                `alertDescription`,
+                `alertSolution`,
+                `alertDate`,
+                `alertFirstSeen`)
+                VALUES
+                (0,
+                 0,
+                 'check_readme_wp_root',
+                 'The <strong>readme.html</strong> file is either empty or not accessible.',
+                 '<p>A default WordPress installation contains a readme.html file.\r\n                                This file is a simple html file that does not contain executable content that can be exploited by hackers or malicious users.\r\n                                Still, this file can provide hackers the version of your WordPress installation, therefore it is important to either delete this file or make it inaccessible for your visitors.</p>',
+                 '',
+                 CURRENT_TIMESTAMP(),
+                 CURRENT_TIMESTAMP()
+                ); made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WsdCheck::check_files, WsdPlugin::alert
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT option_value FROM Hgt_options WHERE option_name = 'dismissed_update_core' LIMIT 1 made by require_once('wp-admin/admin.php'), require('wp-admin/menu.php'), wp_get_update_data, get_core_updates, get_site_option, get_option
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT comment_approved, COUNT( * ) AS num_comments FROM Hgt_comments  GROUP BY comment_approved made by require_once('wp-admin/admin.php'), require('wp-admin/menu.php'), wp_count_comments
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT option_value FROM Hgt_options WHERE option_name = 'w3tc_old_version_single' LIMIT 1 made by require_once('wp-admin/admin.php'), do_action('admin_init'), call_user_func_array, W3_Plugin_DefaultSettings->admin_init, W3_ConfigCompatibility->get_old_version, get_option
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT * FROM Hgt_posts WHERE ID = 2163 LIMIT 1 made by require_once('wp-admin/admin.php'), set_current_screen, WP_Screen::get, get_post, WP_Post::get_instance
+[29-Oct-2014 12:52:53] WordPress database error MySQL server has gone away for query SELECT * FROM Hgt_posts WHERE ID = 2163 LIMIT 1 made by get_post, WP_Post::get_instance
+[27-Dec-2014 02:07:48] WordPress database error Got error 122 from storage engine for query SHOW COLUMNS
+  FROM Hgt_ebd_link
+  LIKE 'selected_id' made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), include_once('/plugins/email-before-download/email-before-download.php')
+[27-Dec-2014 02:07:48] WordPress database error Duplicate column name 'selected_id' for query ALTER TABLE `Hgt_ebd_link` ADD `selected_id` BIGINT NOT NULL ; made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), include_once('/plugins/email-before-download/email-before-download.php')
+[27-Dec-2014 02:07:48] WordPress database error Got error 122 from storage engine for query SHOW COLUMNS
+  FROM Hgt_ebd_link
+  LIKE 'time_requested' made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), include_once('/plugins/email-before-download/email-before-download.php')
+[27-Dec-2014 02:07:48] WordPress database error Duplicate column name 'time_requested' for query ALTER TABLE `Hgt_ebd_link` ADD `time_requested` BIGINT NOT NULL ; made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), include_once('/plugins/email-before-download/email-before-download.php')
+[27-Dec-2014 02:07:48] WordPress database error Got error 122 from storage engine for query SHOW COLUMNS
+  FROM Hgt_ebd_link
+  LIKE 'is_masked' made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), include_once('/plugins/email-before-download/email-before-download.php')
+[27-Dec-2014 02:07:48] WordPress database error Duplicate column name 'is_masked' for query ALTER TABLE `Hgt_ebd_link` ADD `is_masked` VARCHAR(4) NULL DEFAULT NULL; made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), i[07-Apr-2015 00:45:39 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/dfpartne/public_html/wp-includes/post.php on line 1466
+[07-Apr-2015 00:45:46 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/dfpartne/public_html/wp-includes/post.php on line 1466
+[07-Apr-2015 00:46:29 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/dfpartne/public_html/wp-includes/post.php on line 1466
+[07-Apr-2015 00:46:42 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/dfpartne/public_html/wp-includes/post.php on line 1466
+[07-Apr-2015 00:47:09 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/dfpartne/public_html/wp-includes/post.php on line 1466
+[07-Apr-2015 00:48:09 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/dfpartne/public_html/wp-includes/post.php on line 1466
+[07-Apr-2015 00:48:35 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/dfpartne/public_html/wp-includes/post.php on line 1466
+[07-Apr-2015 00:48:50 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/dfpartne/public_html/wp-includes/post.php on line 1466
+[21-Apr-2015 08:07:59 UTC] PHP Warning:  require_once(/home/dfpartne/public_html/wp-content/plugins/mailchimp-for-wp-pro/includes/library/license-manager/class-api-request.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/dfpartne/public_html/wp-content/plugins/mailchimp-for-wp-pro/includes/library/license-manager/class-update-manager.php on line 123
+[21-Apr-2015 08:07:59 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/home/dfpartne/public_html/wp-content/plugins/mailchimp-for-wp-pro/includes/library/license-manager/class-api-request.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dfpartne/public_html/wp-content/plugins/mailchimp-for-wp-pro/includes/library/license-manager/class-update-manager.php on line 123
+[21-Apr-2015 23:28:15 UTC] WordPress database error Duplicate column name 'id' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `id`			BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT  PRIMARY KEY made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[21-Apr-2015 23:28:15 UTC] WordPress database error Duplicate column name 'name' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `name`		VARCHAR(250)	NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[21-Apr-2015 23:28:15 UTC] WordPress database error Duplicate column name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `hash`		VARCHAR(50)		NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[21-Apr-2015 23:28:15 UTC] WordPress database error Duplicate column name 'status' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `status`		INT(11)			NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[21-Apr-2015 23:28:15 UTC] WordPress database error Duplicate column name 'created' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `created`	DATETIME		NOT NULL DEFAULT '0000-00-00 00:00:00' made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[21-Apr-2015 23:28:15 UTC] WordPress database error Duplicate column name 'owner' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `owner`		VARCHAR(60)		NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[21-Apr-2015 23:28:15 UTC] WordPress database error Duplicate column name 'package' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `package`	MEDIUMBLOB		NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[04-May-2015 02:39:35 UTC] WordPress database error Duplicate column name 'id' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `id`			BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT  PRIMARY KEY made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[04-May-2015 02:39:35 UTC] WordPress database error Duplicate column name 'name' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `name`		VARCHAR(250)	NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[04-May-2015 02:39:35 UTC] WordPress database error Duplicate column name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `hash`		VARCHAR(50)		NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[04-May-2015 02:39:35 UTC] WordPress database error Duplicate column name 'status' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `status`		INT(11)			NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[04-May-2015 02:39:35 UTC] WordPress database error Duplicate column name 'created' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `created`	DATETIME		NOT NULL DEFAULT '0000-00-00 00:00:00' made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[04-May-2015 02:39:35 UTC] WordPress database error Duplicate column name 'owner' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `owner`		VARCHAR(60)		NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[04-May-2015 02:39:35 UTC] WordPress database error Duplicate column name 'package' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `package`	MEDIUMBLOB		NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[04-May-2015 02:39:35 UTC] WordPress database error Duplicate key name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD KEY `hash` (`hash`) made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[26-May-2015 05:53:27 UTC] WordPress database error Duplicate column name 'id' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `id`			BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT  PRIMARY KEY made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[26-May-2015 05:53:27 UTC] WordPress database error Duplicate column name 'name' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `name`		VARCHAR(250)	NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[26-May-2015 05:53:27 UTC] WordPress database error Duplicate column name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `hash`		VARCHAR(50)		NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[26-May-2015 05:53:27 UTC] WordPress database error Duplicate column name 'status' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `status`		INT(11)			NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[26-May-2015 05:53:27 UTC] WordPress database error Duplicate column name 'created' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `created`	DATETIME		NOT NULL DEFAULT '0000-00-00 00:00:00' made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[26-May-2015 05:53:27 UTC] WordPress database error Duplicate column name 'owner' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `owner`		VARCHAR(60)		NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[26-May-2015 05:53:27 UTC] WordPress database error Duplicate column name 'package' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `package`	MEDIUMBLOB		NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[26-May-2015 05:53:27 UTC] WordPress database error Duplicate key name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD KEY `hash` (`hash`) made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[31-Jul-2015 00:52:30 UTC] WordPress database error Duplicate column name 'id' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `id`			BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT  PRIMARY KEY made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[31-Jul-2015 00:52:30 UTC] WordPress database error Duplicate column name 'name' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `name`		VARCHAR(250)	NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[31-Jul-2015 00:52:30 UTC] WordPress database error Duplicate column name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `hash`		VARCHAR(50)		NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[31-Jul-2015 00:52:30 UTC] WordPress database error Duplicate column name 'status' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `status`		INT(11)			NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[31-Jul-2015 00:52:30 UTC] WordPress database error Duplicate column name 'created' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `created`	DATETIME		NOT NULL DEFAULT '0000-00-00 00:00:00' made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[31-Jul-2015 00:52:30 UTC] WordPress database error Duplicate column name 'owner' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `owner`		VARCHAR(60)		NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[31-Jul-2015 00:52:30 UTC] WordPress database error Duplicate column name 'package' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `package`	MEDIUMBLOB		NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[31-Jul-2015 00:52:30 UTC] WordPress database error Duplicate key name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD KEY `hash` (`hash`) made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[13-Aug-2015 07:29:16 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 137443729 bytes) in /home/dfpartne/public_html/wp-content/plugins/wp-migrate-db-pro/class/wpmdb.php on line 2449
+[13-Aug-2015 07:46:46 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 137443729 bytes) in /home/dfpartne/public_html/wp-content/plugins/wp-migrate-db-pro/class/wpmdb.php on line 2449
+[13-Aug-2015 07:52:16 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 128833239 bytes) in /home/dfpartne/public_html/wp-content/plugins/wp-migrate-db-pro/class/wpmdb.php on line 2449
+[14-Sep-2015 01:09:30 UTC] WordPress database error Duplicate column name 'id' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `id`			BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT  PRIMARY KEY made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[14-Sep-2015 01:09:30 UTC] WordPress database error Duplicate column name 'name' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `name`		VARCHAR(250)	NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[14-Sep-2015 01:09:30 UTC] WordPress database error Duplicate column name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `hash`		VARCHAR(50)		NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[14-Sep-2015 01:09:30 UTC] WordPress database error Duplicate column name 'status' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `status`		INT(11)			NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[14-Sep-2015 01:09:30 UTC] WordPress database error Duplicate column name 'created' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `created`	DATETIME		NOT NULL DEFAULT '0000-00-00 00:00:00' made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[14-Sep-2015 01:09:30 UTC] WordPress database error Duplicate column name 'owner' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `owner`		VARCHAR(60)		NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[14-Sep-2015 01:09:30 UTC] WordPress database error Duplicate column name 'package' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `package`	MEDIUMBLOB		NOT NULL made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[14-Sep-2015 01:09:30 UTC] WordPress database error Duplicate key name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD KEY `hash` (`hash`) made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[15-Sep-2015 02:51:51 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'glt_deactivate' not found or invalid function name in /home/dfpartne/public_html/wp-includes/plugin.php on line 503
+[18-Sep-2015 04:46:54 UTC] WordPress database error Lost connection to MySQL server during query for query 
+				/*NO_SELECT_FOUND_ROWS*/
+				SELECT
+					SQL_CALC_FOUND_ROWS
+					h.id,
+					h.logger,
+					h.level,
+					h.date,
+					h.message,
+					h.type,
+					h.initiator,
+					h.occasionsID,
+					count(t.repeated) AS subsequentOccasions,
+					t.rep,
+					t.repeated,
+					t.occasionsIDType,
+					c1.value AS context_message_key
+
+				FROM Hgt_simple_history AS h
+
+				LEFT OUTER JOIN Hgt_simple_history_contexts AS c1 ON (c1.history_id = h.id AND c1.key = "_message_key")		
+
+				INNER JOIN (
+					SELECT
+						id,
+						IF(@a=occasionsID,@counter:=@counter+1,@counter:=1) AS rep,
+						IF(@counter=1,@groupby:=@groupby+1,@groupby) AS repeated,
+						@a:=occasionsID occasionsIDType
+					FROM Hgt_simple_history AS h2
+
+					# First/inner where
+					WHERE 
+						1 = 1 AND logger IN ("SimpleCommentsLogger", "SimpleCoreUpdatesLogger", "SimpleExportLogger", "SimpleLegacyLogger", "SimpleLogger", "SimpleMediaLogger", "SimpleMenuLogger", "SimpleOptionsLogger", "SimplePluginLogger", "SimplePostLogger", "SimpleThemeLogger", "SimpleUserLogger", "PluginUserSwitchingLogger", "PluginEnableMediaReplaceLogger") AND id <= 116346
+				# lastdays
+				AND date >= DATE(NOW()) - INTERVAL 7 DAY
+			
+			AND id NOT IN (
+
+				SELECT id
+					# , c1.history_id, c2.history_id
+				FROM Hgt_simple_history AS h
+
+				INNER JOIN Hgt_simple_history_contexts AS c1
+					ON c1.history_id = h.id
+					AND c1.key = "_message_key"
+					AND c1.value IN (
+						"comment_deleted",
+						"pingback_deleted",
+						"trackback_deleted",
+						"anon_comment_added",
+						"anon_pingback_added",
+						"anon_trackback_added"
+					)
+
+				INNER JOIN Hgt_simple_history_contexts AS c2
+					ON c2.history_id = h.id
+					AND c2.key = "comment_approved"
+					AND c2.value = "spam"
+
+				WHERE logger = "SimpleCommentsLogger"
+
+			)
+		
+						
+					ORDER BY id DESC, date DESC
+				) AS t ON t.id = h.id
+
+				WHERE
+					# AND DATE >= DATE(NOW()) - INTERVAL 7 DAY
+					# Outer/Second where
+					1 = 1
+
+				GROUP BY repeated
+				ORDER BY id DESC, date DESC
+				LIMIT 10, 5
+			 made by do_action('wp_ajax_simple_history_api'), call_user_func_array, SimpleHistory->api, SimpleHistoryLogQuery->query
+[18-Sep-2015 14:47:03 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:03 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:47:09 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:09 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:47:13 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:13 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:47:13 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:13 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:47:20 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:20 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:47:23 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:23 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:47:24 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:24 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:47:31 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:31 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:47:33 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:33 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:47:39 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:39 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:47:54 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:47:54 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:48:09 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:48:09 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:49:00 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:49:00 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:49:40 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:49:40 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:49:55 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:49:55 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:50:10 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:50:10 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 04:51:14 UTC] WordPress database error Lost connection to MySQL server during query for query SELECT option_value FROM Hgt_options WHERE option_name = '_transient_timeout_yoast_notifications' LIMIT 1 made by do_action('admin_init'), call_user_func_array, load_yoast_notifications, Yoast_Notification_Center::get, Yoast_Notification_Center->__construct, Yoast_Notification_Center->get_notifications_from_transient, get_transient, get_option
+[18-Sep-2015 14:51:44 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:51:44 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:53:59 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:53:59 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:57:28 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:57:28 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:58:27 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:58:27 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 14:59:46 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 14:59:46 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 15:00:17 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 15:00:17 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 15:03:16 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 15:03:16 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 15:03:55 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 15:03:55 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 15:04:22 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 15:04:22 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[18-Sep-2015 15:13:07 Australia/Sydney] PHP Warning:  [eAccelerator] Can not create shared memory area in Unknown on line 0
+[18-Sep-2015 15:13:07 Australia/Sydney] PHP Fatal error:  Unable to start eAccelerator module in Unknown on line 0
+[16-Oct-2015 01:25:50 UTC] WordPress database error Duplicate column name 'id' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `id`			BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT  PRIMARY KEY made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[16-Oct-2015 01:25:50 UTC] WordPress database error Duplicate column name 'name' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `name`		VARCHAR(250)	NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[16-Oct-2015 01:25:50 UTC] WordPress database error Duplicate column name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `hash`		VARCHAR(50)		NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[16-Oct-2015 01:25:50 UTC] WordPress database error Duplicate column name 'status' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `status`		INT(11)			NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[16-Oct-2015 01:25:50 UTC] WordPress database error Duplicate column name 'created' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `created`	DATETIME		NOT NULL DEFAULT '0000-00-00 00:00:00' made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[16-Oct-2015 01:25:50 UTC] WordPress database error Duplicate column name 'owner' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `owner`		VARCHAR(60)		NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[16-Oct-2015 01:25:50 UTC] WordPress database error Duplicate column name 'package' for query ALTER TABLE Hgt_duplicator_packages ADD COLUMN `package`	MEDIUMBLOB		NOT NULL made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[16-Oct-2015 01:25:50 UTC] WordPress database error Duplicate key name 'hash' for query ALTER TABLE Hgt_duplicator_packages ADD KEY `hash` (`hash`) made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, duplicator_update, duplicator_activate, dbDelta
+[16-Oct-2015 01:55:09 UTC] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for /home/dfpartne/public_html/wp-content/uploads/2013/10/David-Hume-150x150.jpg in /home/dfpartne/public_html/wp-content/plugins/wp-smushit/lib/class-wp-smush.php on line 105
+[16-Oct-2015 02:00:42 UTC] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for /home/dfpartne/public_html/wp-content/uploads/2013/10/David-Hume-150x150.jpg in /home/dfpartne/public_html/wp-content/plugins/wp-smushit/lib/class-wp-smush.php on line 105
+[03-Nov-2015 20:35:08 UTC] WordPress database error Lost connection to MySQL server during query for query SELECT option_value FROM Hgt_options WHERE option_name = 'qtranslate_flag_location' LIMIT 1 made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, qtranxf_init_language, qtranxf_loadConfig, qtranxf_load_option_flag_location, get_option
+[04-Nov-2015 21:20:02 Australia/Sydney] PHP Fatal error:  Call to undefined function apply_filters() in /home/dfpartne/public_html/wp-admin/menu-header.php on line 37
+[04-Nov-2015 21:20:07 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/dfpartne/public_html/wp-admin/upgrade-functions.php on line 11
+[04-Nov-2015 21:20:12 Australia/Sydney] PHP Fatal error:  Call to undefined function wp_reset_vars() in /home/dfpartne/public_html/wp-admin/options-head.php on line 11
+[04-Nov-2015 21:20:20 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/dfpartne/public_html/wp-admin/admin-functions.php on line 12
+[04-Nov-2015 21:20:31 Australia/Sydney] PHP Fatal error:  Call to undefined function __() in /home/dfpartne/public_html/wp-admin/menu.php on line 23
+[17-Nov-2015 04:34:10 UTC] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/dfpartne/public_html/wp-content/plugins/wp-super-cache/wp-cache.php on line 3085
+[17-Nov-2015 04:34:10 UTC] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/dfpartne/public_html/wp-content/plugins/wp-super-cache/wp-cache.php on line 3087
+[17-Nov-2015 04:43:08 UTC] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/dfpartne/public_html/wp-content/plugins/wp-super-cache/wp-cache.php on line 3085
+[17-Nov-2015 04:43:08 UTC] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/dfpartne/public_html/wp-content/plugins/wp-super-cache/wp-cache.php on line 3087
+[20-Nov-2015 02:25:38 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 02:25:39 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 02:25:47 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:20:16 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:20:17 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:20:26 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:20:27 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:20:37 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:20:37 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:20:46 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:20:47 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:20:55 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:20:55 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:20:57 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:20:57 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:21:07 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:21:07 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:21:17 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:21:17 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:21:26 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:21:26 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:21:30 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:21:31 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:21:46 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:21:52 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:22:54 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:22:54 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:24:54 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:24:54 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:26:48 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[20-Nov-2015 08:26:48 UTC] PHP Notice:  ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer zlib output compression in /home/dfpartne/public_html/wp-includes/functions.php on line 3297
+[20-Nov-2015 08:27:39 UTC] PHP Notice:  The called constructor method for WP_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /home/dfpartne/public_html/wp-includes/functions.php on line 3457
+[04-Dec-2015 05:56:21 UTC] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/dfpartne/public_html/wp-content/plugins/wp-super-cache/wp-cache.php on line 3085
+[04-Dec-2015 05:56:21 UTC] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/dfpartne/public_html/wp-content/plugins/wp-super-cache/wp-cache.php on line 3087
+[09-Dec-2015 21:56:12 UTC] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/dfpartne/public_html/wp-content/plugins/wp-super-cache/wp-cache.php on line 3085
+[09-Dec-2015 21:56:12 UTC] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/dfpartne/public_html/wp-content/plugins/wp-super-cache/wp-cache.php on line 3087

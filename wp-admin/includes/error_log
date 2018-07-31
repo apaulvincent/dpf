@@ -1,0 +1,36 @@
+[04-Nov-2015 21:19:14 Australia/Sydney] PHP Warning:  require_once(ABSPATHwp-admin/includes/admin.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/dfpartne/public_html/wp-admin/includes/upgrade.php on line 16
+[04-Nov-2015 21:19:14 Australia/Sydney] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHwp-admin/includes/admin.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dfpartne/public_html/wp-admin/includes/upgrade.php on line 16
+[04-Nov-2015 21:19:18 Australia/Sydney] PHP Fatal error:  Call to undefined function __() in /home/dfpartne/public_html/wp-admin/includes/file.php on line 13
+[04-Nov-2015 21:19:19 Australia/Sydney] PHP Fatal error:  Class 'Walker' not found in /home/dfpartne/public_html/wp-admin/includes/template.php on line 24
+[04-Nov-2015 21:19:20 Australia/Sydney] PHP Fatal error:  Class 'WP_Filesystem_Base' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-filesystem-ftpsockets.php on line 17
+[04-Nov-2015 21:19:21 Australia/Sydney] PHP Fatal error:  Class 'WP_Filesystem_Base' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 17
+[04-Nov-2015 21:19:21 Australia/Sydney] PHP Fatal error:  Class 'WP_Filesystem_Base' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-filesystem-direct.php on line 17
+[04-Nov-2015 21:19:22 Australia/Sydney] PHP Fatal error:  Class 'ftp_base' not found in /home/dfpartne/public_html/wp-admin/includes/class-ftp-sockets.php on line 28
+[04-Nov-2015 21:19:23 Australia/Sydney] PHP Fatal error:  Class 'ftp_base' not found in /home/dfpartne/public_html/wp-admin/includes/class-ftp-pure.php on line 28
+[04-Nov-2015 21:19:25 Australia/Sydney] PHP Fatal error:  Class 'WP_Filesystem_Base' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-filesystem-ssh2.php on line 36
+[04-Nov-2015 21:19:28 Australia/Sydney] PHP Warning:  require(ABSPATHwp-admin/includes/class-wp-upgrader-skins.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/dfpartne/public_html/wp-admin/includes/class-wp-upgrader.php on line 14
+[04-Nov-2015 21:19:28 Australia/Sydney] PHP Warning:  require(ABSPATHwp-admin/includes/class-wp-upgrader-skins.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/dfpartne/public_html/wp-admin/includes/class-wp-upgrader.php on line 14
+[04-Nov-2015 21:19:28 Australia/Sydney] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHwp-admin/includes/class-wp-upgrader-skins.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dfpartne/public_html/wp-admin/includes/class-wp-upgrader.php on line 14
+[04-Nov-2015 21:19:30 Australia/Sydney] PHP Fatal error:  Class 'Walker_Nav_Menu' not found in /home/dfpartne/public_html/wp-admin/includes/nav-menu.php on line 10
+[04-Nov-2015 21:19:33 Australia/Sydney] PHP Fatal error:  Call to a member function get_charset_collate() on a non-object in /home/dfpartne/public_html/wp-admin/includes/schema.php on line 23
+[04-Nov-2015 21:19:35 Australia/Sydney] PHP Fatal error:  Call to undefined function load_textdomain() in /home/dfpartne/public_html/wp-admin/includes/admin.php on line 15
+[04-Nov-2015 21:19:37 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-comments-list-table.php on line 18
+[04-Nov-2015 21:19:39 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-plugins-list-table.php on line 10
+[04-Nov-2015 21:19:40 Australia/Sydney] PHP Fatal error:  Call to undefined function __() in /home/dfpartne/public_html/wp-admin/includes/continents-cities.php on line 7
+[04-Nov-2015 21:19:41 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-posts-list-table.php on line 10
+[04-Nov-2015 21:19:42 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-plugin-install-list-table.php on line 10
+[04-Nov-2015 21:19:43 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/list-table.php on line 88
+[04-Nov-2015 21:19:44 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-themes-list-table.php on line 10
+[04-Nov-2015 21:19:44 Australia/Sydney] PHP Fatal error:  Class 'WP_Themes_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-theme-install-list-table.php on line 10
+[04-Nov-2015 21:19:45 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-terms-list-table.php on line 10
+[04-Nov-2015 21:19:46 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-ms-themes-list-table.php on line 10
+[04-Nov-2015 21:19:46 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-ms-sites-list-table.php on line 10
+[04-Nov-2015 21:19:47 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-media-list-table.php on line 10
+[04-Nov-2015 21:19:48 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-links-list-table.php on line 10
+[04-Nov-2015 21:19:49 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-ms-users-list-table.php on line 10
+[04-Nov-2015 21:19:50 Australia/Sydney] PHP Fatal error:  Class 'WP_List_Table' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-users-list-table.php on line 11
+[04-Nov-2015 21:19:51 Australia/Sydney] PHP Fatal error:  Call to undefined function is_network_admin() in /home/dfpartne/public_html/wp-admin/includes/menu.php on line 9
+[04-Nov-2015 21:22:22 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/dfpartne/public_html/wp-admin/includes/ms-admin-filters.php on line 11
+[04-Nov-2015 21:22:23 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/dfpartne/public_html/wp-admin/includes/class-wp-site-icon.php on line 68
+[04-Nov-2015 21:22:24 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/dfpartne/public_html/wp-admin/includes/admin-filters.php on line 12
+[08-Dec-2015 16:27:06 Australia/Sydney] PHP Fatal error:  Class 'WP_Filesystem_Base' not found in /home/dfpartne/public_html/wp-admin/includes/class-wp-filesystem-ssh2.php on line 36

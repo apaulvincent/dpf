@@ -5,19 +5,6 @@ require_once('inc/Content.php');
 
 include_once('inc/walkers/walkers.php');
 
-function wpcf7_dynamic_to_filter_example($recipient, $args=array()) {
-  if (isset($args['location'])) {
-    if ($args['location'] == 'Australia	') {
-      $recipient = 'dbjoaquin@gmail.com';
-    } elseif ($args['location'] == 'New Zealand') {
-      $recipient = 'djoaquin@drumbeat.net.au';
-    } elseif ($args['location'] == 'Cambodia') {
-      $recipient = 'djoaquin@drumbeat.net.au';
-    }
-  }
-  return $recipient;
-} // end function wpcf7_dynamic_to_filter_example
-add_filter('wpcf7-dynamic-recipient-example-filter', 'wpcf7_dynamic_to_filter_example', 10, 2);
 
 
 //to fix WP's admin double login bug
@@ -31,28 +18,6 @@ add_filter('show_admin_bar', '__return_false');
 //add excerpts to pages
 add_post_type_support( 'page', 'excerpt' );
 
-/**
- * Hide editor on specific pages.
- *
- */
-add_action( 'admin_init', 'hide_editor' );
-function hide_editor() {
-  
-  // Get the Post ID.
-  if(isset($_GET['post'])){
-     $posttype = get_post_type($_GET['post']);
-  }elseif(isset($_GET['post_type']) ){
-    $posttype = $_GET['post_type'];
-  }else{
-    $posttype = '';
-  }
-
-  // Hide the editor on all pages
-  if($posttype == 'page' ){ //
-    remove_post_type_support('page', 'editor');
-  }
-
-}
 
 // Excerpts
 function excerpt($text, $limit) {
