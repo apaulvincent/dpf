@@ -57,16 +57,6 @@ import {debounce} from './helpers';
 
 
 
-		$('.site-header').on('mouseleave', function(){
-
-			$('body').removeClass('menu-drawer-on');
-
-		});
-
-
-
-
-
 		$('.mobile-main-nav-toggle').on('click', function(e){
 
 			e.preventDefault();

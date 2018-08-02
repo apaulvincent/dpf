@@ -1,32 +1,7 @@
-<div class="sub-nav-drawer d-none d-xl-block">
-    <div class="sub-nav-drawer-inner">
-        <div class="container sub-menu-list">
-            
-                <?php 
-                    wp_nav_menu(
-                        array(  'menu' => 'Main Navigation',
-                                'menu_class' => '',
-                                'container' => '',
-                                'container_class' => '',
-                                'before' => '',
-                                'after' => '',
-                                'link_before' => '',
-                                'link_after' => '',
-                                'items_wrap' => '%3$s',
-                                'walker' => new Linfox_Walker_Main_Menu()
-                            )
-                    );
-                ?>
-        
-        </div>
-    </div>
-</div>
-
-
-<div id="mobile-main-nav-drawer" class="mobile-main-nav-drawer d-xl-none">
+<div id="mobile-main-nav-drawer" class="mobile-main-nav-drawer">
 	<?php
 		wp_nav_menu(array(
-			'menu' => 'Main Navigation',
+			'menu' => 'Main Menu',
 			'menu_class' => 'menu-inner',
 			'container' => '',
 			'container_class' => '',

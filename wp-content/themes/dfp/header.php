@@ -5,30 +5,28 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<title>Blog Template for Bootstrap</title>
 <?php wp_head(); ?>
 
+<?php if (is_page('contact')): ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB96rt6dlY8Gp_GFprNH5ug__wnownAQHs"></script>
+<?php endif ?>
 
 
 </head>
 
 <body <?php body_class(); ?>>
+
 <?php
-/*
-do the essential prep
-*/
-global $DB_Base;
-global $DB_Helpers;
-global $DB_Content;
 
-$page_id  = get_queried_object_id();
-if(!$page_id) return;//this should never happen
+$pid  = get_queried_object_id();
 
-$page_config['ID'] = $page_id; //just so we don't need to re-request it, and to make it easy to access
+if( !$pid ) return;
+
+$page_config['ID'] = $pid;
 $page_config['page'] = get_queried_object();
-$page_config['meta'] = get_fields($page_id);
+$page_config['meta'] = get_fields($pid);
 
 // echo '<pre>';
 // print_r($page_config['meta']);
@@ -37,8 +35,6 @@ $page_config['meta'] = get_fields($page_id);
 ?>
 
 <div id="site-wrap" class="site-wrap">
-
-	<?php echo $DB_Content->get_section_spacer('125', array('d-xl-none')); ?> 
 
 	<header class="site-header">
 
@@ -60,16 +56,9 @@ $page_config['meta'] = get_fields($page_id);
 							</a>
 
 							<div class="float-right">
-								<div  class="site-controls d-none d-xl-block">
-									<div class="social float-left">
-										<?php include(locate_template('partials/common/socials.php')); ?>
-									</div>
-									<ul class="site-info float-right">
-										<li><a href="mailto:<?php  echo get_field('email_address', 'option'); ?>"><i class="fas fa-envelope"></i><?php  echo get_field('email_address', 'option'); ?></a></li>
-										<li><a href="tel:<?php  echo get_field('phone_number', 'option'); ?>"><i class="fas fa-phone"></i><?php  echo get_field('phone_number', 'option'); ?></a></li>
-									</ul>
-								</div>
+
 								<?php include(locate_template('partials/common/header-mainnav.php')); ?>
+
 							</div>
 
 						</div>
@@ -77,23 +66,15 @@ $page_config['meta'] = get_fields($page_id);
 				</div>
 			</div>
 		</div>
-		
-		<?php include(locate_template('partials/common/header-subnav.php')); ?>
-
-		
 	</header><!-- #masthead -->
+
+	<?php include(locate_template('partials/common/header-subnav.php')); ?>
+
 
 	<button class="btn btn-full d-xl-none call-btn">
 		<i class="fas fa-phone"></i> DFP
 	</button>
 
 	<?php include(locate_template('partials/common/header-banner.php')); ?>
-
-	<?php 
-		if( $page_config['meta']['show_breadcrumb'] == '1'):
-			include(locate_template('partials/common/header-breadcrumbs.php'));
-		endif; 
-	?>
-
 
 

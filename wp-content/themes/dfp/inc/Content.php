@@ -1,253 +1,15 @@
 <?php
-/*
-reusableblock : Reusable Block
-fulltexttitle : Full-width Title and Text
-herobanner : Hero Banner
-textandcounters : Text and Counters
-slider : Slider
-3blocksfeatpost : 3 Featured Post Blocks
-2blocksfeatpost : 2 Featured Post Blocks
-2blocksimgtext : 2 Image & Text Blocks
-2blockstext : 2 Blocks Text
-countryblocks : Countries Blocks
-*/
 
- 
- class DB_Content extends DB_Base{
+
+class DB_Content extends DB_Base{
  	
-	//variables
-	//private $class_directory = '';
-	public $taxonomy_display_attributes = array(
-			'taxonomy' => 'post_tag',
-			'orderby' => 'name',
-			'order' => 'ASC',
-			'number' => 0,
-			'hide_empty' => 0,
-
-			'--filter-type' => 'term',//defies whether we are calling for terms a based on a term filter or post filter
-			'--format' => 'cloud',
-			'--container-class' => 'tax-display-container',
-			'--child-class' => 'btn btn-default btn-s',
-		);
-	
-	//magic function, called on creation
-	public function __construct(){
-		//add_shortcode( 'callout-block', array($this, 'prepare_callout_block_from_id'));
-		add_shortcode( 'taxonomy-display', array($this, 'generate_taxonomy_display') );
-	}
-
-
-	
-//======================THE MAIN ONES====================//
-function get_page_content(){
-
-	global $post;
-
-	$site_config = get_fields($post->ID);
-
-	/*
-		define the stucture - do we have a sidebar
-		get the content, loop thru it and generate all the blocks
-	*/
-		$html = '<div id="main" class="main">';//set up main container
-		
-		// SHOW | HIDE SIDEBAR
-		if($site_config['has_sidebar'] == 1):
-			$html .= '<div class="container">';
-			$html .= '<div class="row">';
-			$html .= '<div class="col-xs-12 col-md-12 col-lg-9">';
-		endif;
-		
-		
-		if(isset($site_config['content-row']) && !empty($site_config['content-row'])):
-
-			foreach($site_config['content-row'] as $section_key => $row):
-
-				if(empty($row)) continue;		
-
-				$section_visibility = '';
-
-				// LOOP THROUGH ROWS
-				foreach($row as $row_key => $column):
-
-					// SET VISIBILY CLASSES
-					if(  $row_key =='section_visibility') {
-						$section_visibility = $this->get_visbility_classes($column);
-					}
-
-					if( empty($column) || $row_key != 'content-column' ) continue;	
-
-					$html .= '<section class="content-block '.$row['section_class'].' '. $section_visibility .'">';
-
-					if( is_front_page() ):
-						$html .= '<div class="fluid-wrapper">';
-						$html .= '<div class="row no-gutters">';
-					else:
-						$html .= ($site_config['has_sidebar'] == 1) ? '' : '<div class="container">';
-						$html .= '<div class="row">';
-					endif;
-
-					// LOOP THROUGH COLUMNS
-					foreach($column as $col_key => $col):
-
-						if($col['content_type'] == 'reusable-content'):
-
-							// get the data for the reusable content and pass it to the $column array. 
-							// that way we get the required content details, including content-type, 
-							// but keep the classes etc assigned to the page column
-
-							$reusable_content_fields = array();
-							
-							foreach($col['reusable_content'] as $reusable_key => $reusable):
-
-								$ID = $reusable->ID;
-								$reusable_content_fields['reusable'][ $reusable_key ] = get_fields($ID);
-
-								$col = array_merge($col, $reusable_content_fields);
-								
-							endforeach;
-							
-						endif;
-
-						//define col container grid classes
-						switch($col['col_width']){
-							case '2':
-								$col_grid_class  = 'col-xs-12 col-md-12 col-lg-2';
-							break;
-							case '3':
-								$col_grid_class  = 'col-xs-12 col-md-12 col-lg-3';
-							break;
-							case '4':
-								$col_grid_class  = 'col-xs-12 col-md-12 col-lg-4';
-							break;
-							case '6':
-								$col_grid_class  = 'col-xs-12 col-md-12 col-lg-6';
-							break;
-							case '8':
-								$col_grid_class  = 'col-xs-12 col-md-12 col-lg-8';
-							break;
-							case '9':
-								$col_grid_class  = 'col-xs-12 col-md-12 col-lg-9';
-							break;
-							case '12':
-								$col_grid_class  = 'col-xs-12 col-md-12 col-lg-12';
-							break;
-						}
-
-						//assign any col container classes
-						(!empty($col['additional_classes'])) ? $col_classes = $col['additional_classes'] : $col_classes = '';
-
-						// SET VISIBILY CLASSES
-						$column_visibility = $this->get_visbility_classes($col['column_visibility']);
-
-						$html .= '<div class=" '.$col_grid_class.' '.$col_classes.' '.$col['content_type'].' '. $column_visibility .'">';
-						$html .= '<div class="block-item">';
-						$html .= $this->pass_file_to_var('partials/content/'.$col['content_type'].'.php', $col);
-						$html .= '</div>';
-						$html .= '</div>';
-
-					endforeach;
-
-					$html .= '</div>';
-
-					if( !is_front_page() ):
-						$html .= ($site_config['has_sidebar'] == 1) ? '' : '</div>';
-					endif;
-
-					$html .= '</section>';
-				endforeach;
-
-			endforeach;
-
-		endif;
-
-		// SHOW | HIDE SIDEBAR
-		if($site_config['has_sidebar'] == 1):
-
-			$html .= '</div>';
-			$html .= '<div class="col-xs-12 col-md-12 col-lg-3">';
-			$html .= '<div class="sidebar">'.$this->get_sidebar_content().'</div>';
-			$html .= '</div>';
-			$html .= '</div>';
-			$html .= '</div>';
-
-		endif;
-
-		$html .= '</div>'; // END MAIN
-
-		echo $html;
+//magic function, called on creation
+public function __construct(){
 
 }
 
 
-function get_sidebar_content(){
-
-	global $post;
-	$site_config = get_field('sidebar_content', $post->ID);
-
-	$html = '';
-	
-	if(!empty($site_config)):
-
-		foreach($site_config as $col):
-			
-			if($col['content_type'] == 'reusable-content'):
-
-				$reusable_content_fields = array();
-				
-				foreach($col['reusable_content'] as $reusable_key => $reusable):
-
-					$ID = $reusable->ID;
-					$reusable_content_fields['reusable'][ $reusable_key ] = get_fields($ID);
-
-					$col = array_merge($col, $reusable_content_fields);
-
-				endforeach;
-
-			endif;
-
-			//assign any col container classes
-			(!empty($col['additional_classes'])) ? $col_classes = $col['additional_classes'] : $col_classes = '';
-
-			// SET VISIBILY CLASSES
-			$column_visibility = $this->get_visbility_classes($col['column_visibility']);
-
-
-			$html .= '<div class="sidebar-block '.$col['content_type'].' '.$col_classes.'  '. $column_visibility .'">';
-			$html .= $this->pass_file_to_var('partials/content/'.$col['content_type'].'.php', $col);
-			$html .= '</div>';
-
-		endforeach;
-
-	endif;
-
-	return $html;
-	
-}
-
-function get_reusable_content($reusable_content){
-	/*
-		get the post & meta
-	*/
-
-	$content_type = $reusable_content['content_type'];
-
-	$html = $this->pass_file_to_var('partials/content/'.$content_type.'.php', $reusable_content);
-
-	return $html;
-
-}
-
-function pass_file_to_var($file, $var = array()){
-	extract($var);
-	ob_start();
-	include(locate_template($file)); 
-	return ob_get_clean();
-}
-
-
-
-function get_visbility_classes($class){
+public function get_visbility_classes($class){
 	
 
 	if($class == 'xl'){
@@ -287,8 +49,6 @@ function get_visbility_classes($class){
 	return '';
 
 }
-
-
 
 //==============COMMONS AND HELPERS======================//
 public function get_page_breadcrumb(){
@@ -433,22 +193,6 @@ public function get_article_tile($post, $display_rules = array() ){
 
 }
 
-// Add Shortcode
-function generate_taxonomy_display( $atts ) {
-	/*
-	returns tags, categories for any post type in a range of display formats
-	*/
-	// Attributes
-	// att query options here: https://developer.wordpress.org/reference/classes/wp_term_query/__construct/
-	$atts = shortcode_atts(
-		$this->taxonomy_display_attributes,
-		$atts,
-		'taxonomy-display'
-	);
-
-	return $this->get_taxonomy_display($atts);
-
-}
 
 //===========================================
 public function get_taxonomy_display($atts){
@@ -504,29 +248,6 @@ public function get_taxonomy_display($atts){
 
 		return $html;
 	}
-
-//===========================================
-	/*public function prepare_callout_block_from_id($atts){
-
-		//used by the shortcode to return the content
-
-        global $Content;
-
-        $atts = shortcode_atts(
-		array(
-			'id' => '',
-		), $atts
-	);
-
-		$data = $this->get_callout_blocks(array('callout_block_id' => $atts['id']));
-
-        if(empty($data)){
-        	return;
-        }else{
-        	return $this->get_callout_block( $data[0] );
-        } 
-    }
-    */
 
  }//end class
 

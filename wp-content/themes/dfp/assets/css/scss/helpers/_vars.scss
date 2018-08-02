@@ -2,39 +2,20 @@
    // Vars
 // ======================================================================
 
-
-
 // Colors
 
-$brand-w: #ffffff;
-$brand-b: #000000;
+$brand-1: #029bff;  $tint-1: $brand-1;
+$brand-2: #0066cb;  $tint-2: $brand-2;
+$brand-3: #003399;  $tint-3: $brand-3;
+$brand-4: #9900cc;  $tint-4: $brand-4;
+$brand-5: #6600cd;  $tint-5: $brand-5;
+$brand-6: #616161;  $tint-6: $brand-6;
+$brand-7: #e0e0e0;  $tint-7: $brand-7;
+$brand-8: #eeeeee;  $tint-8: $brand-8;
+$brand-9: #f5f5f5;  $tint-9: $brand-9;
 
-$brand-1: #568c20;
-$brand-2: #3c6a3b;
-$brand-3: #9b4124;
-$brand-4: #111111;
-$brand-5: #212121;
-$brand-6: #616161;
-$brand-7: #e0e0e0;
-$brand-8: #eeeeee;
-$brand-9: #f5f5f5;
-
-$tint-w: #ffffff;
-$tint-b: #000000;
-
-$tint-1: $brand-1;
-$tint-2: $brand-2;
-$tint-3: $brand-3;
-$tint-4: $brand-4;
-$tint-5: $brand-5;
-$tint-6: $brand-6;
-$tint-7: $brand-7;
-$tint-8: $brand-8;
-$tint-9: $brand-9;
-
-$tint-1-hover: $tint-4;
-$tint-2-hover: $tint-6;
-
+$brand-w: #ffffff; $tint-w: $brand-w;
+$brand-b: #000000; $tint-b: $brand-b;
 
 $brand-info: #8eb4cb;
 $brand-success: #2ab27b;
@@ -75,9 +56,6 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
-
-
-
 
 
 

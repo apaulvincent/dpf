@@ -1,128 +1,3 @@
-.main-menu {
-    padding: 15px 0 0;
-    margin: 20px 0 0;
-    border-top: 1px solid $tint-6;
-    clear: both;
-
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-
-        & > li {
-            display: inline-block;
-            margin: 0 0 0 40px;
-            padding: 5px 0;
-
-            &:first-child {
-                margin: 0;
-            }
-
-            &.current-menu-item {
-                a {
-                    color: $brand-1;
-                }
-            }
-
-            a {
-                font-size: 14px;
-                color: $brand-w;
-                display: inline-block;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-
-            &:hover .sub-menu {
-                visibility: visible;
-                @include opacity(1);
-
-            }
-
-            &.menu-item-has-children {
-
-                &:hover {
-                    // border-bottom: 2px solid $tint-2;
-                }
-
-            }
-
-            & > .sub-menu {
-                display: none;
-            }
-
-        }
-
-    }
-
-}
-
-
-.sub-nav-drawer {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    height: auto;
-    // background: rgba(17, 17, 17, 0.8); // $tint-4;
-    background: $tint-4;
-    color: $brand-w;
-    z-index: 8;
-    visibility: hidden;
-    @include opacity(0);
-    @include transition(0.4s all ease);
-    @include transform(translateY(10px));
-
-    .sub-nav-drawer-inner {
-        padding: 30px 0;
-    }
-
-     ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .sub-menu-list > .row.hidden {
-        display: none;
-    }
-
-    .sub-menu-list {
-
-        .sub-menu-item {
-            width: 49%;
-            display: inline-block;
-        }
-
-        .sub-menu a {
-            position: relative;
-            color: $brand-w;
-            font-family: $font-regular;
-            display: inline-block;
-            text-decoration: none;
-            text-transform: uppercase;
-            margin: 6px 0;
-
-            &:after {
-                content: '';
-                width: 60%;
-                height: 2px;
-                display: block;
-                background: transparent;
-            }
-            
-            &:hover {
-                &:after{
-                    background: $brand-1;
-                }
-            }
-        }
-    }
-}
-
-
-
 // SEARCH DRAWER STYLES
 
 .search-drawer-toggle {
@@ -218,18 +93,21 @@
 
 
 .mobile-main-nav-drawer {
-    position: absolute;
-    width: 100%;
-    left: 0;
+    position: fixed;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    left: auto;
     right: 0;
-    height: auto;
-    background: $tint-4;
+    height: 100%;
+    background: $tint-b;
     z-index: 9;
+    overflow: auto;
     @include transition(0.4s all ease);
-    @include transform(translateY(-100%));
+    @include transform(translateX(100%));
 
     .menu-inner {
-        padding: 0;
+        padding: 100px 0 0;
         margin: 0;
         list-style-type: none;
 
@@ -316,14 +194,8 @@ body {
 
     &.menu-drawer-on {
 
-        .sub-nav-drawer {
-            visibility: visible;
-            @include opacity(1);
-            @include transform(translateY(0));
-        }
-
         .mobile-main-nav-drawer {
-            @include transform(translateY(0));
+            @include transform(translateX(0));
         }
 
     }

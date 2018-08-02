@@ -5,241 +5,37 @@
  */
  
  class DB_Base{
- 	
-	//variables
-	private $class_directory = '';
-	private $root_directory = '';
-	private $active_theme_uri = '';
 
-	public $custom_image_size_arr = array(
-		'banner_sm' => array(400, 100, false, 'Small Standard Banner'),
-		'banner_md' => array(800, 200, false, 'Medium Standard Banner'),
-		'banner_lg' => array(2000, 688, false, 'Large Standard Banner'),
 
-		'portrait_sm' => array(150, 300, false, 'Small Portrait'),
-		'portrait_md' => array(300, 600, false, 'Medium Portrait'),
-		'portrait_lg' => array(600, 1200, false, 'Large Portrait'),
-
-		'square_sm' => array(300, 300, false, 'Small Square'),
-		'square_md' => array(600, 600, false, 'Medium Square'),
-		'square_lg' => array(1200, 1200, false, 'Large Square'),
-
-	);
-
-	public $site_page_uris = array();
-
-	
 	//magic function, called on creation
 	public function __construct(){
 
-		$this->set_root_directory_value();//set the site root directory
-		$this->set_class_directory_value(); //set the directory url on creation
-		$this->set_parent_theme_uri_value(); //set the parent theme url on creation
-		$this->set_active_theme_uri_value(); //set the child theme url on creation
-
-		$this->run_acf_tweaks();
+		$this->acf_site_options();
 
 		add_action('wp_enqueue_scripts', array($this,'enqueue_public_scripts_and_styles')); //enqueue public facing elements
 		add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts_and_styles')); //enqueues admin elements
-
-
 		add_action( 'after_setup_theme', array($this, 'register_menus') );
-
-		add_action( 'init', array($this, 'create_reusable_content_post_type' ));
-		add_action( 'init', array($this, 'create_page_taxonomy' ));
-
-		add_action( 'init', array($this, 'assign_tags_to_post_types' ));
-
-		// Register the image sizes for use in Add Media modal
-		add_action( 'init', array($this, 'set_custom_image_sizes'));
-		add_filter( 'image_size_names_choose', array($this, 'list_custom_image_sizes') );
-
-		add_action( 'after_setup_theme', array($this, 'wpdocs_after_setup_theme') );
-		add_action( 'pre_get_posts', array($this, 'customise_site_search') );
-
-		//add custom columns in Admin
-		add_filter ( 'manage_download_posts_columns', array($this, 'add_cpt_download_columns') );
-		add_action ( 'manage_download_posts_custom_column', array($this, 'write_cpt_custom_column'), 10, 2 );
-	}
-
-/*
- * Add columns to ebp_offer post list
- */
- public function add_cpt_download_columns ( $columns ) {
-   return array_merge ( $columns, array ( 
-     'post_excerpt' => __ ( 'Excerpt' ),
-   ) );
- }
-
-
-  /*
- * Add custom columns to post list
- */
- public function write_cpt_custom_column ( $column, $post_id ) {
-   switch ( $column ) {
-       case 'post_excerpt':
-       	echo get_the_excerpt($post_id );
-       break;
-
-   }
- }
-
-	public function register_menus(){
-		add_theme_support( 'menus' );
-		register_nav_menu( 'primary_menu', __( 'Main Menu', 'linfox' ) );
-		register_nav_menu( 'primary_menu_mobile', __( 'Main Menu Mobile', 'linfox' ) );
-		register_nav_menu( 'top_menu', __( 'Top Menu', 'linfox' ) );
-		register_nav_menu( 'top_menu_mobile', __( 'Top Menu Mobile', 'linfox' ) );
-		register_nav_menu( 'footer1', __( 'Footer 1', 'linfox' ) );
-		register_nav_menu( 'footer2', __( 'Footer 2', 'linfox' ) );
 	}
 
 
 
-public function customise_site_search( $search_query ) {
-
-    if ( !is_admin() && $search_query->is_main_query() && $search_query->is_search ) {
-
-    	$search_query->set('post_type', array('article', 'page') );   
-	}
-
+public function register_menus(){
+	add_theme_support( 'menus' );
+	register_nav_menu( 'main_menu', __( 'Main Menu', 'DFP' ) );
+	register_nav_menu( 'footer1', __( 'Footer 1', 'DFP' ) );
+	register_nav_menu( 'footer2', __( 'Footer 2', 'DFP' ) );
+	register_nav_menu( 'footer3', __( 'Footer 3', 'DFP' ) );
 }
 
 
-public function wpdocs_after_setup_theme() {
-    add_theme_support( 'html5', array( 'search-form' ) );
-    add_theme_support( 'post-thumbnails' );
-}
-
-
-
-public function assign_tags_to_post_types(){
-
-	//assigns tags to articles, products. the idea is for them to share the tags
-	return;
-	
-	register_taxonomy_for_object_type('post_tag', 'insight');
-	// register_taxonomy_for_object_type('post_tag', 'case-study');
-
-	$labels = array(
-				'name' => _x('Global Tags', 'post type general name'),
-				'singular_name' => _x('Global Tag', 'post type singular name'),
-				'add_new' => _x('Add Global Tag', 'portfolio item'),
-				'add_new_item' => __('Add Global Tag'),
-				'edit_item' => __('Edit Global Tag'),
-				'new_item' => __('New Global Tag'),
-				'view_item' => __('View Global Tag'),
-				'search_items' => __('Search Global Tags'),
-				'not_found' =>  __('Nothing found'),
-				'not_found_in_trash' => __('Nothing found in Trash'),
-				'parent_item_colon' => ''
-			);
-	register_taxonomy( 'post_tag', array('insight'), array(
-		'labels' => $labels,
-		) );
-}
-
-
-
-function create_reusable_content_post_type() {
-
-	$labels = array(
-		'name' => _x('Reusable Blocks', 'post type general name'),
-		'singular_name' => _x('Reusable Blocks', 'post type singular name'),
-		'add_new' => _x('Add Reusable Blocks', 'portfolio item'),
-		'add_new_item' => __('Add Reusable Blocks'),
-		'edit_item' => __('Edit Reusable Blocks'),
-		'new_item' => __('New Reusable Blocks'),
-		'view_item' => __('View Reusable Blocks'),
-		'search_items' => __('Search Reusable Blocks'),
-		'not_found' =>  __('Nothing found'),
-		'not_found_in_trash' => __('Nothing found in Trash'),
-		'parent_item_colon' => ''
-	);
- 
-	$args = array(
-		'labels' => $labels,
-		'public' => false,
-		'publicly_queryable' => false,
-		'show_ui' => true,
-		'query_var' => true,
-		'rewrite' => true,
-		'capability_type' => 'post',
-		'hierarchical' => false,
-		'menu_position' => null,
-		'has_archive'  	=>  false,
-		'supports' 		=> array( 'title' )
-	  ); 
- 
-	register_post_type( 'reusable-block' , $args );			
-}   
-
-
-
-function create_page_taxonomy(){
-	register_taxonomy(
-		'page-cat',
-		'page',
-		array(
-			'label' => __( 'Page Category' ),
-			'rewrite' => array( 'slug' => 'page-category' ),
-			'hierarchical' => true,
-		)
-	);
-}
-
-
-public function set_custom_image_sizes(){
-
-
-	foreach($this->custom_image_size_arr as $name => $image){
-		add_image_size( $name, $image[0], $image[1], $image[2] );
-	}
-}
-
-function list_custom_image_sizes( $sizes ) {
-	foreach($this->custom_image_size_arr as $name => $image){
-		$custom_size[$name] = $image[3];
-	}
-    return array_merge( $sizes, $custom_size );
-}
-
-
-	//sets the directory (path) so that we can use this later
-	public function set_class_directory_value(){
-		$this->class_directory = get_stylesheet_directory_uri() . '/inc';
-	}
-
-	public function set_root_directory_value(){
-		$this->root_directory = ABSPATH;
-
-	}
-
-
-	//sets the URI so that we can use this later
-	public function set_active_theme_uri_value(){
-		$this->active_theme_uri = get_stylesheet_directory_uri();
-	}
-
-	//sets the URI so that we can use this later
-	public function set_parent_theme_uri_value(){
-		$this->parent_theme_uri = get_template_directory_uri();
-	}
 
 //enqueue public scripts and styles
 public function enqueue_public_scripts_and_styles(){
 
-    //load the site CSS, with dependencies defined
+	//load the site CSS, with dependencies defined
 
-	wp_enqueue_style(
-		'main',
-		get_stylesheet_directory_uri().'/assets/css/main.css');
-	
-
-	wp_enqueue_script(
-		'main',
-		get_stylesheet_directory_uri().'/assets/js/main.js');
-
+	wp_enqueue_style('main', get_stylesheet_directory_uri().'/assets/css/main.css');
+	wp_enqueue_script('main', get_stylesheet_directory_uri().'/assets/js/main.js');
 
 }
 
@@ -248,16 +44,11 @@ public function enqueue_public_scripts_and_styles(){
 public function enqueue_admin_scripts_and_styles(){
 	global $pagenow, $post_type;
 	
-	//process only in admin
-	if( is_admin() ){
-			
-			
-	}
+	if( is_admin() ){ }
 }
 
 
-
-public function run_acf_tweaks(){
+private function acf_site_options(){
 
 	if( function_exists('acf_add_options_page') ) {
    
@@ -393,7 +184,7 @@ if( function_exists('acf_add_local_field_group') ):
 	  'title' => 'Branding Options',
 	  'fields' => array ( 
 						  $desktop_site_logo_field, 
-						  $desktop_site_logo_light_field, 
+						  // $desktop_site_logo_light_field, 
 						),
 	  'location' => array (
 		array (

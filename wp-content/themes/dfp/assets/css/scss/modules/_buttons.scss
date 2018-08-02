@@ -20,8 +20,8 @@ button {
     &:active,
     &:active:hover,
     &:active:focus {
-        background: $tint-1-hover;
-        border-color: $tint-1-hover;
+        background: $tint-1;
+        border-color: $tint-1;
         color: $brand-w;
         outline: none;
         @include box-shadow(none);

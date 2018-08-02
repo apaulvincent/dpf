@@ -10,12 +10,8 @@
   
   .site-header-inner {
     position: relative;
-    background: rgba(17, 17, 17, 0.8); // $tint-4;
+    background: $brand-b;
     z-index: 10;
-
-    @include screen-max-md(){
-      background: rgba(17, 17, 17, 1); // $tint-4; 
-    }
 
   }
 

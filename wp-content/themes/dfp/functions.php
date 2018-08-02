@@ -1,10 +1,10 @@
 <?php
-require_once('inc/Base.php');
-require_once('inc/Helper.php');
-require_once('inc/Content.php');
+
+include_once('inc/Base.php');
+include_once('inc/Content.php');
+include_once('inc/Helper.php');
 
 include_once('inc/walkers/walkers.php');
-
 
 
 //to fix WP's admin double login bug
@@ -15,44 +15,18 @@ if ( SITECOOKIEPATH != COOKIEPATH ) setcookie(TEST_COOKIE, 'WP Cookie check', 0,
 // Remove admin bar on site
 add_filter('show_admin_bar', '__return_false');
 
-//add excerpts to pages
-add_post_type_support( 'page', 'excerpt' );
 
 
-// Excerpts
-function excerpt($text, $limit) {
-	$excerpt = explode(' ',$text , $limit);
-	if (count($excerpt)>=$limit) {
-	  array_pop($excerpt);
-	  $excerpt = implode(" ",$excerpt).'...';
-	} else {
-	  $excerpt = implode(" ",$excerpt);
-	} 
-	// $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
-	$excerpt = str_replace(']]>', ']]&gt;', $excerpt);
-	return $excerpt;
-  }
+// *********************** Post Thumbnails
+add_theme_support( 'post-thumbnails' );
 
+add_image_size( 'banner-image', 1920, 700, false );
+add_image_size( 'gallery', 630, 370, true );
+add_image_size( 'gallery-thumb', 60, 60, true );
+add_image_size( 'card-thumb', 400, 200, true );
+add_image_size( 'card-thumb-sm', 9999, 170, false );
+// add_image_size( 'news-thumb', 790, 99999, false ); // false -> resize no crop
 
-
-function strip_tags_content($text, $tags = '', $invert = FALSE) { 
-
-  preg_match_all('/<(.+?)[\s]*\/?[\s]*>/si', trim($tags), $tags); 
-  $tags = array_unique($tags[1]); 
-    
-  if(is_array($tags) AND count($tags) > 0) { 
-    if($invert == FALSE) { 
-    return preg_replace('@<(?!(?:'. implode('|', $tags) .')\b)(\w+)\b.*?>.*?</\1>@si', '', $text); 
-    } 
-    else { 
-    return preg_replace('@<('. implode('|', $tags) .')\b.*?>.*?</\1>@si', '', $text); 
-    } 
-  } 
-  elseif($invert == FALSE) { 
-    return preg_replace('@<(\w+)\b.*?>.*?</\1>@si', '', $text); 
-  } 
-  return $text; 
-  } 
 
 
 // Pagination

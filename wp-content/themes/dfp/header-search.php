@@ -27,8 +27,6 @@ global $DB_Content;
 
 <div id="site-wrap" class="site-wrap">
 
-<?php echo $DB_Content->get_section_spacer('85', array('d-xl-none')); ?> 
-
 <header class="site-header">
 
 	<div class="site-header-inner">

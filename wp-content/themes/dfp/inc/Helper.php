@@ -13,7 +13,6 @@
 	//magic function, called on creation
 	public function __construct(){
 
-		
 	}
 
 	public function get_current_url(){
@@ -47,78 +46,59 @@
 	}
 
 	public function get_image_size( $size ) {
-	$sizes = $this->get_image_sizes();
+		$sizes = $this->get_image_sizes();
 
-	if ( isset( $sizes[ $size ] ) ) {
-		return $sizes[ $size ];
+		if ( isset( $sizes[ $size ] ) ) {
+			return $sizes[ $size ];
+		}
+
+		return false;
 	}
-
-	return false;
-}
 	
 	public function get_placeholder_image_url($w, $h ){
-			return 'http://via.placeholder.com/'.$w.'x'.$h;
-		}
+		return 'http://via.placeholder.com/'.$w.'x'.$h;
+	}
 
-		public function generate_image($image_id, $type = 'thumbnail' ){
+	public function generate_image($image_id, $type = 'thumbnail' ){
 
-		
-			$image = wp_get_attachment_image( $image_id, $type);
-			if(!($image)){
-				return false;
-				if(is_array($type)){
-					$width = $type[0];
-					$height = $type[1];
-				}else{
-					$sizes = $this->get_image_size( $type );
-					//if(!isset($sizes['width'])) {print_r($sizes);}
-					$width = $sizes['width'];
-					$height = $sizes['height'];
-				}
-				
-				$image = '<img src="'.$this->get_placeholder_image_url($width, $height).'" />';
+	
+		$image = wp_get_attachment_image( $image_id, $type);
+		if(!($image)){
+			return false;
+			if(is_array($type)){
+				$width = $type[0];
+				$height = $type[1];
+			}else{
+				$sizes = $this->get_image_size( $type );
+				//if(!isset($sizes['width'])) {print_r($sizes);}
+				$width = $sizes['width'];
+				$height = $sizes['height'];
 			}
-			return $image;
+			
+			$image = '<img src="'.$this->get_placeholder_image_url($width, $height).'" />';
 		}
+		return $image;
+	}
 
 
 		//================HELPER QUERIES ==============//
 
-		public function array_search($array, $field, $value)
-		{
-		   $result = array();
-		   if(is_array($array) && !empty($array)){
-		  
-			   foreach($array as $key => $subarray)
-			   {
-			      if ( $subarray[$field] === $value )
-			         $result[$key] = $subarray;
-			   }
-		    }
-		   return $result;
-		}
-
-		public function format_heading($text) {
-
-			$title_arr = explode('/', $text );
-			$title_markup = '';
-	
-			foreach ($title_arr as $key => $value) {
-				if($key == 0 ) {
-					$title_markup .=  $value;
-				} else {
-					$title_markup .=  ' <span>/</span> ' . $value;
-				}
+	public function array_search($array, $field, $value) {
+		$result = array();
+		if(is_array($array) && !empty($array)){
+		
+			foreach($array as $key => $subarray)
+			{
+				if ( $subarray[$field] === $value )
+					$result[$key] = $subarray;
 			}
-	
-			return $title_markup;
-
-		}
-
+			}
+		return $result;
+	}
 
 
-// Excerpts
-public function excerpt($text, $limit) {
+		// Excerpts
+	public function excerpt($text, $limit) {
 	$excerpt = explode(' ',$text , $limit);
 	if (count($excerpt)>=$limit) {
 	  array_pop($excerpt);

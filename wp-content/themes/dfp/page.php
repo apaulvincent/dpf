@@ -8,15 +8,12 @@
 		/* Start the Loop */
 		while ( have_posts() ) : the_post();
 
-			$DB_Content->get_page_content(); 
+			the_content(); 
 
 		endwhile;
 
 		the_posts_pagination();
 
-	else :
-
-		include(locate_template('partials/error-no-content.php'));
 
 	endif;
 

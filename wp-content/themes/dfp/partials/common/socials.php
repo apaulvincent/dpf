@@ -21,6 +21,9 @@ if( $social_fields ):
             case 'linkedin':
                 echo '<li><a href="'.$field['social_url'].'"><i class="fab fa-linkedin-in"></i></a>';
                 break;
+            case 'google':
+                echo '<li><a href="'.$field['social_url'].'"><i class="fab fa-google"></i></a>';
+                break;
         }
 
    }
