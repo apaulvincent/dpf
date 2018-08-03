@@ -9,22 +9,16 @@
 // var_dump($page_config);
 
 	if($page_config['meta']['show_banner'] == 0) {
-		echo '<div class="no-banner "></div>';
+		echo '<div class="no-banner"></div>';
 		return;
 	}
 
 	switch($page_config['meta']['banner_type']){
-		case 'image-feature':
-			include(locate_template('partials/common/header-banner-image-feature.php'));
+		case 'static-banner':
+			include(locate_template('partials/common/header-static-banner.php'));
 		break;
-		case 'image-standard':
-			include(locate_template('partials/common/header-banner-image-compact.php'));
-		break;
-		case 'video-feature':
-			include(locate_template('partials/common/header-banner-video-feature.php'));
-		break;
-		case 'image-slider':
-			include(locate_template('partials/common/header-banner-image-slider.php'));
+		case 'slider-banner':
+			include(locate_template('partials/common/header-slider-banner.php'));
 		break;
 	}
 ?>

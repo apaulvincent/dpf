@@ -1,5 +1,43 @@
 @import "peicons";
 
+
+
+@font-face {
+	font-family: 'Futura Book';
+	src: url('../fonts/futura/futura-book.eot');
+	src: url('../fonts/futura/futura-book.eot') format('embedded-opentype'),  url('../fonts/futura/futura-book.woff') format('woff'),  url('../fonts/futura/futura-book.ttf') format('truetype'),  url('../fonts/futura/futura-book.svg#Conv_Futura-Book') format('svg');
+}
+
+@font-face {
+	font-family: 'Helvetica Bold';
+	src: url('../fonts/helvetica/Helvetica Bold.eot');
+	src: local('☺'), url('../fonts/helvetica/Helvetica Bold.woff') format('woff'), url('../fonts/helvetica/Helvetica Bold.ttf') format('truetype'), url('../fonts/helvetica/Helvetica Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Constantia';
+	src: url('../fonts/constantia/Constantia.eot');
+	src: local('☺'), url('../fonts/constantia/Constantia.woff') format('woff'), url('../fonts/constantia/Constantia.ttf') format('truetype'), url('../fonts/constantia/Constantia.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Constantia Bold';
+	src: url('../fonts/constantia/Constantia Bold.eot');
+	src: local('☺'), url('../fonts/constantia/Constantia Bold.woff') format('woff'), url('../fonts/constantia/Constantia Bold.ttf') format('truetype'), url('../fonts/constantia/Constantia Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+
+
+
 @font-face {
     font-family: 'geomanistblack';
     src: url('../fonts/geomanist/geomanist-black-webfont.eot');
@@ -9,11 +47,7 @@
          url('../fonts/geomanist/geomanist-black-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'geomanistbold';
@@ -24,11 +58,7 @@
          url('../fonts/geomanist/geomanist-bold-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'geomanistbook';
@@ -39,11 +69,7 @@
          url('../fonts/geomanist/geomanist-book-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'geomanistextralight';
@@ -54,11 +80,7 @@
          url('../fonts/geomanist/geomanist-extralight-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'geomanistlight';
@@ -69,11 +91,7 @@
          url('../fonts/geomanist/geomanist-light-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'geomanistmedium';
@@ -84,11 +102,7 @@
          url('../fonts/geomanist/geomanist-medium-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'geomanistregular';
@@ -99,11 +113,7 @@
          url('../fonts/geomanist/geomanist-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'geomanistthin';
@@ -114,11 +124,7 @@
          url('../fonts/geomanist/geomanist-thin-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'geomanistultra';
@@ -129,5 +135,4 @@
          url('../fonts/geomanist/geomanist-ultra-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }

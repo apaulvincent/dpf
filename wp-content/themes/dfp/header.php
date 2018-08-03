@@ -46,9 +46,11 @@ $page_config['meta'] = get_fields($pid);
 
 							<a href="<?php echo home_url(); ?>" class="branding">
 								<?php
-									$site_logo = get_field('desktop_site_logo_light', 'option');
+
+									$site_logo = get_field('desktop_site_logo', 'option');
+
 									if($site_logo) {
-										echo "<img src='".$site_logo."' width='68'/>";
+										echo "<img src='".$site_logo."' width='338'/>";
 									} else{
 										echo get_bloginfo('name');
 									}
@@ -56,9 +58,7 @@ $page_config['meta'] = get_fields($pid);
 							</a>
 
 							<div class="float-right">
-
 								<?php include(locate_template('partials/common/header-mainnav.php')); ?>
-
 							</div>
 
 						</div>
@@ -71,9 +71,9 @@ $page_config['meta'] = get_fields($pid);
 	<?php include(locate_template('partials/common/header-subnav.php')); ?>
 
 
-	<button class="btn btn-full d-xl-none call-btn">
+	<!-- <button class="btn btn-full d-xl-none call-btn">
 		<i class="fas fa-phone"></i> DFP
-	</button>
+	</button> -->
 
 	<?php include(locate_template('partials/common/header-banner.php')); ?>
 

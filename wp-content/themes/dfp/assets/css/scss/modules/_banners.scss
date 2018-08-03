@@ -1,6 +1,8 @@
 .no-banner{
-    @include screen-min-md(){
-    height:120px;
+    height: 98px;
+
+    @include screen-max-md(){
+        height: 60px;
     }
 }
 .main-banner {

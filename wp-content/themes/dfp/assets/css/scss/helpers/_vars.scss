@@ -9,7 +9,8 @@ $brand-2: #0066cb;  $tint-2: $brand-2;
 $brand-3: #003399;  $tint-3: $brand-3;
 $brand-4: #9900cc;  $tint-4: $brand-4;
 $brand-5: #6600cd;  $tint-5: $brand-5;
-$brand-6: #616161;  $tint-6: $brand-6;
+$brand-6: #c8c8c8;  $tint-6: $brand-6;
+// -- separator
 $brand-7: #e0e0e0;  $tint-7: $brand-7;
 $brand-8: #eeeeee;  $tint-8: $brand-8;
 $brand-9: #f5f5f5;  $tint-9: $brand-9;
@@ -27,15 +28,16 @@ $placeholder-color: #cccccc;
 
 // Typography
 
-$font-ultra: 'geomanistultra', sans-serif;
-$font-thin: 'geomanistthin', sans-serif;
-$font-light: 'geomanistlight', sans-serif;
-$font-xlight: 'geomanistextralight', sans-serif;
-$font-regular: 'geomanistregular', sans-serif;
-$font-book: 'geomanistbook', sans-serif;
-$font-medium: 'geomanistmedium', sans-serif;
-$font-bold: 'geomanistbold', sans-serif;
-$font-black: 'geomanistblack', sans-serif;
+// -- Futura Book
+// -- Helvetica Bold
+// -- Helvetica Bold
+// -- Constantia Bold
+
+$font-regular: 'Constantia', sans-serif;
+$font-light: 'Constantia', sans-serif;
+$font-book: 'Constantia', sans-serif;
+$font-medium: 'Constantia', sans-serif;
+$font-bold: 'Constantia', sans-serif;
 
 
 $font-size-base: 16px;

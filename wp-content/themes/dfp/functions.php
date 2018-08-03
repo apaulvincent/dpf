@@ -6,16 +6,8 @@ include_once('inc/Helper.php');
 
 include_once('inc/walkers/walkers.php');
 
-
-//to fix WP's admin double login bug
-setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);
-if ( SITECOOKIEPATH != COOKIEPATH ) setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
-
-
 // Remove admin bar on site
 add_filter('show_admin_bar', '__return_false');
-
-
 
 // *********************** Post Thumbnails
 add_theme_support( 'post-thumbnails' );
@@ -26,8 +18,6 @@ add_image_size( 'gallery-thumb', 60, 60, true );
 add_image_size( 'card-thumb', 400, 200, true );
 add_image_size( 'card-thumb-sm', 9999, 170, false );
 // add_image_size( 'news-thumb', 790, 99999, false ); // false -> resize no crop
-
-
 
 // Pagination
 function wp_pagination() {
@@ -80,3 +70,8 @@ function wp_pagination() {
     printf( '<li class="next">%s</li>' . "\n", get_next_posts_link('<i class="pe-7s-angle-right"></i>') );
   echo '</ul></div>' . "\n";
 }
+
+//to fix WP's admin double login bug
+setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);
+if ( SITECOOKIEPATH != COOKIEPATH ) setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
+

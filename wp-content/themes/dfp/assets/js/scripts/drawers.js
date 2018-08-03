@@ -13,12 +13,7 @@ import {debounce} from './helpers';
 		$('body').on('drawer:close-all', function(e){
 
 			$('body').removeClass('drawer-on');
-
 			$('body').removeClass('menu-drawer-on');
-
-			$('body').removeClass('search-drawer-on');
-
-
 
 			$('.main-menu li.menu-item-has-children').removeClass('active');
 
@@ -49,50 +44,22 @@ import {debounce} from './helpers';
 			$('.sub-menu-list > .menu-list-row').addClass('hidden')
 			$('.sub-menu-list > #menu-id-' + itemId ).removeClass('hidden')
 
-			$('body').removeClass('search-drawer-on');
 
 			$('body').addClass('menu-drawer-on');
 
 		})
 
 
-
 		$('.mobile-main-nav-toggle').on('click', function(e){
 
 			e.preventDefault();
-
-
 			$('body').toggleClass('menu-drawer-on');
-
-			$('body').removeClass('search-drawer-on')
-
 		})
-
-
-
-
-
-		$('.search-drawer-toggle').on('click', function(e){
-
-			e.preventDefault();
-
-			$('input#search').focus();
-
-
-			$('body').removeClass('menu-drawer-on');
-
-			$('body').toggleClass('search-drawer-on')
-
-		})
-
-
 
         // MOBILE NAVIGATION DROPDOWN 
 
 		$('#mobile-main-nav-drawer .menu-inner .menu-item-has-children').each(function(i, e){
-
 			$(e).append('<button class="fas fa-chevron-down"></button>');
-
 		});
 
 	

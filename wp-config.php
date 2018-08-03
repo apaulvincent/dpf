@@ -91,8 +91,6 @@ define('WP_DEBUG', false);
 define('WP_DEBUG_LOG', false);
 define('WP_DEBUG_DISPLAY', false);
 define('WP_MEMORY_LIMIT', '128M');
-define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
-/* That's all, stop editing! Happy blogging. */
 
 // define('FORCE_SSL_ADMIN', true);
 
@@ -102,3 +100,6 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
+/* That's all, stop editing! Happy blogging. */
