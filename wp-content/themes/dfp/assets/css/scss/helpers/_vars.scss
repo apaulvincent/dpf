@@ -10,8 +10,9 @@ $brand-3: #003399;  $tint-3: $brand-3;
 $brand-4: #9900cc;  $tint-4: $brand-4;
 $brand-5: #6600cd;  $tint-5: $brand-5;
 $brand-6: #c8c8c8;  $tint-6: $brand-6;
+$brand-7: #dedede;  $tint-7: $brand-7;
+
 // -- separator
-$brand-7: #e0e0e0;  $tint-7: $brand-7;
 $brand-8: #eeeeee;  $tint-8: $brand-8;
 $brand-9: #f5f5f5;  $tint-9: $brand-9;
 
@@ -28,19 +29,21 @@ $placeholder-color: #cccccc;
 
 // Typography
 
-// -- Futura Book
-// -- Helvetica Bold
-// -- Helvetica Bold
-// -- Constantia Bold
-
 $font-regular: 'Constantia', sans-serif;
 $font-light: 'Constantia', sans-serif;
 $font-book: 'Constantia', sans-serif;
 $font-medium: 'Constantia', sans-serif;
-$font-bold: 'Constantia', sans-serif;
+$font-bold: 'Constantia Bold', sans-serif;
 
 
-$font-size-base: 16px;
+$font-cons-r: 'Constantia', sans-serif;
+$font-cons-b: 'Constantia Bold', sans-serif;
+$font-mont-r: 'montserratregular', sans-serif;
+$font-mont-b: 'montserratbold', sans-serif;
+
+
+
+$font-size-base: 14px;
 $line-height-base: 1.4;
 $text-color: $brand-4;
 

@@ -93,19 +93,18 @@ public function get_section_spacer( $size = '30', $class = array() ){
 	return $spacer;
 }
 
-public function get_news_articles($query_mods = array()){
+public function get_latest_article($query_mods = array()){
 
-		$args = array(
-			'posts_per_page'    => -1,
-			'post_type'      => 'article',
-			'post_status' => 'publish',
-			'orderby' => 'date',
-			'order'  => 'desc',
-		);
+	$args = array(
+		'posts_per_page'    => 1,
+		'post_type'      => 'post',
+		'post_status' => 'publish',
+		'category_name' => 'latest-press',
+	);
 
 	$args = array_replace ($args, $query_mods);
 	$query = new WP_Query( $args );
-	return $query ;
+	return $query->post ;
 }
 
 public function get_article_tile($post, $display_rules = array() ){
@@ -192,6 +191,17 @@ public function get_article_tile($post, $display_rules = array() ){
 	return $content;
 
 }
+
+
+
+public function pass_file_to_var($file, $var = array()){
+	extract($var);
+	ob_start();
+	include(locate_template($file)); 
+	return ob_get_clean();
+}
+
+
 
 
 //===========================================

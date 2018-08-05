@@ -199,6 +199,13 @@ class acf_field_repeater extends acf_field {
 		$div['class'] .= ' -' . $field['layout'];
 		
 		
+		// hidden input
+		acf_hidden_input(array(
+			'type'	=> 'hidden',
+			'name'	=> $field['name'],
+		));
+		
+		
 		// collapsed
 		if( $field['collapsed'] ) {
 			
@@ -221,8 +228,7 @@ class acf_field_repeater extends acf_field {
 		}
 		
 ?>
-<div <?php acf_esc_attr_e( $div ); ?>>
-	<?php acf_hidden_input(array( 'name' => $field['name'], 'value' => '' )); ?>
+<div <?php acf_esc_attr_e($div); ?>>
 <table class="acf-table">
 	
 	<?php if( $field['layout'] == 'table' ): ?>
@@ -351,9 +357,11 @@ class acf_field_repeater extends acf_field {
 </table>
 <?php if( $show_add ): ?>
 	
-	<div class="acf-actions">
-		<a class="acf-button button button-primary" href="#" data-event="add-row"><?php echo $field['button_label']; ?></a>
-	</div>
+	<ul class="acf-actions acf-hl">
+		<li>
+			<a class="acf-button button button-primary" href="#" data-event="add-row"><?php echo $field['button_label']; ?></a>
+		</li>
+	</ul>
 			
 <?php endif; ?>
 </div>
@@ -1118,7 +1126,7 @@ class acf_field_repeater extends acf_field {
 
 
 // initialize
-acf_register_field_type( 'acf_field_repeater' );
+acf_register_field_type( new acf_field_repeater() );
 
 endif; // class_exists check
 

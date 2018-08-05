@@ -224,3 +224,55 @@ div.wpcf7-mail-sent-ng {
 	font-size: 14px;
 	text-align: center;
 }
+
+
+//  Mail Chimp
+
+.mc4wp-form input[type=date], 
+.mc4wp-form input[type=email],
+.mc4wp-form input[type=tel],
+.mc4wp-form input[type=text],
+.mc4wp-form input[type=url]
+{
+	font-family: $font-regular;
+	font-size: 14px;
+	padding: 0 15px;
+	margin: 0;
+	height: 50px !important;
+	line-height: 1.2;
+	vertical-align: middle;
+	width: 100%;
+	background: $tint-w;
+	outline: none;
+	color: $brand-b;
+	border: 1px solid $tint-w;
+	width: 100%;
+
+	 -webkit-appearance: none; 
+	 -moz-appearance: none;
+
+	&::-webkit-input-placeholder {color: $placeholder-color; }
+	&:-moz-placeholder {color: $placeholder-color; opacity: 1; } 
+	&::-moz-placeholder {color: $placeholder-color; opacity: 1; } 
+	&:-ms-input-placeholder {color: $placeholder-color; }
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+	    -webkit-appearance: none;
+	    margin: 0;
+	}
+
+	@include round-corners(0);
+	// @include transition(0.4s all ease);
+	@include box-shadow(none);
+
+	&:focus, &:active {
+		outline: none;
+		border-color:  $tint-6;
+		@include box-shadow(none);
+	}
+
+	@include screen-max-xs(){
+
+	}
+}

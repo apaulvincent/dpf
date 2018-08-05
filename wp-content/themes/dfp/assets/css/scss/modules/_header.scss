@@ -9,7 +9,6 @@
   z-index: 99;
   
   .site-header-inner {
-    position: relative;
     background: $brand-b;
     z-index: 10;
 
@@ -70,9 +69,15 @@
   }
 }
 
-.call-btn {
-  position: fixed;
-  top: 86px;
-  width: 100%;
-  z-index: 4; 
+
+.header-spacer{
+  @include screen-max-md(){
+      margin-bottom: 60px !important;
+  }
 }
+
+
+.call-btn {
+  width: 100%;
+}
+

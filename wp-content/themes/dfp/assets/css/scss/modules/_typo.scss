@@ -1,8 +1,8 @@
 body {
-    font-family: $font-regular;
+    font-family: $font-cons-r;
     font-size: 14px;
     line-height: 1.4;
-    color: $brand-5;
+    color: $brand-b;
 }
 
 p {
@@ -11,13 +11,24 @@ p {
 }
 
 
-h1, .h1 {
-    font-family: $font-bold;
-    font-size: 48px;
+.mega {
+    font-family: $font-cons-b;
+    font-size: 60px;
     line-height: 1;
     margin: 0 0 20px;
 
-    @include screen-max-md(){
+    @include screen-max-sm(){
+        font-size: 30px;
+    } 
+}
+
+h1, .h1 {
+    font-family: $font-bold;
+    font-size: 46px;
+    line-height: 1;
+    margin: 0 0 20px;
+
+    @include screen-max-sm(){
         font-size: 30px;
     } 
 }
@@ -28,7 +39,7 @@ h2, .h2 {
     line-height: 1.4;
     margin: 0 0 20px;
 
-    @include screen-max-md(){
+    @include screen-max-sm(){
         font-size: 26px;
     } 
 
@@ -40,17 +51,17 @@ h3, .h3 {
     line-height: 1.2;
     margin: 0 0 15px;
 
-    @include screen-max-md(){
+    @include screen-max-sm(){
         font-size: 20px;
     } 
 }
 
 h4, .h4 {
-    font-family: $font-regular;
+    font-family: $font-cons-r;
     font-size: 24px;
     line-height: 1.2;
 
-    @include screen-max-md(){
+    @include screen-max-sm(){
         font-size: 16px;
     }  
 }
@@ -61,7 +72,7 @@ h5, .h5 {
     line-height: 1.4;
     margin: 0 0 15px;
 
-    @include screen-max-md(){
+    @include screen-max-sm(){
         font-size: 14px;
     }  
 }
@@ -71,7 +82,7 @@ h6, .h6 {
     font-size: 16px;
     line-height: 1.4;
 
-    @include screen-max-md(){
+    @include screen-max-sm(){
         font-size: 14px;
     }  
 }
@@ -99,7 +110,7 @@ blockquote {
         font-style: normal;
     }
 
-    @include screen-max-md(){
+    @include screen-max-sm(){
         font-size: 16px;
     } 
 }
@@ -131,6 +142,4 @@ ul, ol {
         margin: 0 0 8px;
     }
 }
-.copyright a{
-  color:#E4E4E4;
-}
+

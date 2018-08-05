@@ -566,7 +566,7 @@ class acf_field_taxonomy extends acf_field {
 		
 		// vars
 		$div = array(
-			'class'				=> 'acf-taxonomy-field',
+			'class'				=> 'acf-taxonomy-field acf-soh',
 			'data-save'			=> $field['save_terms'],
 			'data-type'			=> $field['field_type'],
 			'data-taxonomy'		=> $field['taxonomy']
@@ -576,17 +576,10 @@ class acf_field_taxonomy extends acf_field {
 		// get taxonomy
 		$taxonomy = get_taxonomy( $field['taxonomy'] );
 		
-		
-		// bail early if taxonomy does not exist
-		if( !$taxonomy ) return;
-		
-		
 		?>
 <div <?php acf_esc_attr_e($div); ?>>
 	<?php if( $field['add_term'] && current_user_can( $taxonomy->cap->manage_terms) ): ?>
-	<div class="acf-actions -hover">
-		<a href="#" class="acf-icon -plus acf-js-tooltip small" data-name="add" title="<?php echo esc_attr($taxonomy->labels->add_new_item); ?>"></a>
-	</div>
+	<a href="#" class="acf-icon -plus acf-js-tooltip small acf-soh-target" data-name="add" title="<?php echo esc_attr($taxonomy->labels->add_new_item); ?>"></a>
 	<?php endif;
 
 	if( $field['field_type'] == 'select' ) {
@@ -710,10 +703,10 @@ class acf_field_taxonomy extends acf_field {
 		// vars
 		$args = array(
 			'taxonomy'     		=> $field['taxonomy'],
-			'show_option_none'	=> sprintf( _x('No %s', 'No terms', 'acf'), strtolower($taxonomy_obj->labels->name) ),
+			'show_option_none'	=> __('No', 'acf') . ' ' . $taxonomy_obj->labels->name,
 			'hide_empty'   		=> false,
 			'style'        		=> 'none',
-			'walker'       		=> new ACF_Taxonomy_Field_Walker( $field ),
+			'walker'       		=> new acf_taxonomy_field_walker( $field ),
 		);
 		
 		
@@ -729,7 +722,7 @@ class acf_field_taxonomy extends acf_field {
 				<?php if( $field['field_type'] == 'radio' && $field['allow_null'] ): ?>
 					<li>
 						<label class="selectit">
-							<input type="radio" name="<?php echo esc_attr($field['name']); ?>" value="" /> <?php _e("None", 'acf'); ?>
+							<input type="radio" name="<?php echo $field['name']; ?>" value="" /> <?php _e("None", 'acf'); ?>
 						</label>
 					</li>
 				<?php endif; ?>

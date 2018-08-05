@@ -1,190 +1,10 @@
-.pre-content {
-  padding: 60px 0 0;
-  
-  @include screen-max-sm(){
-    padding: 20px 0 0;
-  }
-
-  .content-block {
-    margin: 0;
-  
-  }
-
-}
-
-.main {
-
-}
-
-// SECTIONS / BLOCKS
-
-.content-block {
-  margin: 0 0 30px;
-  
-  @include screen-max-sm(){
-    margin: 0 0 30px;
-  }
-
-
-  // EQUAL HEIGHT COLUMNS
-  &.equal-heights > .container > .row{
-
-    & > [class*="col-"] {
-      padding-bottom: 30px;
-
-      @include screen-max-sm(){
-        padding-bottom: 0;
-      }
-
-    }
-
-    .card {
-      margin: 0;
-      height: 100%;
-
-      & > .row {
-        height: 100%;
-      }
-    }
-  }
-
-}
-
-.block-type-B {
-  background: $tint-6;
-  padding: 40px 0;
-}
-
-.block-type-A {
-  background: $tint-1;
-}
-
-.score-cards-block {
-  
-  @include screen-max-sm(){
-    background: $tint-1;
-  }
-
-
-  .h3 {
-      color: $brand-3;
-  }
-
-}
-
-.page-links-block {
-
-  .card {
-    @include screen-max-sm(){
-      text-align: center;
-    }
-  }
-
-  .card-image {
-    @include screen-max-sm(){
-      display: none;  
-    }
-  }
-
-  .card-body {
-    h3 {
-      color: $brand-5;
-    }
-
-    p {
-      margin: 0;
-    }
-  }
-
-}
-
-
-
-.page-link-block {
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    li a {
-      color: $brand-6;
-      font-size: 14px;
-
-      i {
-        color: $brand-1;
-        margin: 0 5px 0 0;
-      }
-    }
-
-
-}
-
-
-
-.contact-select {
-  
-  .select-wrap {
-    margin: 0  0 20px;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  li {
-    position: relative;
-    padding-left: 25px;
-    font-size: 14px;
-    word-break: break-all;
-
-    i {
-      color: $brand-1;
-      position: absolute;
-      top: 2px;
-      left: 0;
-    }
-  }
-
-}
-
-
-
-
-// LISTING PAGE
-
-.breadcrumb-bar {
-  display: block;
-  z-index: 2;
-  padding:  60px 0 20px;
-
-  h2 {
-    display: inline-block;
-    margin: 0;
-  }
-}
-
-.breadcrumbs {
-  margin: 6px 0 0;
-
-  i {
-    font-size: 8px;
-    height: 14px;
-    margin: 0 2px;
-    line-height: 8px;
-    vertical-align: middle;
-    color: $brand-1;
-  }
-}
-
-
-
-
 .paging-wrap {
 
+}
+
+
+.divider {
+  height: 1px;
 }
 
 .pagination {
@@ -226,326 +46,122 @@
 
 }
 
+.latest-post-signup-block {
+  background: $brand-7;
+
+  .latest-post-block {
+    background-size: cover;
+    background-position: center;
+
+      h4 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $tint-3;
+        color: $brand-w;
+        padding: 24px;
+        margin: 0;
+      
+        @include screen-max-sm(){
+          position: static; 
+        }
+      
+      }
+  }
+
+  .singup-form {
+      padding: 30px 24px;
+      color: $brand-b;
+
+      .fa-envelope {
+        font-size: 44px;
+      }
+
+      .dfp-logo {
+        width: 196px;
+        height: 100px;
+        margin: 0 0 80px;
+        background-image: url('../img/dfp-logo-bw.png');
+        background-size: 100% auto;
+        position: top center;
+        background-repeat: no-repeat;
+      }
+
+      .mc4wp-form {
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      h4 {
+        margin: 0 0 20px;
+      }
+
+      .form-group {
+        position: relative;
 
 
-.collapsible-block {
-    padding: 60px;
+        input[type="submit"] {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 50px;
+          line-height: 50px;
+        }
 
-    p {
-      font-size: 14px;
-    }
+      }
+  
+  }
 
-    @include screen-max-md(){
-      padding: 30px 15px;
-    }
+
+}
+
+
+
+.awards-block {
+  padding-bottom: 60px;
+}
+
+.feat-block {
+  padding-top: 0;
+}
+
+
+.offices-block {
+
+  .card-0 {
+    border-top: 5px solid $tint-1;
     
-    @include screen-max-sm(){
-      padding: 0;
+    strong {
+       color: $brand-1;
     }
+  }
+
+  .card-1 {
+    border-top: 5px solid $tint-3;
+    
+    strong {
+       color: $brand-3;
+    }
+  }
+
+  .card-2 {
+    border-top: 5px solid $tint-4;
+    
+    strong {
+       color: $brand-4;
+    }
+  }
   
-  .component-name {
-    font-size: 14px;
-    text-transform: uppercase;
-    color: $brand-1;
-
-    @include screen-max-sm(){
-        padding: 0;
-        margin: 0;
-    }
-
-    .collapsible-toggle {
-        cursor: pointer;
-        display: block;
-        font-size: 14px;
-        text-transform: uppercase;
-        color: $brand-1;
-        background: none;
-        border: none;
-        padding: 30px 20px;
-        width: 100%;
-        text-align: left;
-        line-height: 1.2;
-
-        i {
-            float: right;
-            color: $brand-6;
-            font-size: 12px;
-            margin: 3px 0 0;
-            @include transition(0.4s all ease);
-        }
-
-        &.on {
-
-            i {
-                @include transform(rotate(180deg));
-            }
-        }
-
-    }
-  }
-
-  .component-inner {
-      @include screen-max-sm(){
-          display: none;
-          padding: 0 30px 30px;
-      }
-  }
-
-}
-
-
-.home-select-columns {
-  margin: 0;
-
-  .standard-content-block {
-
-    p {
-      font-size: 14px;
-
-      @include screen-max-md(){
-        display: none;
-      }
-
-    }
-
-    .form-group{
-      @include screen-max-sm(){
-        margin: 0;
-      }
-    }
-
-    .component-name {
-      font-size: 18px;
-      font-family: $font-medium;
-      color: $tint-5;
-    }
-
-    span {
-
-      &:before {
-        font-family: 'Pe-icon-7-stroke';
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        display: inline-block;
-        margin: 2px 5px 0 0;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-
-        content: "\e65c";
-      }
-
-    }
-
-    .collapsible-toggle {
-        color: $brand-5; 
-        outline: none;
-        text-align: center;
-        font-size: 16px;
-
-      &:before {
-        font-family: 'Pe-icon-7-stroke';
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        font-size: 18px;
-        margin: 2px 5px 0 0;
-        float: left;
-
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-
-        content: "\e65c";
-      }
-
-    }
-
-    .btn {
-      padding-left: 0;
-      padding-right: 0;
-      display: block;
-      width: auto;
-    }
-
-    .btn-1 {
-      margin-left: 8px;
-    }
-
-    .btn-2 {
-      margin-right: 8px;
-    }
-
-  }
-
-}
-
-.home-contents {
-  margin: 0;
-
-  .row > [class*="col-"] {
-    border: 1px solid $tint-8;
-
-    &.tint-1,
-    &.tint-2 {
-      border: none;
-    }
-  }
-
-  .contact-select li i {
-    color: $brand-w; 
-  }
-
-  .collapsible-block {
-    padding: 0;
-  }
-
-  .block-item {
-    padding: 60px;
-    margin: 0;
-
-    @include screen-max-md(){
-      padding: 30px 15px;
-    }
-
-
-    .component-name {
-      font-size: 14px;
-      text-transform: uppercase;
-      color: $brand-1;
-  
-    }
-  }
-
-
-  .product-finder-block .block-item {
-    padding: 0;
-  }
-
-  .tint-2 {
-    p {
-      font-size: 14px;
-    }
-
-    @include screen-max-sm(){
-      
-        background: $tint-w;
-        color: $brand-4;
-
-    }
-
-    .component-name {
-        @include screen-max-sm(){
-          color: $brand-1 !important;
-      }
-    }
-
-  }
-
-
-  .tint-1 {
-
-    @include screen-max-sm(){
-      
-        background: $tint-w;
-        color: $brand-4;
-
-    }
-      a{
-          color: $brand-w;
-        }
-    .contact-select li i {
-      @include screen-max-sm(){
-          color: $brand-1 !important;
-      } 
-    }
-
-    .component-name {
-        @include screen-max-sm(){
-          color: $brand-1 !important;
-      }
-    }
-
-  }
-
-
-
-}
-
-.grid-links {
-  margin-right: -5px;
-  margin-left: -5px;
-  margin-bottom: 20px;
-
-  & > .col, 
-  & > [class*="col-"] {
-
-    padding-right: 5px;
-    padding-left: 5px;
-    border: none !important;
-
-  }
-
-  .btn {
-    margin-bottom: 10px;
-  }
-
-}
-
-.crop-select-wrap {
-
-  .tbl {
-    display: table;
-    width: 65%;
-
-    @include screen-max-sm(){
-      display: block;
-      width: 100%;
-    }
-
-    .tbl-cell {
-      display: table-cell;
-
-      @include screen-max-sm(){
-        display: block;
-      }
-
-    }
-
-    .cell-left {
-      width: 160px;
-
-      @include screen-max-sm(){
-        width: 100%;
-      }
-
-    }
-  }
-
-}
-
-.product-select-block {
-
-  .collapsible-toggle {
-    padding-left: 0 !important;
-  }
-
-  .block-item .collapsible-block .component-name,
-  .collapsible-block .component-name .collapsible-toggle {
-    font-size: 24px;
-    text-transform: none;
-    color: $brand-5;
-  }
-
-  .collapsible-block .component-name .collapsible-toggle  {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .collapsible-block .component-inner {
-    padding-left: 0;
-    padding-right: 0;
+  h4 {
+    padding: 24px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
   }
 
 }
@@ -553,77 +169,4 @@
 
 
 
-// LISTING SECTION
-.section-listing {
 
-  & > .row {
-      & > .col, 
-      & > [class*="col-"] {
-        margin-bottom: 30px;
-      }
-  }
-
-  .card {
-      border: 1px solid $tint-8;
-      height: 100%;
-  }
-}
-
-
-.category-listing {
-  margin: 0 0 20px;
-
-    & > .row {
-      margin-left: -5px;
-      margin-right: -5px;
-
-        & > .col, 
-        & > [class*="col-"] {
-          margin-bottom: 10px;
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-    }
-}
-
-
-.component-group {
-  .card {
-    height: 100%;
-    border: 1px solid $tint-8;
-  }
-}
-
-
-.product-group {
-
-  .card {
-    .title {
-      display: none;
-    }
-  }
-}
-
-.insight-select-block {
-  .component-name span {
-      @extend .h4;
-      text-transform: none;
-      color: $brand-4;
-  }
-}
-.bg-green{
-  background:green;
-}
-.bg-red{
-  background:red;
-}
-i.fas.white{
-  color:white;
-}
-ul.sitemap-pages{
-  columns: 3;
-  -webkit-columns: 3;
-  -moz-columns: 3;
-}
-
-@import "social";

@@ -85,6 +85,8 @@
     background: $tint-b;
     z-index: 9;
     overflow: auto;
+    font-family: $font-mont-b;
+
     @include transition(0.4s all ease);
     @include transform(translateX(100%));
 
@@ -111,6 +113,8 @@
             }
 
             .sub-menu {
+
+                font-family: $font-mont-r;
 
                 & > li {
 

@@ -12,11 +12,14 @@ add_filter('show_admin_bar', '__return_false');
 // *********************** Post Thumbnails
 add_theme_support( 'post-thumbnails' );
 
-add_image_size( 'banner-image', 1920, 700, false );
-add_image_size( 'gallery', 630, 370, true );
-add_image_size( 'gallery-thumb', 60, 60, true );
-add_image_size( 'card-thumb', 400, 200, true );
-add_image_size( 'card-thumb-sm', 9999, 170, false );
+add_image_size( 'banner-image', 1400, 500, true );
+
+add_image_size( 'listing-image', 560, 360, false );
+add_image_size( 'single-image', 560, 360, false );
+
+add_image_size( 'thumb-sm', 358, 256, true );
+add_image_size( 'thumb-md', 400, 300, true );
+add_image_size( 'thumb-lg', 600, 480, true );
 // add_image_size( 'news-thumb', 790, 99999, false ); // false -> resize no crop
 
 // Pagination

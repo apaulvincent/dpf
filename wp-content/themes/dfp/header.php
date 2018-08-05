@@ -20,6 +20,8 @@
 
 <?php
 
+global $DB_Content;
+
 $pid  = get_queried_object_id();
 
 if( !$pid ) return;
@@ -29,7 +31,7 @@ $page_config['page'] = get_queried_object();
 $page_config['meta'] = get_fields($pid);
 
 // echo '<pre>';
-// print_r($page_config['meta']);
+// var_dump($page_config['meta']);
 // echo '</pre>';
 
 ?>
@@ -68,13 +70,9 @@ $page_config['meta'] = get_fields($pid);
 		</div>
 	</header><!-- #masthead -->
 
+	<?php echo $DB_Content->get_section_spacer('98', ['header-spacer']); ?>
+
 	<?php include(locate_template('partials/common/header-subnav.php')); ?>
 
-
-	<!-- <button class="btn btn-full d-xl-none call-btn">
-		<i class="fas fa-phone"></i> DFP
-	</button> -->
-
 	<?php include(locate_template('partials/common/header-banner.php')); ?>
-
 

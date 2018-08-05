@@ -19,10 +19,10 @@ if( $social_fields ):
                 echo '<li><a href="'.$field['social_url'].'"><i class="fab fa-youtube"></i></a>';
                 break;
             case 'linkedin':
-                echo '<li><a href="'.$field['social_url'].'"><i class="fab fa-linkedin-in"></i></a>';
+                echo '<li><a href="'.$field['social_url'].'"><i class="fab fa-linkedin"></i></a>';
                 break;
             case 'google':
-                echo '<li><a href="'.$field['social_url'].'"><i class="fab fa-google"></i></a>';
+                echo '<li><a href="'.$field['social_url'].'"><i class="fab fa-google-plus-square"></i></a>';
                 break;
         }
 

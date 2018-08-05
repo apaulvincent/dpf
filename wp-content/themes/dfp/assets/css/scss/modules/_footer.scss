@@ -1,13 +1,92 @@
 footer.site-footer {
+    background: $brand-b;
+    color: $brand-6;
+    padding: 40px 0;
+    font-family: $font-mont-r;
+    font-size: 14px;
+
+    a {
+        font-size: 14px;
+        color: $brand-6;
+
+        &:hover {
+            color: $brand-2;
+        }
+
+    }
+
+    h5 {
+        font-family: $font-mont-b;
+        font-size: 14px;
+    }
 
     @include screen-max-sm(){
         text-align: center;
     }
 
+    .search-form {
+        position: relative;
+
+        input {
+            background: $tint-b;
+        }
+
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 42px;
+            z-index: 1;
+            color: $brand-w;
+            background: transparent;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+    }
+
+
+    ul.footer-menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        // @include screen-max-sm(){
+        // }
+
+        // @include screen-max-md(){
+        // }
+
+       & > li {
+            margin: 0;
+
+            & > a {
+                display: block;
+                font-family: $font-mont-b;
+                margin: 0 0 20px;
+            }
+            
+            & > ul {
+                list-style-type: none;
+                margin: 0 0 20px;
+                padding: 0;
+
+                li {
+                    margin: 0;
+                }
+            }
+
+        }
+
+    }
+
+
+
     .footer-site-info {
         margin: 0 0 5px;
         padding: 0;
-        text-align: center;
 
         @include screen-max-sm(){
             margin: 20px 0;
@@ -22,80 +101,8 @@ footer.site-footer {
                 display: block;
                 margin: 0 0 5px;
             }
-
-            strong {
-                font-family: $font-bold;
-
-
-                @include screen-max-sm(){
-                    display: none;
-                }
-
-            }
         }
     }
 
-    .footer-menu {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-
-        @include screen-max-sm(){
-            margin: 0 0 20px;
-        }
-
-        @include screen-max-md(){
-            padding: 0;
-            max-width: none;
-        }
-
-        li {
-            display: inline-block;
-            list-style-type: none;
-            margin: 0;
-            font-size: 14px;
-
-            &:last-child strong {
-                display: none;
-            }
-
-            a {
-                color: $brand-4;
-            }
-
-            strong {
-                display: inline-block;
-                margin: 0 4px;
-                font-family: $font-bold;
-            }
-
-
-        }
-
-    }
-
-    .main-footer {
-        background: $brand-b;
-        padding: 40px 0;
-    }
-
-    .copyright {
-        text-align: center;
-        margin: 0;
-        padding: 60px 0;
-        background: $tint-b;
-        
-        small {
-            color: $brand-8;
-            font-size: 12px;
-            @include opacity(0.5);
-        }
-
-        br {
-            @include screen-max-xs(){
-                display: none;
-            }
-        }
-    }
 
 }
