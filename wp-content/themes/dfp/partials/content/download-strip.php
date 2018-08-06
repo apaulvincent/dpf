@@ -1,7 +1,5 @@
 <?php
 
-global $DB_Helper, $DB_Content;
-
 // echo '<pre>';
 // var_dump($block);
 // echo '</pre>';

@@ -9006,6 +9006,11 @@ button {
     .wide-gutter > [class^="col-"], .wide-gutter > [class^=" col-"] {
       padding-right: 15px;
       padding-left: 15px; } }
+.main {
+  padding: 100px 0; }
+@media screen and (max-width: 991px) {
+    .main {
+      padding: 60px 0; } }
 .reusable-block {
   padding: 100px 0; }
 @media screen and (max-width: 991px) {
@@ -9023,9 +9028,9 @@ button {
     margin: 0; }
 .cta-block.full-width a {
     color: #ffffff; }
+.eq-blocks .eq-block-wrap {
+  margin-bottom: 30px; }
 @media screen and (max-width: 991px) {
-  .eq-blocks .eq-block-wrap {
-    margin-bottom: 30px; }
     .eq-blocks .eq-block-wrap:last-child {
       margin-bottom: 0; } }
 .eq-blocks .eq-block {
@@ -9592,8 +9597,28 @@ body.menu-drawer-on .mobile-main-nav-drawer {
     height: 40px;
     line-height: 40px;
     text-align: center; }
+.page-grid-block .eq-block {
+  background-size: cover;
+  background-position: center;
+  background-color: #eeeeee;
+  padding-top: 260px; }
+.page-grid-block .eq-block h4 {
+    background: #eeeeee;
+    color: #000000;
+    padding: 24px;
+    margin: 0; }
+@media screen and (max-width: 991px) {
+      .page-grid-block .eq-block h4 {
+        position: static; } }
 .latest-post-signup-block {
   background: #dedede; }
+.latest-post-signup-block .eq-block-wrap {
+    margin-bottom: 0; }
+@media screen and (max-width: 991px) {
+      .latest-post-signup-block .eq-block-wrap {
+        margin-bottom: 30px; }
+        .latest-post-signup-block .eq-block-wrap:last-child {
+          margin-bottom: 0; } }
 .latest-post-signup-block .latest-post-block {
     background-size: cover;
     background-position: center; }

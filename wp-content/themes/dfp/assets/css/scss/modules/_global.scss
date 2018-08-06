@@ -46,8 +46,48 @@
 
 }
 
+
+.page-grid-block {
+
+
+  .eq-block {
+    background-size: cover;
+    background-position: center;
+    background-color: $tint-8;
+    padding-top: 260px;
+
+      h4 {
+        background: $tint-8;
+        color: $brand-b;
+        padding: 24px;
+        margin: 0;
+      
+        @include screen-max-sm(){
+          position: static; 
+        }
+      
+      }
+  }
+
+}
+
+
 .latest-post-signup-block {
   background: $brand-7;
+
+
+  .eq-block-wrap {
+    margin-bottom: 0;
+          
+      @include screen-max-sm(){
+        margin-bottom: 30px;
+          
+          &:last-child {
+              margin-bottom: 0;
+          }
+      }
+  }
+
 
   .latest-post-block {
     background-size: cover;
