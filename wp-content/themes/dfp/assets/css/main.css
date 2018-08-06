@@ -8531,9 +8531,10 @@ body {
   font-family: "Constantia", sans-serif;
   font-size: 14px;
   line-height: 1.4;
-  color: #000000; }
+  color: #000000;
+  background: #dedede; }
 p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.6; }
 .mega, .main-banner .banner-content h1, .banner-slider .slide-content h1 {
   font-family: "Constantia Bold", sans-serif;
@@ -8544,15 +8545,15 @@ p {
     .mega, .main-banner .banner-content h1, .banner-slider .slide-content h1 {
       font-size: 30px; } }
 h1, .h1 {
-  font-family: "Constantia Bold", sans-serif;
-  font-size: 46px;
+  font-family: "Constantia", sans-serif;
+  font-size: 32px;
   line-height: 1;
   margin: 0 0 20px; }
 @media screen and (max-width: 991px) {
     h1, .h1 {
       font-size: 30px; } }
 h2, .h2 {
-  font-family: "Constantia Bold", sans-serif;
+  font-family: "Constantia", sans-serif;
   font-size: 36px;
   line-height: 1.4;
   margin: 0 0 20px; }
@@ -8560,7 +8561,7 @@ h2, .h2 {
     h2, .h2 {
       font-size: 26px; } }
 h3, .h3 {
-  font-family: "Constantia Bold", sans-serif;
+  font-family: "Constantia", sans-serif;
   font-size: 30px;
   line-height: 1.2;
   margin: 0 0 15px; }
@@ -8620,7 +8621,7 @@ table td {
     padding: 10px;
     border: 1px solid #dedede; }
 ul, ol {
-  font-size: 14px;
+  font-size: 15px;
   margin: 0 0 20px;
   padding: 0 0 0 24px; }
 ul li, ol li {
@@ -9011,17 +9012,28 @@ button {
 @media screen and (max-width: 991px) {
     .main {
       padding: 60px 0; } }
+.main .entry {
+    padding: 60px 24px;
+    background: #ffffff; }
 .reusable-block {
   padding: 100px 0; }
 @media screen and (max-width: 991px) {
     .reusable-block {
       padding: 60px 0; } }
+.reusable-block .block-title {
+    font-family: "Constantia Bold", sans-serif;
+    font-size: 46px;
+    line-height: 1;
+    margin: 0 0 20px; }
+@media screen and (max-width: 991px) {
+      .reusable-block .block-title {
+        font-size: 30px; } }
 .reusable-block .block-title:after {
-    content: '';
-    display: block;
-    height: 1px;
-    border-bottom: 1px solid #000000;
-    margin: 5px 0 0; }
+      content: '';
+      display: block;
+      height: 1px;
+      border-bottom: 1px solid #000000;
+      margin: 5px 0 0; }
 .cta-block.full-width {
   padding: 60px 0; }
 .cta-block.full-width h4 {
@@ -9033,6 +9045,10 @@ button {
 @media screen and (max-width: 991px) {
     .eq-blocks .eq-block-wrap:last-child {
       margin-bottom: 0; } }
+.eq-blocks .img-block {
+  padding-top: 260px;
+  background-size: cover;
+  background-position: center; }
 .eq-blocks .eq-block {
   position: relative;
   display: block;
@@ -9350,7 +9366,8 @@ button {
 .mobile-main-nav-drawer .menu-inner > li a {
       color: #ffffff; }
 .mobile-main-nav-drawer .menu-inner > li a:hover {
-        text-decoration: none; }
+        text-decoration: none;
+        color: #029bff; }
 .mobile-main-nav-drawer .menu-inner > li .sub-menu {
       font-family: "montserratregular", sans-serif; }
 .mobile-main-nav-drawer .menu-inner > li .sub-menu > li a {
@@ -9597,19 +9614,20 @@ body.menu-drawer-on .mobile-main-nav-drawer {
     height: 40px;
     line-height: 40px;
     text-align: center; }
+.page-grid-block {
+  background: #ffffff; }
 .page-grid-block .eq-block {
-  background-size: cover;
-  background-position: center;
-  background-color: #eeeeee;
-  padding-top: 260px; }
+    background-color: #eeeeee; }
 .page-grid-block .eq-block h4 {
-    background: #eeeeee;
-    color: #000000;
-    padding: 24px;
-    margin: 0; }
+      background: #eeeeee;
+      color: #000000;
+      padding: 24px;
+      margin: 0; }
+.page-grid-block .eq-block h4 strong {
+        color: #003399; }
 @media screen and (max-width: 991px) {
-      .page-grid-block .eq-block h4 {
-        position: static; } }
+        .page-grid-block .eq-block h4 {
+          position: static; } }
 .latest-post-signup-block {
   background: #dedede; }
 .latest-post-signup-block .eq-block-wrap {
@@ -9622,6 +9640,9 @@ body.menu-drawer-on .mobile-main-nav-drawer {
 .latest-post-signup-block .latest-post-block {
     background-size: cover;
     background-position: center; }
+@media screen and (max-width: 991px) {
+      .latest-post-signup-block .latest-post-block {
+        padding-top: 260px; } }
 .latest-post-signup-block .latest-post-block h4 {
       position: absolute;
       bottom: 0;
@@ -9662,9 +9683,11 @@ body.menu-drawer-on .mobile-main-nav-drawer {
         height: 50px;
         line-height: 50px; }
 .awards-block {
-  padding-bottom: 60px; }
+  padding-bottom: 60px;
+  background: #ffffff; }
 .feat-block {
-  padding-top: 0; }
+  padding-top: 0;
+  background: #ffffff; }
 .offices-block .card-0 {
   border-top: 5px solid #029bff; }
 .offices-block .card-0 strong {

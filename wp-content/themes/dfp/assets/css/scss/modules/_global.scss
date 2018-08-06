@@ -1,8 +1,3 @@
-.paging-wrap {
-
-}
-
-
 .divider {
   height: 1px;
 }
@@ -48,19 +43,20 @@
 
 
 .page-grid-block {
-
+  background: $tint-w;
 
   .eq-block {
-    background-size: cover;
-    background-position: center;
     background-color: $tint-8;
-    padding-top: 260px;
 
       h4 {
         background: $tint-8;
         color: $brand-b;
         padding: 24px;
         margin: 0;
+
+        strong {
+          color: $brand-3;
+        }
       
         @include screen-max-sm(){
           position: static; 
@@ -92,6 +88,10 @@
   .latest-post-block {
     background-size: cover;
     background-position: center;
+
+      @include screen-max-sm(){
+        padding-top: 260px;
+      }
 
       h4 {
         position: absolute;
@@ -160,13 +160,15 @@
 }
 
 
-
 .awards-block {
   padding-bottom: 60px;
+  background: $tint-w;
 }
+
 
 .feat-block {
   padding-top: 0;
+  background: $tint-w;
 }
 
 

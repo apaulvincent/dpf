@@ -28,6 +28,13 @@
     @include screen-max-sm(){
         padding: 60px 0;
     }
+
+    .entry {
+
+        padding: 60px 24px;
+        background: $tint-w;
+
+    }
   
 }
 
@@ -41,6 +48,14 @@
 
 
     .block-title {
+        font-family: $font-cons-b;
+        font-size: 46px;
+        line-height: 1;
+        margin: 0 0 20px;
+    
+        @include screen-max-sm(){
+            font-size: 30px;
+        } 
         
         &:after {
             content: '';
@@ -73,22 +88,28 @@
   
   .eq-blocks {
 
-        .eq-block-wrap {
-            margin-bottom: 30px;
-                
-            @include screen-max-sm(){
-                
-                &:last-child {
-                    margin-bottom: 0;
-                }
+    .eq-block-wrap {
+        margin-bottom: 30px;
+            
+        @include screen-max-sm(){
+            
+            &:last-child {
+                margin-bottom: 0;
             }
         }
+    }
 
-      .eq-block {
-          position: relative;
-          display: block;
-          height: 100%;
-      }
+    .img-block {
+        padding-top: 260px;
+        background-size: cover;
+        background-position: center;
+    }
+            
+    .eq-block {
+        position: relative;
+        display: block;
+        height: 100%;
+    }
 
 
   }

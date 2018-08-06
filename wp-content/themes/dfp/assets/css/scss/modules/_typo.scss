@@ -3,6 +3,7 @@ body {
     font-size: 14px;
     line-height: 1.4;
     color: $brand-b;
+    background: $brand-7;
 }
 
 p {
@@ -23,8 +24,8 @@ p {
 }
 
 h1, .h1 {
-    font-family: $font-bold;
-    font-size: 46px;
+    font-family: $font-cons-r;
+    font-size: 32px;
     line-height: 1;
     margin: 0 0 20px;
 
@@ -34,7 +35,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-family: $font-bold;
+    font-family: $font-cons-r;
     font-size: 36px;
     line-height: 1.4;
     margin: 0 0 20px;
@@ -46,7 +47,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-    font-family: $font-bold;
+    font-family: $font-cons-r;
     font-size: 30px;
     line-height: 1.2;
     margin: 0 0 15px;

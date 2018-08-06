@@ -14,12 +14,12 @@ add_theme_support( 'post-thumbnails' );
 
 add_image_size( 'banner-image', 1400, 500, true );
 
-add_image_size( 'listing-image', 560, 360, false );
-add_image_size( 'single-image', 560, 360, false );
+add_image_size( 'listing-image', 560, 560, true );
+add_image_size( 'single-image', 560, 360, true );
 
-add_image_size( 'thumb-sm', 358, 256, true );
-add_image_size( 'thumb-md', 400, 300, true );
-add_image_size( 'thumb-lg', 600, 480, true );
+add_image_size( 'thumb-sm', 360, 360, true );
+add_image_size( 'thumb-md', 400, 400, true );
+add_image_size( 'thumb-lg', 600, 600, true );
 // add_image_size( 'news-thumb', 790, 99999, false ); // false -> resize no crop
 
 // Pagination

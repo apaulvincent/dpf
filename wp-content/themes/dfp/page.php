@@ -2,20 +2,50 @@
 
 	get_header();
 
+?>
 
-	if ( have_posts() ) :
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="mega"><?php echo the_title(); ?></h1>
+				</div>
+			</div>
+		</div>
+	</section>
 
-		/* Start the Loop */
-		while ( have_posts() ) : the_post();
+	<section class="main">
+		<div class="container">
+				<div class="row">
 
-			the_content(); 
+					<div class="col-8">
 
-		endwhile;
+						<?php 
+							if ( have_posts() ) :
+							while ( have_posts() ) : the_post();
+						?>
 
-		the_posts_pagination();
+							<div class="entry">
+								<?php the_content(); ?>
+							</div>
+
+						<?php 
+							endwhile;
+							endif; 
+						?>
+
+					</div>
+					
+					<div class="col-3 offset-1">
+						sidebar
+					</div>
+
+				</div>
+		</div>
+	</section>
 
 
-	endif;
 
+<?php 
 
 get_footer();
