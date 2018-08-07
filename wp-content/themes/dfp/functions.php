@@ -76,7 +76,6 @@ function wp_pagination() {
   echo '</ul></div>' . "\n";
 }
 
-
 // Sidebar main content
 function sidebar_content( $atts) {
 
@@ -114,6 +113,19 @@ function sidebar_content( $atts) {
 }
 
 add_shortcode( 'sidebar_content', 'sidebar_content' );
+
+
+
+function dfp_sf_form(){
+
+  global $DB_Content;
+
+  $var = array();
+
+  return $DB_Content->pass_file_to_var('partials/content/dfp-sf-form.php', $var);
+
+}
+add_shortcode('dfp_sf_form', 'dfp_sf_form');
 
 
 

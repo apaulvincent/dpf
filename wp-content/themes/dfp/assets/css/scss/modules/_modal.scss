@@ -1,0 +1,33 @@
+.modal-content {
+    background: $tint-8;
+    @include round-corners(0px);
+}
+
+.modal-header {
+    padding: 30px 60px 0;
+
+    @include screen-max-sm(){
+        padding: 20px 20px 0;
+    }
+
+    .close {
+        color: $brand-b;
+        font-size: 56px;
+        padding: 0;
+        margin: -1rem -1rem -1rem auto;
+        @include opacity(1);
+    }
+}
+
+.modal-body {
+    padding: 0 60px 30px;
+
+    @include screen-max-sm(){
+        padding: 0 20px 20px;
+    }
+
+    .fa-comment {
+        color: $brand-b;
+        font-size: 38px;
+    }
+}

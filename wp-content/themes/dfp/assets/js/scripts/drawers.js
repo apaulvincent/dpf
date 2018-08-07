@@ -20,17 +20,11 @@ import {debounce} from './helpers';
 		})
 
 
-
-
-
 		$(window).on('resize', debounce(() => {
 
 			$('body').trigger('drawer:close-all');
 
 		}, 250));
-
-
-
 
 
 		$('.main-menu li.menu-item-has-children').on('mouseover', function(e){

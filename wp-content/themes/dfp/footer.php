@@ -154,6 +154,25 @@ if( $content['content_reusable_blocks'] ) {
 		</div>
 </footer>
 
+
+<!-- Modal -->
+<div class="modal fade" id="dfp-sf-form-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span class="pe-7s-close"></span>
+		</button>
+	  </div>
+      <div class="modal-body">
+		<i class="fas fa-comment"></i>
+	  	<?php echo do_shortcode('[sidebar_content ids="14555"]'); ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <?php wp_footer(); ?>
 
 </body>
