@@ -13,6 +13,7 @@ add_filter('show_admin_bar', '__return_false');
 add_theme_support( 'post-thumbnails' );
 
 add_image_size( 'banner-image', 1400, 500, true );
+add_image_size( 'feat-banner-image', 760, 999999, false );
 
 add_image_size( 'listing-image', 560, 560, true );
 add_image_size( 'single-image', 560, 360, true );
@@ -21,6 +22,7 @@ add_image_size( 'thumb-sm', 360, 360, true );
 add_image_size( 'thumb-md', 400, 400, true );
 add_image_size( 'thumb-lg', 600, 600, true );
 // add_image_size( 'news-thumb', 790, 99999, false ); // false -> resize no crop
+
 
 // Pagination
 function wp_pagination() {
@@ -73,6 +75,47 @@ function wp_pagination() {
     printf( '<li class="next">%s</li>' . "\n", get_next_posts_link('<i class="pe-7s-angle-right"></i>') );
   echo '</ul></div>' . "\n";
 }
+
+
+// Sidebar main content
+function sidebar_content( $atts) {
+
+  global $DB_Content;
+
+  extract(shortcode_atts(array(
+    'ids' => '14502|14504',
+  ), $atts));
+
+  $ids_arr = explode('|', $ids);
+
+  $args = array( 
+      'post_type'         => 'reusable-block',
+      'post__in'          => $ids_arr, 
+      'orderby'           => array( 'post__in' )
+  );
+
+  $query = new WP_Query($args);
+
+  if ( $query->have_posts() ) :
+  
+      while ( $query->have_posts() ) : $query->the_post();
+
+          $block = get_fields($post->ID);
+
+          echo $DB_Content->pass_file_to_var('partials/content/'. $block['reusable_block_setup'] .'.php', $block);
+  
+      endwhile;
+  
+  endif;
+  
+  // Restore original post data.
+  wp_reset_postdata();
+
+}
+
+add_shortcode( 'sidebar_content', 'sidebar_content' );
+
+
 
 //to fix WP's admin double login bug
 setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);

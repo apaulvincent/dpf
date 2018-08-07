@@ -14,12 +14,11 @@ if( $content['content_reusable_blocks'] ) {
 		$block = get_fields($value);
 
 		if( is_front_page() ) {
-			if( $block['reusable_block_setup'] == 'download-strip' || $block['reusable_block_setup'] == 'page-grid') {
+			if( $block['class'] == 'download-strip' || $block['reusable_block_setup'] == 'page-grid') {
 				continue;
 			}
 		}
 
-		//include( locate_template('partials/content/'. $block['reusable_block_setup'] .'.php'));
 		echo $DB_Content->pass_file_to_var('partials/content/'. $block['reusable_block_setup'] .'.php', $block);
 
 	}

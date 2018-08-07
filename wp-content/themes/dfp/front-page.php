@@ -1,5 +1,7 @@
 <?php
 
+global $DB_Content;
+
 get_header(); 
 
 $content = get_fields($post->ID);
@@ -9,8 +11,10 @@ if( $content['content_reusable_blocks'] ) {
 
 		$block = get_fields($id);
 
-		if( $block['reusable_block_setup'] == 'download-strip' || $block['reusable_block_setup'] == 'page-grid') {
-			include(locate_template('partials/content/'. $block['reusable_block_setup'] .'.php'));
+		if( $block['class'] == 'download-strip' || $block['reusable_block_setup'] == 'page-grid') {
+
+			echo $DB_Content->pass_file_to_var('partials/content/'. $block['reusable_block_setup'] .'.php', $block);
+
 		}
 	}
 }

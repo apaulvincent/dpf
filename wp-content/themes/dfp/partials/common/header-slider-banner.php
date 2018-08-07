@@ -10,14 +10,25 @@ $slides = $page_config['meta']['banner_slider']
 
 <div class="main-banner">
 
-    <div class="banner-slider">
+    <div class="banner-info d-none d-xl-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 offset-lg-9 col-lg-3">
+                     <?php  echo do_shortcode('[sidebar_content ids="14502"]'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <div class="banner-slider">
+
         <?php 
-        
+
             foreach ($slides as $slide): 
             $banner_image_url = wp_get_attachment_image_src($slide['slide_image'], 'banner-image');
 
         ?>
+
         <div style="background-image: url(<?php echo $banner_image_url[0]; ?>);" >
             <div class="overlay"></div>
             <div class="slide-content">
@@ -40,7 +51,9 @@ $slides = $page_config['meta']['banner_slider']
                 </div>
             </div>
         </div>
+
         <?php endforeach; ?>
+        
     </div>
 
 </div>

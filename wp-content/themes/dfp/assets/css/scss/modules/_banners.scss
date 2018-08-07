@@ -60,6 +60,15 @@
 
     }
 
+    .banner-info {
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        right: 0;
+
+        @include transform(translateY(-50%));
+    }
 }
 
 
