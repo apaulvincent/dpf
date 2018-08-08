@@ -35,6 +35,7 @@ $slides = $page_config['meta']['banner_slider']
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-4">
+
                             <?php echo $slide['slide_content']; ?>
                             
                             <?php if($slide['button_url']): ?>
@@ -53,7 +54,7 @@ $slides = $page_config['meta']['banner_slider']
         </div>
 
         <?php endforeach; ?>
-        
+
     </div>
 
 </div>

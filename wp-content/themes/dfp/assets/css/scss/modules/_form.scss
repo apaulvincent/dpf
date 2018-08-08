@@ -116,6 +116,7 @@ input[type="password"] {
 }
 
 
+
 textarea, textarea.form-control {
 	font-family: $font-regular;
 	font-size: 14px;
@@ -127,8 +128,9 @@ textarea, textarea.form-control {
 	margin: 0 auto;
 	background: $tint-w;
 	outline: none;
-	color: $brand-6;
+	color: $brand-b;
 	border: 1px solid $brand-8;
+	
 	 -webkit-appearance: none; 
 	 -moz-appearance: none;
 

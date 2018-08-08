@@ -50,27 +50,20 @@ $content = get_fields($posts_page);
 
                                 <div class="entry blog-entry">
                                     <h2><?php the_title(); ?></h2>
-                                    <?php the_content(); ?>
-								</div>
-								
-
-								<?php 
-								
-									$args = array(
-											'title_reply'=>'Leave a comment',
-											'label_submit'=>'Post'
-										);
-
-									comment_form($args); 
-									
-								?>
+                                    <?php the_excerpt(); ?>
+                                    <a href="<?php echo get_permalink(); ?>" class="btn btn-1">More</a>
+                                </div>
 
                             </div>
                         </div>
 
 						<?php  endwhile; ?>
-						<?php endif; ?>
-						
+                        
+                        <div class="paging-wrap bottom">
+                            <?php wp_pagination(); ?>
+                        </div>
+
+                        <?php endif; ?>
 
 					</div>
 					

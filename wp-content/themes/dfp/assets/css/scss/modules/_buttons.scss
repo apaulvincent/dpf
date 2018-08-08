@@ -16,6 +16,7 @@ button {
     letter-spacing: 2px;
     white-space: pre-wrap;
     text-transform: uppercase;
+    text-decoration: none !important;
     @include round-corners(0);
     @include transition(0.4s all ease);
 
@@ -46,6 +47,13 @@ button {
     }
 
 }
+
+.btn-1 {
+    border-color: $tint-1;
+    background: $tint-1;
+    color: $brand-w;
+}
+
 
 .btn-2 {
     border-color: $tint-2;

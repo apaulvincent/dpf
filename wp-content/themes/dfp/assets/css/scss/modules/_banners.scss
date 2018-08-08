@@ -66,8 +66,18 @@
         z-index: 2;
         top: 50%;
         right: 0;
+        height: 1px;
+        overflow: visible;
 
-        @include transform(translateY(-50%));
+        .col-12 {
+            height: 1px;
+            overflow: visible;
+        }
+
+        .expert-advise {
+            @include transform(translateY(-50%));
+        }
+    
     }
 }
 

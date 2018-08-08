@@ -56,6 +56,11 @@
         padding: 60px 24px;
         background: $tint-w;
 
+        &.blog-entry {
+            padding: 30px;
+            margin: 0 0 50px;
+        }
+
     }
   
 }

@@ -129,6 +129,138 @@ add_shortcode('dfp_sf_form', 'dfp_sf_form');
 
 
 
+
+
+
+
+
+
+// Category listing
+function dfp_list_categories( $atts ) {
+
+    $html = "";
+
+    $html .= "<ul class='category-list'>";
+    // Get the ID of a given category
+    $category_id = get_cat_ID( 'Solutions' );
+    $cat_name =  get_cat_name( $category_id );
+
+    // Get the URL of this category
+    $category_link = get_category_link( $category_id );
+
+    $html .= "<li><a href='".esc_url( $category_link )."' >" . $cat_name . "</a></li>";
+
+    // Get the ID of a given category
+    $category_id = get_cat_ID( 'Developer Advice' );
+    $cat_name =  get_cat_name( $category_id );
+
+    // Get the URL of this category
+    $category_link = get_category_link( $category_id );
+
+    $html .= "<li><a href='".esc_url( $category_link )."' >" . $cat_name . "</a></li>";
+
+    // Get the ID of a given category
+    $category_id = get_cat_ID( 'Strategy' );
+    $cat_name =  get_cat_name( $category_id );
+
+    // Get the URL of this category
+    $category_link = get_category_link( $category_id );
+
+    $html .= "<li><a href='".esc_url( $category_link )."' >" . $cat_name . "</a></li>";
+
+    $html .= "</ul>";
+
+
+    return $html;
+}
+
+add_shortcode( 'dfp_list_categories', 'dfp_list_categories' );
+
+
+// Featured article shortcode
+function dfp_featured_list( $atts ) {
+
+    $html = "";
+
+    $args = array(
+        'post_type' => 'post',
+        'order' => 'ASC',
+        'orderby' => 'rand',
+        'tag' => 'featured',
+        'posts_per_page' => 5
+      );
+
+    $query = new WP_Query( $args );
+
+
+    if( $query->have_posts() ):
+
+      $html .= "<ul>";
+
+      while ( $query->have_posts() ):
+        $query->the_post();
+
+        $html .= "<li><a href='".get_permalink()."' >".get_the_title()."</a></li>";
+
+      endwhile;
+
+      $html .= "</ul>";
+
+    else:
+
+      $html .= "<p class='no-featured'>Sorry, no featured article found.</p>";
+
+    endif;
+
+    return $html;
+}
+
+add_shortcode( 'dfp_featured_list', 'dfp_featured_list' );
+
+
+// Add Widget Area
+function widgets_init() {
+
+  register_sidebar( array(
+      'name'          => __( 'Sidebar Widgets', 'dfp' ),
+      'id'            => 'sidebar-widget',
+      'description'   => __( '', 'dfp' ),
+      'before_widget' => '<section id="%1$s" class="standard-content-block widget-block %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h4>',
+      'after_title'   => '</h4>',
+  ));
+
+}
+
+add_action( 'widgets_init', 'widgets_init' );
+
+
+
+
+//Register tag cloud filter callback
+function tag_widget_limit($args){
+
+  if(isset($args['taxonomy']) && $args['taxonomy'] == 'post_tag'){
+    $args['number'] = 16; //Limit number of tags
+  }
+
+ return $args;
+}
+
+add_filter('widget_tag_cloud_args', 'tag_widget_limit');
+
+
+
+
+
+
+
+
+
+
+
+
 //to fix WP's admin double login bug
 setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);
 if ( SITECOOKIEPATH != COOKIEPATH ) setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);

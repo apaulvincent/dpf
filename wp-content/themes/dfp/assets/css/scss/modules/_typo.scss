@@ -109,6 +109,10 @@ a {
     }
  }
 
+ strong, b {
+     font-weight: normal;
+    font-family: $font-cons-b;
+ }
 
 blockquote {
     padding: 0;
@@ -141,5 +145,25 @@ ul, ol {
 
     li {
         margin: 0 0 8px;
+    }
+}
+
+
+.post-meta {
+    h3 {
+        font-size: 20px;
+        line-height: 1;
+        margin: 0 0 10px;
+    }
+
+    p {
+        font-family: $font-mont-r;
+        font-size: 12px;
+    }
+}
+
+.blog-entry {
+    h2 {
+        font-size: 22px;
     }
 }
