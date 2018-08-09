@@ -1,11 +1,13 @@
 <?php
 
 	get_header();
-	$content = get_fields($post->ID);
+	$page_setup = get_fields();
 
 ?>
 
-	<section class="title-bar" style="background-color: <?php echo $content['title_bar_background']; ?>">
+	<?php if($page_setup['show_banner'] == 0): ?>
+
+	<section class="title-bar" style="background-color: <?php echo $page_setup['title_bar_background']; ?>">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -14,6 +16,9 @@
 			</div>
 		</div>
 	</section>
+
+	<?php endif; ?>
+
 
 	<section class="main">
 		<div class="container">
@@ -25,7 +30,6 @@
 							if ( have_posts() ) :
 							while ( have_posts() ) : the_post();
 						?>
-
 
 						<?php 
 

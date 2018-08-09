@@ -4,12 +4,12 @@
 
 <?php 
 
-$content = get_fields($post->ID);
+$page_setup = get_fields();
 
 
-if( $content['content_reusable_blocks'] ) {
+if( $page_setup['content_reusable_blocks'] ) {
 
-	foreach ( $content['content_reusable_blocks'] as $key => $value) {
+	foreach ( $page_setup['content_reusable_blocks'] as $key => $value) {
 
 		$block = get_fields($value);
 
@@ -155,7 +155,9 @@ if( $content['content_reusable_blocks'] ) {
 </footer>
 
 
+
 <!-- Modal -->
+<?php if ( !is_page('contact') ): ?>
 <div class="modal fade" id="dfp-sf-form-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-md" role="document">
     <div class="modal-content">
@@ -171,7 +173,12 @@ if( $content['content_reusable_blocks'] ) {
     </div>
   </div>
 </div>
+<?php endif ?>
 
+
+<div class="social-share d-none d-lg-block">
+	<?php echo do_shortcode('[ssba-buttons]'); ?>
+</div>
 
 <?php wp_footer(); ?>
 

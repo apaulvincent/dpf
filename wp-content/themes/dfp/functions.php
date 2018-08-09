@@ -128,13 +128,6 @@ function dfp_sf_form(){
 add_shortcode('dfp_sf_form', 'dfp_sf_form');
 
 
-
-
-
-
-
-
-
 // Category listing
 function dfp_list_categories( $atts ) {
 
@@ -237,7 +230,6 @@ add_action( 'widgets_init', 'widgets_init' );
 
 
 
-
 //Register tag cloud filter callback
 function tag_widget_limit($args){
 
@@ -252,12 +244,12 @@ add_filter('widget_tag_cloud_args', 'tag_widget_limit');
 
 
 
+//  ACF Google Map API key
+function dfp_acf_init() {
+	acf_update_setting('google_api_key', 'AIzaSyCj3H1hUZKVCKqi15bIs1xK4EuxIBf2F5s');
+}
 
-
-
-
-
-
+add_action('acf/init', 'dfp_acf_init');
 
 
 

@@ -2,7 +2,7 @@
 
 global $DB_Content;
 
-$slides = $page_config['meta']['banner_slider']
+$slides = $page_setup['banner_slider']
 
 ?>
 

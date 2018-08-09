@@ -7,15 +7,15 @@ $content = get_fields($posts_page);
 
 ?>
 
-<section class="title-bar" style="background-color: <?php echo $content['title_bar_background']; ?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="large"><?php echo get_the_title($posts_page); ?></h1>
+    <section class="title-bar" style="background-color: <?php echo $content['title_bar_background']; ?>">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="large"><?php echo get_the_title($posts_page); ?></h1>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 	<section class="main">
@@ -69,7 +69,12 @@ $content = get_fields($posts_page);
 					
 					<div class="col-12 col-lg-3 offset-lg-1">
 						<?php echo $DB_Content->get_section_spacer('30', ['d-lg-none']); ?>
-						<?php get_sidebar(); ?>
+                        <?php get_sidebar(); ?>
+                        
+                        <?php if( is_dynamic_sidebar( 'sidebar-widget' ) ): ?>
+                        <?php dynamic_sidebar( 'sidebar-widget' ); ?>
+                        <?php endif; ?>
+                        
 					</div>
 
 				</div>

@@ -27,26 +27,20 @@
 }
 
 
-
-.social-share {
-
-    .socials {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-  
-      a {
-        font-size: 18px;
-        margin: 0 10px;
-        padding: 0;
-      }
-    }
-  
-  }
   
   // SHARE BUTTONS:
   
-  .ssba {
+
+.social-share {
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 0;
+
+  @include transform(translateY(-50%));
+}
+
+.ssba {
       .ssba_facebook_share,
       .ssba_twitter_share,
       .ssba_email_share,
@@ -54,13 +48,18 @@
       .ssba_google_share {
         font-family: 'Font Awesome Brands';
         font-weight: 400;
-        margin: 0 0 0 16px;
-        display: inline-block;
-        color: $brand-5;
+        margin: 0;
+        color: $brand-w;
+        background: $brand-b;
         font-size: 18px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
 
           &:hover {
-            color: $brand-1;
+            color: $brand-w;
           }
   
           img, .ssbp-text {
@@ -70,10 +69,24 @@
 
       .ssba-share-text {
           color: $brand-6;
-
+          display: none;
+          
           @include screen-max-md(){
             display: none;
           }
+      }
+
+      .ssba_facebook_share{
+        background: #375e99;
+      }
+      .ssba_twitter_share{
+        background: #01a5fa;
+      }
+      .ssba_google_share{
+        background: #df4e3b;
+      }
+      .ssba_linkedin_share{
+        background: #0179b6;
       }
 
       .ssba_facebook_share:before{
@@ -83,7 +96,7 @@
         content: "\F099";
       }
       .ssba_google_share:before{
-        content: "\E813";
+        content: "\f0d5";
       }
       .ssba_email_share:before{
         font-family: 'Font Awesome';

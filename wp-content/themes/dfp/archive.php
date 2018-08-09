@@ -1,83 +1,83 @@
 <?php
-/*
- * Archive Template
- */
 
-get_header('search');
+get_header();
+
+$posts_page = get_option( 'page_for_posts' );
+$content = get_fields($posts_page);
 
 ?>
 
-	<section class="primary ui-card">
+    <section class="title-bar" style="background-color: <?php echo $content['title_bar_background']; ?>">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1><?php single_term_title(); ?></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section class="main">
 		<div class="container">
-			<div class="row">
+				<div class="row">
 
-		<?php if ( have_posts() ) : ?>
-				<div class="col-sm-12 col-md-12">
-					<div class="row">
+					<div class="col-12 col-lg-8">
 
-						<div class="col-sm-12 col-md-12">
-							<div class="page-title">
-                                <h1><?php single_term_title(); ?></h1>
-                                <?php the_archive_description(); ?>
-							</div>
-						</div>
+						<?php 
+							if ( have_posts() ) :
+							while ( have_posts() ) : the_post();
+						?>
 
-						<div class="col-sm-12 col-md-12">
-							<div class="paging-wrap">
-								<?php wp_pagination(); ?>
-							</div>
-						</div>
+                        <div class="row">
+                            <div class="col-12 col-lg-3">
+                                <div class="post-meta">
+                                    <h3><?php the_date(); ?></h3>
+                                    <p>By <?php the_author(); ?></p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-9">
 
-                        <?php  while( have_posts() ): the_post(); ?>
+                                <?php 
 
-                                <article class="list-item">
-                                    <div class="col-xs-12 col-sm-3">
-                                        
-                                        <?php if (has_post_thumbnail() ): ?>
-                                            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' ); ?>
-                                            <a href="<?php echo get_the_permalink(); ?>" class="img-wrap">
-                                                <img src="<?php echo $image[0]; ?>" alt="">
-                                            </a>
-                                        <?php else: ?>
-                                            <a href="<?php echo get_the_permalink(); ?>" class="img-wrap">
-                                                <?php
-                                                    $fallback = get_field('field_fallback_image', 'option');
-                                                    echo '<img src="'.$fallback['sizes']['thumbnail'].'">';
-                                                ?>
-                                            </a>
-                                        <?php endif; ?>
-                                    </div>
+                                    if ( has_post_thumbnail() ) {
+                                        echo '<div class="featured-image">';
+                                        the_post_thumbnail('feat-banner-image');
+                                        echo '</div>';
+                                    }
 
-                                    <div class="col-xs-12 col-sm-9">
-                                        <div class="entry-content">
-                                            <h3><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                            <small class="date"><?php echo get_the_date(); ?></small>
-                                            <a href="<?php echo get_the_permalink(); ?>" class="btn wire">read more</a>
-                                        </div>
-                                    </div>
-                                </article>
+                                ?>
 
-                        <?php endwhile; ?>
+                                <div class="entry blog-entry">
+                                    <h2><?php the_title(); ?></h2>
+                                    <?php the_excerpt(); ?>
+                                    <a href="<?php echo get_permalink(); ?>" class="btn btn-1">More</a>
+                                </div>
 
-                    <div class="col-sm-12 col-md-12">
-						<div class="paging-wrap bottom">
-							<?php wp_pagination(); ?>
-						</div>
-					</div>
+                            </div>
+                        </div>
+
+						<?php  endwhile; ?>
+                        
+                        <div class="paging-wrap bottom">
+                            <?php wp_pagination(); ?>
+                        </div>
+
+                        <?php endif; ?>
 
 					</div>
+					
+					<div class="col-12 col-lg-3 offset-lg-1">
+
+						<?php echo $DB_Content->get_section_spacer('30', ['d-lg-none']); ?>
+                        <?php get_sidebar(); ?>
+
+					</div>
+
 				</div>
-			<?php endif; ?>
+		</div>
+	</section>
 
 
+<?php 
 
-
-			</div>
-		</div><!-- end entry -->
-	</section><!-- end primary -->
-
-
-
-
-
-<?php get_footer(); ?>
+get_footer();

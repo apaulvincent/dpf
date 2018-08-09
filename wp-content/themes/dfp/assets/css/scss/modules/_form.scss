@@ -103,6 +103,10 @@ input[type="password"] {
 	    margin: 0;
 	}
 
+	&[required] {
+		border: 1px solid $brand-4;
+	}
+
 	@include round-corners(0);
 	// @include transition(0.4s all ease);
 	@include box-shadow(none);
@@ -121,7 +125,7 @@ textarea, textarea.form-control {
 	font-family: $font-regular;
 	font-size: 14px;
 	width: 100%;
-	padding: 10px;
+	padding: 18px;
 	line-height: 1.2;
 	text-align: left;
 	outline: none;
@@ -130,15 +134,16 @@ textarea, textarea.form-control {
 	outline: none;
 	color: $brand-b;
 	border: 1px solid $brand-8;
-	
+
 	 -webkit-appearance: none; 
 	 -moz-appearance: none;
-
 
 	&::-webkit-input-placeholder {color: $brand-b; }
 	&:-moz-placeholder {color: $brand-b; opacity: 1; } 
 	&::-moz-placeholder {color: $brand-b; opacity: 1; } 
 	&:-ms-input-placeholder {color: $brand-b; }
+
+	@include round-corners(0);
 
 	&:focus {
 		outline: none;
@@ -173,8 +178,10 @@ input[type="checkbox"] {
 	padding-left:0px;
 	padding-right:0px;
 }
+
 .recaptcha-container .wpcf7-recaptcha div{
 }
+
 .wpcf7-form {
 	label {
 		display: block;
@@ -285,4 +292,9 @@ div.wpcf7-mail-sent-ng {
 	@include screen-max-xs(){
 
 	}
+}
+
+.g-recaptcha * {
+	text-align: center;
+	margin: 0 auto;
 }

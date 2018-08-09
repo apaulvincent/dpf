@@ -2,8 +2,26 @@
 
 get_header();
 
-$posts_page = get_option( 'page_for_posts' );
-$content = get_fields($posts_page);
+
+if ( in_category('project-advisory') ) { 
+
+    $page = get_page_by_path('project-advisory');
+
+} elseif ( in_category('landmark-projects') ) { 
+
+    $page = get_page_by_path('project-funding');
+
+} elseif ( in_category('key-workout-projects') ) { 
+
+    $page = get_page_by_path('project-workouts');
+
+} else {
+
+    $page = get_page_by_path('blog');
+}
+
+
+$content = get_fields($page->ID);
 
 ?>
 
@@ -11,7 +29,7 @@ $content = get_fields($posts_page);
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="large"><?php echo get_the_title($posts_page); ?></h1>
+                <h1 class="large"><?php echo get_the_title($page->ID); ?></h1>
             </div>
         </div>
     </div>
@@ -53,16 +71,13 @@ $content = get_fields($posts_page);
                                     <?php the_content(); ?>
 								</div>
 								
-
 								<?php 
-								
 									$args = array(
 											'title_reply'=>'Leave a comment',
 											'label_submit'=>'Post'
 										);
 
 									comment_form($args); 
-									
 								?>
 
                             </div>
@@ -77,6 +92,10 @@ $content = get_fields($posts_page);
 					<div class="col-12 col-lg-3 offset-lg-1">
 						<?php echo $DB_Content->get_section_spacer('30', ['d-lg-none']); ?>
 						<?php get_sidebar(); ?>
+
+                        <?php if( is_dynamic_sidebar( 'sidebar-widget' ) ): ?>
+                        <?php dynamic_sidebar( 'sidebar-widget' ); ?>
+                        <?php endif; ?>
 					</div>
 
 				</div>

@@ -13,6 +13,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB96rt6dlY8Gp_GFprNH5ug__wnownAQHs"></script>
 <?php endif ?>
 
+<script src="https://www.google.com/recaptcha/api.js"></script>
 
 </head>
 
@@ -22,17 +23,7 @@
 
 global $DB_Content;
 
-$pid  = get_queried_object_id();
-
-if( !$pid ) return;
-
-$page_config['ID'] = $pid;
-$page_config['page'] = get_queried_object();
-$page_config['meta'] = get_fields($pid);
-
-// echo '<pre>';
-// var_dump($page_config['meta']);
-// echo '</pre>';
+$page_setup = get_fields();
 
 ?>
 

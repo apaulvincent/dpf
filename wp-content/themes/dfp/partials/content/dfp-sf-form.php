@@ -1,20 +1,10 @@
-<?php
-
-global $DB_Helper, $DB_Content;
-
-// echo '<pre>';
-// var_dump($var);
-// echo '</pre>';
-
-?>
-
 <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/v1531759913576/recaptcha__en.js"></script>
 
 <form action="https://login.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="sf-contact-form">
 
     <input type=hidden name="captcha_settings" value='{"keyname":"DFP_1","fallback":"true","orgId":"00D28000001Kgn6","ts":""}'>
     <input type=hidden name="oid" value="00D28000001Kgn6">
-    <input type=hidden name="retURL" value="https://www.dfpartners.com.au/contact-confirmation/">
+    <input type=hidden name="retURL" value="/contact">
     <input type="hidden" name="lead_source" value="Web">
 
     <div class="form-group">
@@ -110,7 +100,7 @@ global $DB_Helper, $DB_Content;
     </div>
 
     <div class="form-group">
-        <textarea id="00N2800000J0G02" placeholder="Message" name="00N2800000J0G02" rows="4" type="text" wrap="soft" class="form-control"></textarea>
+        <textarea id="00N2800000J0G02" placeholder="Message" name="00N2800000J0G02" rows="1" type="text" wrap="soft" class="form-control"></textarea>
     </div>
 
     <div class="form-group">

@@ -9,7 +9,7 @@
 
   li {
     display: inline-block;
-    border: 1px solid $tint-8;
+    border: 1px solid $tint-1;
     margin: 0;
     padding: 0;
 
@@ -20,11 +20,27 @@
       line-height: 40px;
       text-align: center;
       vertical-align: middle;
-      color: $brand-6;
+      color: $brand-b;
+    }
+
+    &.ellip {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      color: $brand-b;
+      border-color: transparent;
     }
 
     &.active {
-      background: $tint-8;
+      background: $tint-1;
+
+      a {
+        color: $brand-w;
+      }
+      
     }
   }
 
@@ -387,3 +403,22 @@
   }
 }
 
+.contact-form {
+
+  .fa-comment {
+    color: $brand-b;
+    font-size: 38px;
+  }
+}
+
+.comment-respond {
+
+  .comment-reply-title {
+    font-size: 22px;
+  }
+
+  input.submit {
+    @extend .btn;
+    @extend .btn-1;
+  }
+}

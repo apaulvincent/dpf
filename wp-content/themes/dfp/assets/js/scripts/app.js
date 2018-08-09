@@ -26,4 +26,22 @@ $(document).ready(function(){
     // });
 
 
+    $('.dfp-sf-form-modal-btn').on('click', function(e){
+        e.preventDefault();
+        
+        // If contact form, scroll to form
+
+        if( $('section.contact-form').length > 0 ) {
+
+            window.location = '#dfp-sf-form-modal'
+
+        } else {
+
+            $('#dfp-sf-form-modal').modal('show');
+        }
+
+        
+
+    })
+
 });
