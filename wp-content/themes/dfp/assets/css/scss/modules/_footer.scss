@@ -3,11 +3,14 @@ footer.site-footer {
     color: $brand-6;
     padding: 40px 0;
     font-family: $font-mont-r;
-    font-size: 14px;
+    font-size: 13px;
 
     a {
-        font-size: 14px;
+        font-size: 13px;
         color: $brand-6;
+        line-height: 1.2;
+        display: block;
+        margin: 0 0 6px;
 
         &:hover {
             color: $brand-2;
@@ -17,7 +20,7 @@ footer.site-footer {
 
     h5 {
         font-family: $font-mont-b;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     @include screen-max-sm(){
@@ -94,7 +97,7 @@ footer.site-footer {
 
         li {
             display: inline-block;
-            font-size: 14px;
+            font-size: 13px;
             margin: 0;
 
             @include screen-max-sm(){

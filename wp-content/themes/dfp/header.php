@@ -10,7 +10,7 @@
 <?php wp_head(); ?>
 
 <?php if (is_page('contact')): ?>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB96rt6dlY8Gp_GFprNH5ug__wnownAQHs"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj3H1hUZKVCKqi15bIs1xK4EuxIBf2F5s"></script>
 <?php endif ?>
 
 <script src="https://www.google.com/recaptcha/api.js"></script>

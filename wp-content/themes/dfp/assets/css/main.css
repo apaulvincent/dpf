@@ -9979,15 +9979,18 @@ footer.site-footer {
   color: #c8c8c8;
   padding: 40px 0;
   font-family: "montserratregular", sans-serif;
-  font-size: 14px; }
+  font-size: 13px; }
 footer.site-footer a {
-    font-size: 14px;
-    color: #c8c8c8; }
+    font-size: 13px;
+    color: #c8c8c8;
+    line-height: 1.2;
+    display: block;
+    margin: 0 0 6px; }
 footer.site-footer a:hover {
       color: #0066cb; }
 footer.site-footer h5 {
     font-family: "montserratbold", sans-serif;
-    font-size: 14px; }
+    font-size: 13px; }
 @media screen and (max-width: 991px) {
     footer.site-footer {
       text-align: center; } }
@@ -10031,7 +10034,7 @@ footer.site-footer .footer-site-info {
         margin: 20px 0; } }
 footer.site-footer .footer-site-info li {
       display: inline-block;
-      font-size: 14px;
+      font-size: 13px;
       margin: 0; }
 @media screen and (max-width: 991px) {
         footer.site-footer .footer-site-info li {
