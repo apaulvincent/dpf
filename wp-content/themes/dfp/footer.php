@@ -156,7 +156,7 @@ if( $page_setup['content_reusable_blocks'] ) {
 
 
 
-<!-- Modal -->
+<!-- Modal: SF Form-->
 <?php if ( !is_page('contact') ): ?>
 <div class="modal fade" id="dfp-sf-form-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-md" role="document">
@@ -175,6 +175,24 @@ if( $page_setup['content_reusable_blocks'] ) {
 </div>
 <?php endif ?>
 
+<!-- Modal: Subscribe Form-->
+<div class="modal fade" id="dfp-subscribe-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span class="pe-7s-close"></span>
+		</button>
+	  </div>
+      <div class="modal-body">
+	  	<?php echo do_shortcode('[mc4wp_form id="3533" element_id="mc4wp-newsletter-signup"]'); ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <div class="social-share d-none d-lg-block">
 	<?php echo do_shortcode('[ssba-buttons]'); ?>
@@ -184,3 +202,7 @@ if( $page_setup['content_reusable_blocks'] ) {
 
 </body>
 </html>
+
+
+
+

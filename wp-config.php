@@ -21,7 +21,7 @@ define("WPLANG", "");
 /** The name of the database for WordPress */
  //Added by WP-Cache Manager
  //Added by WP-Cache Manager
-define('DB_NAME', 'dfp_db');
+define('DB_NAME', 'dfp_db_2');
 
 /** MySQL database username */
 define('DB_USER', 'pvuser');

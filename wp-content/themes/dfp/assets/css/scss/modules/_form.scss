@@ -186,6 +186,16 @@ input[type="checkbox"] {
 	label {
 		display: block;
 	}
+
+	.show-on-sent {
+		display: none;
+	}
+
+	&.sent {
+		.show-on-sent {
+			display: block;
+		}
+	}
 }
 input[type="text"],
 input[type="number"],

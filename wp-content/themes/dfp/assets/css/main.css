@@ -641,6 +641,14 @@
   margin-left: auto; }
 img.alignnone, img.alignleft, img.alignright, img.aligncenter {
   margin-bottom: 1.5em; }
+@media screen and (max-width: 991px) {
+    img.alignnone, img.alignleft, img.alignright, img.aligncenter {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      float: none;
+      clear: both; } }
 .wp-caption {
   margin-bottom: 1.5em;
   padding: 8px;
@@ -673,6 +681,10 @@ img[class*="wp-image-"] {
   /* Fluid images for posts, comments, and widgets */ }
 .entry a {
   text-decoration: underline; }
+.entry hr {
+  display: block;
+  clear: both;
+  margin: 30px 0; }
 img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
   height: auto;
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
@@ -8789,6 +8801,10 @@ input[type="radio"], input[type="checkbox"] {
   padding-right: 0px; }
 .wpcf7-form label {
   display: block; }
+.wpcf7-form .show-on-sent {
+  display: none; }
+.wpcf7-form.sent .show-on-sent {
+  display: block; }
 input[type="text"].wpcf7-not-valid, input[type="number"].wpcf7-not-valid, input[type="email"].wpcf7-not-valid, input[type="date"].wpcf7-not-valid, textarea.wpcf7-not-valid, select.wpcf7-not-valid, input[type="password"].wpcf7-not-valid {
   border: 1px solid #ff6161; }
 span.wpcf7-not-valid-tip, div.wpcf7 img.ajax-loader {
@@ -8903,15 +8919,15 @@ button {
 .btn-1, .comment-respond input.submit {
   border-color: #029bff;
   background: #029bff;
-  color: #ffffff; }
+  color: #ffffff !important; }
 .btn-2 {
   border-color: #0066cb;
   background: #0066cb;
-  color: #ffffff; }
+  color: #ffffff !important; }
 .btn-3 {
   border-color: #9900cc;
   background: transparent;
-  color: #9900cc; }
+  color: #9900cc !important; }
 .btn-3:hover, .btn-3:focus, .btn-3:active, .btn-3:active:hover, .btn-3:active:focus {
     color: #ffffff;
     background: #9900cc; }

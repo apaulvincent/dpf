@@ -13018,6 +13018,11 @@ $(document).ready(function () {
             $('#dfp-sf-form-modal').modal('show');
         }
     });
+
+    $('.dfp-subscribe-modal-btn').on('click', function (e) {
+        e.preventDefault();
+        $('#dfp-subscribe-modal').modal('show');
+    });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 

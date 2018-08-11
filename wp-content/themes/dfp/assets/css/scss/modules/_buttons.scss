@@ -51,20 +51,20 @@ button {
 .btn-1 {
     border-color: $tint-1;
     background: $tint-1;
-    color: $brand-w;
+    color: $brand-w !important;
 }
 
 
 .btn-2 {
     border-color: $tint-2;
     background: $tint-2;
-    color: $brand-w;
+    color: $brand-w !important;
 }
 
 .btn-3 {
     border-color: $tint-4;
     background: transparent;
-    color: $brand-4;
+    color: $brand-4 !important;
 
     &:hover, 
     &:focus, 
