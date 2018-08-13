@@ -8629,7 +8629,8 @@ blockquote {
   position: relative; }
 table {
   width: 100%;
-  border: 1px solid #eeeeee; }
+  border: 1px solid #eeeeee;
+  margin: 30px 0 30px; }
 table th {
     padding: 10px;
     font-weight: normal;
@@ -8638,7 +8639,8 @@ table th {
     border: 1px solid #dedede; }
 table td {
     padding: 10px;
-    border: 1px solid #dedede; }
+    border: 1px solid #dedede;
+    line-height: 1.2; }
 ul, ol {
   font-size: 15px;
   margin: 0 0 20px;

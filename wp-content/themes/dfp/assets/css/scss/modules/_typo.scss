@@ -124,6 +124,7 @@ blockquote {
 table {
     width: 100%;
     border: 1px solid $tint-8;
+    margin: 30px 0 30px;
 
     th {
         padding: 10px;
@@ -136,6 +137,7 @@ table {
     td {
         padding: 10px;
         border: 1px solid $tint-7;
+        line-height: 1.2;
     }
 }
 

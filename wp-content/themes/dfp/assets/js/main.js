@@ -14548,9 +14548,17 @@ module.exports = g;
 
     var latlng = new google.maps.LatLng($marker.attr('data-lat'), $marker.attr('data-lng'));
 
+    var icon = {
+      url: '/wp-content/themes/dfp/assets/img/marker.png',
+      scaledSize: new google.maps.Size(50, 50),
+      origin: new google.maps.Point(0, 0), // origin
+      anchor: new google.maps.Point(25, 25) // anchor
+    };
+
     var marker = new google.maps.Marker({
       position: latlng,
-      map: map
+      map: map,
+      icon: icon
     });
 
     map.markers.push(marker);
