@@ -8595,7 +8595,8 @@ h3, .h3 {
 h4, .h4 {
   font-family: "Constantia", sans-serif;
   font-size: 24px;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin: 0 0 30px; }
 @media screen and (max-width: 991px) {
     h4, .h4 {
       font-size: 16px; } }

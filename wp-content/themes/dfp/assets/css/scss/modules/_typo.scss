@@ -73,6 +73,7 @@ h4, .h4 {
     font-family: $font-cons-r;
     font-size: 24px;
     line-height: 1.2;
+    margin: 0 0 30px;
 
     @include screen-max-sm(){
         font-size: 16px;
