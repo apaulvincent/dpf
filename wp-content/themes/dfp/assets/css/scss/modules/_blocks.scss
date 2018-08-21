@@ -130,9 +130,10 @@
 .eq-blocks {
 
     .eq-block-wrap {
-        margin-bottom: 30px;
+        margin-bottom: 70px;
             
         @include screen-max-sm(){
+            margin-bottom: 30px;
             
             &:last-child {
                 margin-bottom: 0;

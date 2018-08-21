@@ -152,6 +152,37 @@ ul, ol {
 }
 
 
+.entry {
+
+    ol {
+        padding: 0 0 0 14px; 
+    }
+
+
+    ul {
+        margin: 0 0 20px;
+        padding: 0;
+        list-style-type: none;
+    
+        li {
+            position: relative;
+            margin: 0 0 8px;
+            padding: 0 0 0 26px;
+
+            &:before {
+                background: $tint-b;
+                content: '';
+                width: 4px;
+                height: 4px;
+                @include round-corners(4px);
+                position: absolute;
+                top: 10px;
+                left: 0;
+            }
+        }
+    }
+}
+
 .post-meta {
     h3 {
         font-size: 20px;

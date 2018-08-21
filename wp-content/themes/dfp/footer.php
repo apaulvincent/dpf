@@ -136,10 +136,15 @@ if( $page_setup['content_reusable_blocks'] ) {
 						if( $contact_info_fields ):
 							echo '<ul class="footer-site-info">';
 
-							foreach ($contact_info_fields as $field) {
+							foreach ($contact_info_fields as $key => $field) {
+
+								$p = 'P / ';
+								if($key == 2) {
+									$p = 'M / ';
+								}
+
 								echo '<li>
-										'.$field['contact_name'].'<br>
-										P / '.$field['contact_phone'].'<br><br>
+										'.$field['contact_name'].'<br>' . $p . $field['contact_phone'].'<br><br>
 									</li>';
 							}
 							

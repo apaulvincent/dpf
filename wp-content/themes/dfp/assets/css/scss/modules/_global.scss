@@ -60,6 +60,11 @@
 
 .page-grid-block {
   background: $tint-w;
+  padding: 100px 0 40px;
+
+  @include screen-max-sm(){
+    padding: 60px 0;
+  }
 
   .eq-block {
     background-color: $tint-8;
@@ -118,6 +123,10 @@
         color: $brand-w;
         padding: 24px;
         margin: 0;
+
+        strong {
+          color: $brand-1;
+        }
       
         @include screen-max-sm(){
           position: static; 

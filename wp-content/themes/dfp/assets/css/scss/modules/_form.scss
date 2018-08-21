@@ -104,7 +104,11 @@ input[type="password"] {
 	}
 
 	&[required] {
-		border: 1px solid $brand-4;
+		//border: 1px solid #cc00cc;
+	}
+
+	&[required].error {
+		border: 1px solid #cc00cc;
 	}
 
 	@include round-corners(0);

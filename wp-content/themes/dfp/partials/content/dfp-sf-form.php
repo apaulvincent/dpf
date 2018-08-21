@@ -1,3 +1,10 @@
+<?php
+
+global $DB_Helper, $DB_Content;
+
+?>
+
+
 <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/v1531759913576/recaptcha__en.js"></script>
 
 <form action="https://login.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="sf-contact-form">
@@ -6,6 +13,8 @@
     <input type=hidden name="oid" value="00D28000001Kgn6">
     <input type=hidden name="retURL" value="/contact">
     <input type="hidden" name="lead_source" value="Web">
+
+    <?php echo $DB_Content->get_section_spacer(20); ?>
 
     <div class="form-group">
         <input id="first_name" maxlength="40" name="first_name" placeholder="First Name*" type="text" class="form-control" required/>
