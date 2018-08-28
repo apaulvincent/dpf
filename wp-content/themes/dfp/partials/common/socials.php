@@ -27,6 +27,8 @@ if( $social_fields ):
         }
 
    }
-   
+
    echo "</ul>";
 endif;
+
+   

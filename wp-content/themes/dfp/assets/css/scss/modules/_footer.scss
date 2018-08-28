@@ -23,7 +23,7 @@ footer.site-footer {
         font-size: 13px;
     }
 
-    @include screen-max-sm(){
+    @include screen-max-xs(){
         text-align: center;
     }
 
@@ -32,6 +32,7 @@ footer.site-footer {
 
         input {
             background: $tint-b;
+            color: $brand-w;
         }
 
         button {
@@ -83,6 +84,12 @@ footer.site-footer {
 
         }
 
+        &.footer-menu-last {
+            & > li > a {
+                font-family: $font-mont-r;
+            }
+        }
+
     }
 
 
@@ -99,6 +106,10 @@ footer.site-footer {
             display: inline-block;
             font-size: 13px;
             margin: 0;
+
+            a {
+                display: inline-block;
+            }
 
             @include screen-max-sm(){
                 display: block;

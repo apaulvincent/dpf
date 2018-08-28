@@ -8,12 +8,12 @@ $slides = $page_setup['banner_slider']
 
 <?php if($slides): ?>
 
-<div class="main-banner">
+<div class="main-banner main-banner-slider">
 
-    <div class="banner-info d-none d-xl-block">
+    <div class="banner-info">
         <div class="container">
             <div class="row">
-                <div class="col-12 offset-lg-9 col-lg-3">
+                <div class="col-12 offset-md-6 col-md-6 offset-lg-9 col-lg-3">
                      <?php  echo do_shortcode('[sidebar_content ids="14502"]'); ?>
                 </div>
             </div>
@@ -34,7 +34,7 @@ $slides = $page_setup['banner_slider']
             <div class="slide-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-md-6 col-lg-4">
 
                             <?php echo $slide['slide_content']; ?>
                             

@@ -36,8 +36,8 @@ global $DB_Helper, $DB_Content;
                     echo '<div class="col-12 col-lg-4 eq-block-wrap"><div class="eq-block tint-w card-'.$key.'"><h4><strong>'.$field['contact_name'].' / </strong>';
 
                     echo $field['contact_address'] ? $field['contact_address'] : '';
-                    echo $field['contact_phone'] ? $p . $field['contact_phone'] : '';
-                    echo $field['contact_email'] ? ',&nbsp;E&nbsp;/&nbsp;' . $field['contact_email'] : '';
+                    echo $field['contact_phone'] ? $p . '<a href="tel:'.$field['contact_phone'].'">'.$field['contact_phone'].'</a>' : '';
+                    echo $field['contact_email'] ? ',&nbsp;E&nbsp;/&nbsp;' . ' <a href="mailto:'.$field['contact_email'].'">'.$field['contact_email'].'</a>' : '';
                     
                     echo '</h4></div></div>';
                 }

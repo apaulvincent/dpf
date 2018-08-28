@@ -12,7 +12,7 @@ add_filter('show_admin_bar', '__return_false');
 // *********************** Post Thumbnails
 add_theme_support( 'post-thumbnails' );
 
-add_image_size( 'banner-image', 1400, 500, true );
+add_image_size( 'banner-image', 2000, 714, true );
 add_image_size( 'feat-banner-image', 760, 999999, false );
 
 add_image_size( 'listing-image', 560, 560, true );

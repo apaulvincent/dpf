@@ -46,7 +46,7 @@ if( $page_setup['content_reusable_blocks'] ) {
 			 <?php echo $DB_Content->get_section_spacer('30'); ?>
 
 			<div class="row">
-				<div class="col-12 col-lg-2">
+				<div class="col-12 col-md-6 col-lg-2">
 					<ul class="footer-menu">
 						<?php 
 							wp_nav_menu(
@@ -66,7 +66,7 @@ if( $page_setup['content_reusable_blocks'] ) {
 					</ul>
 				</div>
 
-				<div class="col-12 col-lg-2">
+				<div class="col-12 col-md-6 col-lg-2">
 					<ul class="footer-menu">
 						<?php 
 							wp_nav_menu(
@@ -86,7 +86,7 @@ if( $page_setup['content_reusable_blocks'] ) {
 					</ul>
 				</div>
 
-				<div class="col-12 col-lg-2">
+				<div class="col-12 col-md-6 col-lg-2">
 					<ul class="footer-menu">
 						<?php 
 							wp_nav_menu(
@@ -107,15 +107,33 @@ if( $page_setup['content_reusable_blocks'] ) {
 				</div>
 
 
-				<div class="col-12 col-lg-2">
+				<div class="col-12 col-md-6 col-lg-2">
 					<h5>Follow</h5>
 					<div class="footer-socials">
 						<?php include(locate_template('partials/common/socials.php')); ?>
 					</div>
+					<br>
+					<ul class="footer-menu footer-menu-last">
+						<?php 
+							wp_nav_menu(
+								array(  
+										'menu' => 'Footer 04',
+										'menu_class' => '',
+										'container' => '',
+										'container_class' => '',
+										'before' => '',
+										'after' => '',
+										'link_before' => '',
+										'link_after' => '',
+										'items_wrap' => '%3$s',
+									)
+							);
+						?>
+					</ul>
 				</div>
 
 
-				<div class="col-12 col-lg-2">
+				<div class="col-12 col-md-6  col-lg-2">
 					<ul class="footer-site-info">
 						<?php
 							$site_copyright = get_field('site_copyright', 'option');
@@ -126,7 +144,7 @@ if( $page_setup['content_reusable_blocks'] ) {
 					</ul>
 				</div>
 
-				<div class="col-12 col-lg-2">
+				<div class="col-12 col-md-6 col-lg-2">
 					<h5>Contact Us</h5>
 
 					<?php 
@@ -144,7 +162,8 @@ if( $page_setup['content_reusable_blocks'] ) {
 								}
 
 								echo '<li>
-										'.$field['contact_name'].'<br>' . $p . $field['contact_phone'].'<br><br>
+										'.$field['contact_name'].'<br>' . $p . 
+										'<a href="tel:'. $field['contact_phone'].'">'. $field['contact_phone'].'</a> <br><br>
 									</li>';
 							}
 							

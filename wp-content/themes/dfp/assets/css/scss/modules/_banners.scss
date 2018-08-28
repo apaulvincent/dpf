@@ -7,10 +7,18 @@
         height: 380px; 
     }
 
-
     @include screen-max-sm(){
-        height: 230px; 
+        height: 380px; 
     }
+
+    &.main-banner-slider {
+
+        @include screen-max-xs(){
+            height: 480px; 
+        }
+    
+    }
+
 
      &.feature {
         height: 620px;
@@ -50,13 +58,9 @@
             padding: 0;  
          }
 
-
-
          h1 {
             @extend .mega;
         }
-
-
 
     }
 
@@ -69,6 +73,11 @@
         height: 1px;
         overflow: visible;
 
+        @include screen-max-xs(){
+            top: auto;
+            bottom: 30px;
+        }
+
         .col-12 {
             height: 1px;
             overflow: visible;
@@ -76,6 +85,12 @@
 
         .expert-advise {
             @include transform(translateY(-50%));
+
+
+            @include screen-max-xs(){
+                @include transform(translateY(-100%));
+            }
+
         }
     
     }
@@ -118,6 +133,12 @@
         @include screen-max-md(){
             padding: 0;  
          }
+
+         @include screen-max-xs(){
+            padding-bottom: 240px; 
+        }
+    
+
 
         h1 {
             @extend .mega;

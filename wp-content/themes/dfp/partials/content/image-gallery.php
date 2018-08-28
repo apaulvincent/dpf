@@ -39,18 +39,20 @@ global $DB_Helper, $DB_Content;
                     <div class="col-12">    
                         <h1 class="block-title"> <?php echo $var['title'] ?></h1>
                     </div>
-                    <?php  foreach ($var['images'] as $logo) { ?>
+                </div>
 
-                    <div class="col-6 col-md-2">
+                <div class="row odd-grid">
+                    <?php  foreach ($var['images'] as $logo) { ?>
+                    <div class="col">
                         <img src="<?php echo $logo['url']; ?>" class="img-fluid">
                     </div>
-
                     <?php } ?>
+                </div>
 
+                <div class="row">
                     <div class="col-12">    
                         <h4><a href="<?php echo $var['link']; ?>" class="brand-b"><?php echo $var['link_text']; ?></a></h4>
                     </div>
-
                 </div>
             </div>
         </section>

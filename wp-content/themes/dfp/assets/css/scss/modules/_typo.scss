@@ -4,6 +4,11 @@ body {
     line-height: 1.4;
     color: $brand-b;
     background: $brand-7;
+
+    &.modal-open {
+        overflow: auto !important;
+        padding-right: 0 !important;
+    }
 }
 
 p {
@@ -207,4 +212,13 @@ ul, ol {
     h3 {
         margin-top: 0;
     }
+
+    a {
+        color: $brand-b;
+
+        &:hover {
+            color: $brand-1;
+        }
+    }
+    
 }

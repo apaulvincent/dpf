@@ -8547,6 +8547,9 @@ body {
   line-height: 1.4;
   color: #000000;
   background: #dedede; }
+body.modal-open {
+    overflow: auto !important;
+    padding-right: 0 !important; }
 p {
   font-size: 15px;
   line-height: 1.6; }
@@ -8679,6 +8682,10 @@ ul li, ol li {
   font-size: 22px; }
 .contact-entry h3 {
   margin-top: 0; }
+.contact-entry a {
+  color: #000000; }
+.contact-entry a:hover {
+    color: #029bff; }
 .select-wrap {
   position: relative;
   width: 100%;
@@ -9066,7 +9073,7 @@ button {
 .footer-socials {
   padding: 0;
   margin: 0; }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
     .footer-socials {
       text-align: center; } }
 .footer-socials ul {
@@ -9126,6 +9133,13 @@ button {
     .wide-gutter > [class^="col-"], .wide-gutter > [class^=" col-"] {
       padding-right: 15px;
       padding-left: 15px; } }
+@media screen and (max-width: 991px) {
+  .odd-grid .col {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    margin: auto; } }
 .title-bar {
   background: #003399;
   color: #ffffff;
@@ -9269,7 +9283,10 @@ button {
       height: 380px; } }
 @media screen and (max-width: 991px) {
     .main-banner {
-      height: 230px; } }
+      height: 380px; } }
+@media screen and (max-width: 767px) {
+    .main-banner.main-banner-slider {
+      height: 480px; } }
 .main-banner.feature {
     height: 620px; }
 @media screen and (max-width: 1199px) {
@@ -9308,12 +9325,20 @@ button {
     right: 0;
     height: 1px;
     overflow: visible; }
+@media screen and (max-width: 767px) {
+      .main-banner .banner-info {
+        top: auto;
+        bottom: 30px; } }
 .main-banner .banner-info .col-12 {
       height: 1px;
       overflow: visible; }
 .main-banner .banner-info .expert-advise {
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%); }
+@media screen and (max-width: 767px) {
+        .main-banner .banner-info .expert-advise {
+          -webkit-transform: translateY(-100%);
+          transform: translateY(-100%); } }
 .banner-static {
   height: 100%;
   background-size: cover;
@@ -9339,6 +9364,9 @@ button {
 @media screen and (max-width: 1199px) {
       .banner-slider .slide-content {
         padding: 0; } }
+@media screen and (max-width: 767px) {
+      .banner-slider .slide-content {
+        padding-bottom: 240px; } }
 .banner-slider .slide-content .btn, .banner-slider .slide-content .comment-respond input.submit, .comment-respond .banner-slider .slide-content input.submit {
       min-width: 260px;
       max-width: 260px;
@@ -9895,6 +9923,15 @@ body.menu-drawer-on .mobile-main-nav-drawer {
   word-wrap: break-word;
   word-break: break-all;
   word-break: break-word; }
+.offices-block h4 a {
+    color: #000000;
+    display: inline;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all !important;
+    word-break: break-word; }
+.offices-block h4 a:hover {
+      color: #029bff; }
 .expert-advise {
   background: rgba(0, 0, 0, 0.5);
   padding: 30px; }
@@ -10041,13 +10078,14 @@ footer.site-footer a:hover {
 footer.site-footer h5 {
     font-family: "montserratbold", sans-serif;
     font-size: 13px; }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
     footer.site-footer {
       text-align: center; } }
 footer.site-footer .search-form {
     position: relative; }
 footer.site-footer .search-form input {
-      background: #000000; }
+      background: #000000;
+      color: #ffffff; }
 footer.site-footer .search-form button {
       position: absolute;
       top: 0;
@@ -10076,6 +10114,8 @@ footer.site-footer ul.footer-menu > li > ul {
         padding: 0; }
 footer.site-footer ul.footer-menu > li > ul li {
           margin: 0; }
+footer.site-footer ul.footer-menu.footer-menu-last > li > a {
+      font-family: "montserratregular", sans-serif; }
 footer.site-footer .footer-site-info {
     margin: 0 0 5px;
     padding: 0; }
@@ -10086,6 +10126,8 @@ footer.site-footer .footer-site-info li {
       display: inline-block;
       font-size: 13px;
       margin: 0; }
+footer.site-footer .footer-site-info li a {
+        display: inline-block; }
 @media screen and (max-width: 991px) {
         footer.site-footer .footer-site-info li {
           display: block;

@@ -229,6 +229,19 @@
     word-wrap: break-word;
     word-break: break-all;
     word-break: break-word;
+
+    a {
+      color: $brand-b;
+      display: inline;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-all !important;
+      word-break: break-word;
+
+      &:hover {
+        color: $brand-1;
+      }
+    }
   }
 
 }
