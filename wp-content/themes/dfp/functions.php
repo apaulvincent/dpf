@@ -177,9 +177,10 @@ function dfp_featured_list( $atts ) {
 
     $args = array(
         'post_type' => 'post',
-        'order' => 'ASC',
-        'orderby' => 'rand',
-        'tag' => 'featured',
+        'order' => 'DESC',
+        'orderby' => 'date',
+        'cat' => 87, // Category Featured
+        // 'tag_slug__in' => array( 'featured' ), // Tag Featured,  70
         'posts_per_page' => 5
       );
 
