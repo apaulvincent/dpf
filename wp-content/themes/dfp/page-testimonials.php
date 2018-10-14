@@ -93,7 +93,8 @@
 									<h2><?php the_title(); ?></h2>
 									
                                     <div class="post-meta text-right">
-                                        <p style="font-size: 14px;">By <strong><?php the_author(); ?></strong></p>
+										<p style="font-size: 14px;"><strong><?php the_date('d.m.Y'); ?></strong></p>
+                                        <!-- <p style="font-size: 14px;">By <strong><?php the_author(); ?></strong></p> -->
                                     </div>
                                     
                                     <div style="font-style: italic;">
