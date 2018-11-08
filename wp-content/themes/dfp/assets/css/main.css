@@ -9201,7 +9201,7 @@ button {
 .cta-block-full a {
     color: #ffffff; }
 .eq-blocks .eq-block-wrap {
-  margin-bottom: 70px; }
+  margin-bottom: 30px; }
 @media screen and (max-width: 991px) {
     .eq-blocks .eq-block-wrap {
       margin-bottom: 30px; }
@@ -9837,7 +9837,8 @@ body.menu-drawer-on .mobile-main-nav-drawer {
       background: #eeeeee;
       color: #000000;
       padding: 24px;
-      margin: 0; }
+      margin: 0;
+      font-size: 20px; }
 .page-grid-block .eq-block h4 strong {
         color: #003399; }
 @media screen and (max-width: 991px) {
@@ -10061,6 +10062,9 @@ body.menu-drawer-on .mobile-main-nav-drawer {
   font-size: 38px; }
 .comment-respond .comment-reply-title {
   font-size: 22px; }
+.sub-heading {
+  font-weight: bold;
+  font-size: 115%; }
 footer.site-footer {
   background: #000000;
   color: #c8c8c8;

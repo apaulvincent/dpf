@@ -7,8 +7,6 @@
 	get_header();
 	$content = get_fields($post->ID);
 
-	$is_blog = is_page('blog');
-
 ?>
 
 	<section class="title-bar" style="background-color: <?php echo $content['title_bar_background']; ?>">
@@ -75,7 +73,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-3">
                                 <div class="post-meta">
-                                    <h3><?php the_date('d F'); ?></h3>
+                                    <h3><?php the_date(); ?></h3>
                                     <p>By <?php the_author(); ?></p>
                                 </div>
                             </div>
@@ -124,13 +122,6 @@
 					<div class="col-12 col-lg-3 offset-lg-1">
 						<?php echo $DB_Content->get_section_spacer('30', ['d-lg-none']); ?>
 						<?php get_sidebar(); ?>
-
-						<?php if( $is_blog ): ?>
-							<?php if( is_dynamic_sidebar( 'sidebar-widget' ) ): ?>
-							<?php dynamic_sidebar( 'sidebar-widget' ); ?>
-							<?php endif; ?>
-						<?php endif; ?>
-
 					</div>
 
 				</div>

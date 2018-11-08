@@ -74,6 +74,7 @@
         color: $brand-b;
         padding: 24px;
         margin: 0;
+        font-size: 20px;
 
         strong {
           color: $brand-3;
@@ -443,4 +444,9 @@
     @extend .btn;
     @extend .btn-1;
   }
+}
+
+.sub-heading {
+  font-weight: bold;
+  font-size: 115%;
 }

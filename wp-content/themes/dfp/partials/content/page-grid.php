@@ -13,7 +13,7 @@ global $DB_Helper, $DB_Content;
 <section class="reusable-block eq-blocks page-grid-block">
     
     <div class="container">
-        <div class="wide-gutter row">
+        <div class="row">
             
             <div class="col-12">    
                 <h1 class="block-title"> <?php echo $var['title'] ?></h1>
@@ -28,7 +28,7 @@ global $DB_Helper, $DB_Content;
                     
             ?>
 
-            <div class="col-12 col-lg-4 eq-block-wrap">
+            <div class="col-12 col-lg-3 eq-block-wrap">
                 <a href="<?php echo get_permalink( $grid['page'] ); ?>" class="eq-block">
                     <div class="img-block" style="background-image: url(<?php echo $banner_image; ?>);"></div>
                     <?php echo $grid['excerpt']; ?>
